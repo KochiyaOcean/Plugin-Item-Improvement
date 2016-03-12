@@ -23,6 +23,9 @@ ItemInfoRow = React.createClass
       </td>
       <td>{@props.name}</td>
       <td>{@props.hisho}</td>
+      <td>{@props.screw.begin.nonconfirm}/{@props.screw.begin.confirm}</td>
+      <td>{@props.screw.mid.nonconfirm}/{@props.screw.mid.confirm}</td>
+      <td>{@props.screw.max.nonconfirm}/{@props.screw.max.confirm}</td>
     </tr>
 
 ItemInfoArea = React.createClass
@@ -43,6 +46,8 @@ ItemInfoArea = React.createClass
           name: window.i18n.resources.__ item.name
           hisho: hishos.join(' / ')
           highlight: highlight
+          screw: item.comsumption.screws
+          equipment: item.comsumption.equipment
         rows.push row
     return rows
   getInitialState: ->
@@ -90,6 +95,9 @@ ItemInfoArea = React.createClass
               <th width="200" ><div style={paddingLeft: '55px'}>{__ "Type"}</div></th>
               <th width="250" >{__ "Name"}</th>
               <th width="200" >{__ "2nd Ship"}</th>
+              <th width="100" >螺丝耗费0~6</th>
+              <th width="100" >螺丝耗费6~max</th>
+              <th width="100" >螺丝耗费max</th>
             </tr>
           </thead>
           <tbody>
@@ -106,6 +114,8 @@ ItemInfoArea = React.createClass
                     hisho = {row.hisho}
                     highlight = {row.highlight}
                     onClick = {@handleClickItem.bind(@, row.id)}
+                    screw = {row.screw}
+                    equipment = {row.equipment}
                   />
               for row, index in rows
                 if not row.highlight
@@ -117,6 +127,8 @@ ItemInfoArea = React.createClass
                     hisho = {row.hisho}
                     highlight = {row.highlight}
                     onClick = {@handleClickItem.bind(@, row.id)}
+                    screw = {row.screw}
+                    equipment = {row.equipment}
                   />
               results
             }
