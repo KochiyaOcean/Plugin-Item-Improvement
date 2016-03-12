@@ -17,7 +17,7 @@
                 "max": {"nonconfirm": 3, "confirm": 6}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 2}       
             }
@@ -45,7 +45,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -73,7 +73,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "10cm連装高角砲", "need": 2},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -97,7 +97,7 @@
                 "max": {"nonconfirm": 3, "confirm": 6}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 2}       
             }
@@ -121,7 +121,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -154,7 +154,7 @@
                 "max": {"nonconfirm": 4, "confirm": 10}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "22号対水上電探", "need": 1}       
             }
@@ -182,7 +182,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "15.2cm連装砲", "need": 1},
                 "mid": {"name": "15.2cm連装砲", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -210,7 +210,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -238,7 +238,7 @@
                 "max": {"nonconfirm": 4, "confirm": 10}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 2}       
             }
@@ -262,7 +262,7 @@
                 "max": {"nonconfirm": 4, "confirm": 11}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 1}       
             }
@@ -286,7 +286,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -310,7 +310,7 @@
                 "max": {"nonconfirm": 5, "confirm": 12}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 3}       
             }
@@ -674,7 +674,7 @@
                 "max": {"nonconfirm": 3, "confirm": 5}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 2}       
             }
@@ -702,7 +702,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "15.5cm三連装砲", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -730,7 +730,7 @@
                 "max": {"nonconfirm": 2, "confirm": 4}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 2}       
             }
@@ -754,7 +754,7 @@
                 "max": {"nonconfirm": 3, "confirm": 6}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "61cm三連装魚雷", "need": 1},
                 "max": {"name": "61cm三連装魚雷", "need": 2}       
             }
@@ -778,7 +778,7 @@
                 "max": {"nonconfirm": 3, "confirm": 6}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 2}       
             }
@@ -806,7 +806,7 @@
                 "max": {"nonconfirm": 5, "confirm": 11}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 3}       
             }
@@ -830,7 +830,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -885,14 +885,14 @@
         ],
         "comsumption": {
             "screws": {
-                "begin": {"nonconfirm": 3, "confirm": 5},
-                "mid": {"nonconfirm": 4, "confirm": 7},
-                "max": {"nonconfirm": "-", "confirm": "-"}
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": 3, "confirm": 5}
             },
             "equipment": {
-                "begin": {"name": "瑞雲", "need": 0},
-                "mid": {"name": "零式水上観測機", "need": 1},
-                "max": {"name": "-", "need": "-"}       
+                "begin": {"name": "零式水上偵察機", "need": 1},
+                "mid": {"name": "瑞雲", "need": 1},
+                "max": {"name": "零式水上偵察機", "need": 2}       
             }
         }
     },
@@ -921,7 +921,7 @@
         ],
         "comsumption": {
             "screws": {
-                "begin": {"nonconfirm": 5, "confirm": 3},
+                "begin": {"nonconfirm": 2, "confirm": 3},
                 "mid": {"nonconfirm": 3, "confirm": 5},
                 "max": {"nonconfirm": 5, "confirm": 12}
             },
@@ -1050,7 +1050,7 @@
                 "max": {"nonconfirm": 5, "confirm": 13}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 2}       
             }
@@ -1075,7 +1075,7 @@
             "screws": {
                 "begin": {"nonconfirm": 2, "confirm": 3},
                 "mid": {"nonconfirm": 4, "confirm": 8},
-                "max": {"nonconfirm": 5, "confirm": 13}
+                "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
                 "begin": {"name": "21号対空電探", "need": 1},
@@ -1135,7 +1135,7 @@
             },
             "equipment": {
                 "begin": {"name": "22号対水上電探", "need": 3},
-                "mid": {"name": "32号対水上電探", "need": 2},
+                "mid": {"name": "32号対水上電探", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
         }
@@ -1167,12 +1167,12 @@
             "screws": {
                 "begin": {"nonconfirm": 1, "confirm": 2},
                 "mid": {"nonconfirm": 2, "confirm": 3},
-                "max": {"nonconfirm": 3, "confirm": 5}
+                "max": {"nonconfirm": "3-6", "confirm": "5-12"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
-                "max": {"name": "同装備", "need": 2}       
+                "max": {"name": "同装備 / 三式水中探信儀", "need": 2}       
             }
         }
     },
@@ -1198,7 +1198,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -1258,7 +1258,7 @@
                 "max": {"nonconfirm": 3, "confirm": 8}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 2}       
             }
@@ -1282,7 +1282,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "四式水中聴音機", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
@@ -1310,7 +1310,7 @@
                 "max": {"nonconfirm": 4, "confirm": 9}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 3}       
             }
@@ -1362,7 +1362,7 @@
                 "max": {"nonconfirm": 1, "confirm": 2}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 1}       
             }
@@ -1394,7 +1394,7 @@
                 "max": {"nonconfirm": 3, "confirm": 7}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "同装備", "need": 5}       
             }
@@ -1426,7 +1426,7 @@
                 "max": {"nonconfirm": 4, "confirm": 7}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "12.7cm連装高角砲", "need": 1},
                 "max": {"name": "10cm連装高角砲", "need": 2}       
             }
@@ -1462,9 +1462,9 @@
                 "max": {"nonconfirm": 5, "confirm": "9-10"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
-                "mid": {"name": "10cm連装高角砲/12.7cm連装高角砲", "need": 1},
-                "max": {"name": "10cm連装高角砲/12.7cm連装高角砲", "need": 2}       
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "10cm連装高角砲 / 12.7cm連装高角砲", "need": 1},
+                "max": {"name": "10cm連装高角砲 / 12.7cm連装高角砲", "need": 2}       
             }
         }
     },
@@ -1498,7 +1498,7 @@
                 "max": {"nonconfirm": 3, "confirm": 7}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 0},
+                "begin": {"name": "-", "need": 0},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "熟練見張員", "need": 1}       
             }
@@ -1526,7 +1526,7 @@
                 "max": {"nonconfirm": "-", "confirm": "-"}
             },
             "equipment": {
-                "begin": {"name": "無", "need": 1},
+                "begin": {"name": "-", "need": 1},
                 "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }

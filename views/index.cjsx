@@ -121,9 +121,9 @@ ItemInfoArea = React.createClass
               <th width="250" >{__ "Name"}</th>
               <th width="200" >{__ "2nd Ship"}</th>
               <th width="200" ></th>
-              <th width="200" >螺丝消耗</th>
-              <th width="400" >装备消耗</th>
-              <th width="200" >数量</th>
+              <th width="200" >{__ "Screw Consumption"}</th>
+              <th width="400" >{__ "Equipment Consumption"}</th>
+              <th width="200" >{__ "Equipment Number"}</th>
             </tr>
           </thead>
           <tbody>
