@@ -1,31 +1,65 @@
 {
-  "name": "poi-plugin-item-improvement",
-  "version": "2.1.2",
-  "description": "Show improvable items of the day",
-  "main": "index.cjsx",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      "C:\\Users\\TEMP\\Desktop\\poi-plugin_2016-03-10\\poi-plugin-item-improvement-2.1.2.tgz",
+      ""
+    ]
+  ],
+  "_from": "..\\..\\..\\..\\Desktop\\poi-plugin_2016-03-10\\poi-plugin-item-improvement-2.1.2.tgz",
+  "_id": "poi-plugin-item-improvement@2.1.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/poi-plugin-item-improvement",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": null,
+    "raw": "C:\\Users\\TEMP\\Desktop\\poi-plugin_2016-03-10\\poi-plugin-item-improvement-2.1.2.tgz",
+    "rawSpec": "C:\\Users\\TEMP\\Desktop\\poi-plugin_2016-03-10\\poi-plugin-item-improvement-2.1.2.tgz",
+    "scope": null,
+    "spec": "C:\\Users\\TEMP\\Desktop\\poi-plugin_2016-03-10\\poi-plugin-item-improvement-2.1.2.tgz",
+    "type": "local"
   },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:..\\..\\..\\..\\Desktop\\poi-plugin_2016-03-10\\poi-plugin-item-improvement-2.1.2.tgz",
+  "_shasum": "b247916041b1ec0ed6b9955521de2efb6ba7c875",
+  "_shrinkwrap": null,
+  "_spec": "C:\\Users\\TEMP\\Desktop\\poi-plugin_2016-03-10\\poi-plugin-item-improvement-2.1.2.tgz",
+  "_where": "",
+  "author": {
+    "name": "KochiyaOcean"
+  },
+  "bugs": {
+    "url": "https://github.com/poooi/plugin-item-improvement/issues"
+  },
+  "contributors": [
+    {
+      "name": "Dazzy Ding"
+    }
+  ],
+  "dependencies": {},
+  "description": "Show improvable items of the day",
+  "devDependencies": {},
+  "homepage": "https://github.com/poooi/plugin-item-improvement#readme",
+  "license": "MIT",
+  "main": "index.cjsx",
+  "name": "poi-plugin-item-improvement",
+  "optionalDependencies": {},
+  "poiPlugin": {
+    "description": "Show possible improvements of the day",
+    "icon": "fa/wrench",
+    "priority": 50,
+    "title": "Equipment Improvement"
+  },
+  "readme": "# Plugin-Item-Improvement\nShow improvable items of the day\n#### Usage\nPut the folder into /path/to/poi/resources/app/plugins\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/poooi/plugin-item-improvement.git"
   },
-  "author": {
-    "name": "KochiyaOcean",
-    "link": "https://github.com/kochiyaocean"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "contributors": ["Dazzy Ding"],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/poooi/plugin-item-improvement/issues"
-  },
-  "homepage": "https://github.com/poooi/plugin-item-improvement#readme",
-  "dependencies": {
-  },
-  "poiPlugin": {
-    "title": "Equipment Improvement",
-    "description": "Show possible improvements of the day",
-    "icon": "fa/wrench",
-    "priority": 50
-  }
+  "version": "2.1.2"
 }

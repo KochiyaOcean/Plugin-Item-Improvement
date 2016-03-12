@@ -9,7 +9,19 @@
                 "name": "無",
                 "day": [true, true, true, true, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 1, "confirm": 2},
+                "max": {"nonconfirm": 3, "confirm": 6}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 2}       
+            }
+        }
     },
     {
         "name": "12.7cm連装砲B型改二",
@@ -25,7 +37,19 @@
                 "name": "绫波改二",
                 "day": [false, true, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "10cm連装高角砲+高射装置",
@@ -41,7 +65,19 @@
                 "name": "照月",
                 "day": [true, false, false, false, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 4},
+                "mid": {"nonconfirm": 4, "confirm": 7},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "10cm連装高角砲", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "14cm単装砲",
@@ -53,7 +89,19 @@
                 "name": "無",
                 "day": [true, true, true, true, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 1, "confirm": 2},
+                "max": {"nonconfirm": 3, "confirm": 6}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 2}       
+            }
+        }
     },
     {
         "name": "14cm連装砲",
@@ -65,7 +113,20 @@
                 "name": "夕張",
                 "day": [false, true, false, false, true, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 2, "confirm": 3},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
+
     },
     {
         "name": "15.2cm連装砲",
@@ -85,7 +146,19 @@
                 "name": "矢矧",
                 "day": [false, true, true, true, true, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": 4, "confirm": 10}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "22号対水上電探", "need": 1}       
+            }
+        }
     },
     {
         "name": "15.2cm連装砲改",
@@ -101,7 +174,19 @@
                 "name": "酒匂",
                 "day": [true, true, true, false, false, false, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 6},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "15.2cm連装砲", "need": 1},
+                "mid": {"name": "15.2cm連装砲", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "15.5cm三連装砲",
@@ -117,7 +202,19 @@
                 "name": "大淀",
                 "day": [true, true, false, false, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "20.3cm連装砲",
@@ -133,7 +230,19 @@
                 "name": "衣笠",
                 "day": [true, true, true, true, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 2, "confirm": 3},
+                "max": {"nonconfirm": 4, "confirm": 10}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 2}       
+            }
+        }
     },
     {
         "name": "20.3cm(2号)連装砲",
@@ -145,7 +254,19 @@
                 "name": "妙高",
                 "day": [true, true, true, false, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": 4, "confirm": 11}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 1}       
+            }
+        }
     },
     {
         "name": "20.3cm(3号)連装砲",
@@ -157,7 +278,19 @@
                 "name": "三隈",
                 "day": [false, false, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "35.6cm連装砲",
@@ -169,7 +302,19 @@
                 "name": "扶桑",
                 "day": [true, false, false, false, false, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": 5, "confirm": 12}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 3}       
+            }
+        }
     },
     {
         "name": "試製35.6cm三連装砲",
@@ -193,7 +338,19 @@
                 "name": "山城改二",
                 "day": [true, false, false, false, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 4},
+                "mid": {"nonconfirm": 4, "confirm": 7},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "35.6cm連装砲", "need": 2},
+                "mid": {"name": "35.6cm連装砲", "need": 3},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "35.6cm連装砲(ダズル迷彩)",
@@ -205,7 +362,19 @@
                 "name": "榛名改二",
                 "day": [true, true, true, true, false, false, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "35.6cm連装砲", "need": 1},
+                "mid": {"name": "35.6cm連装砲", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "38cm連装砲",
@@ -217,7 +386,19 @@
                 "name": "Bismarck",
                 "day": [false, false, false, false, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": 6, "confirm": 13}
+            },
+            "equipment": {
+                "begin": {"name": "35.6cm連装砲", "need": 1},
+                "mid": {"name": "35.6cm連装砲", "need": 2},
+                "max": {"name": "41cm連装砲", "need": 2}       
+            }
+        }
     },
     {
         "name": "38cm連装砲改",
@@ -229,7 +410,19 @@
                 "name": "Bismarck",
                 "day": [true, true, true, false, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 4},
+                "mid": {"nonconfirm": 4, "confirm": 6},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "41cm連装砲", "need": 1},
+                "mid": {"name": "41cm連装砲", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "381mm/50 三連装砲",
@@ -245,7 +438,19 @@
                 "name": "Roma",
                 "day": [true, true, false, false, false, false, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": 7, "confirm": 14}
+            },
+            "equipment": {
+                "begin": {"name": "35.6cm連装砲", "need": 1},
+                "mid": {"name": "35.6cm連装砲", "need": 2},
+                "max": {"name": "25mm連装機銃", "need": 2}       
+            }
+        }
     },
     {
         "name": "381mm/50 三連装砲改",
@@ -261,7 +466,19 @@
                 "name": "Roma",
                 "day": [false, false, true, true, true, true, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 4},
+                "mid": {"nonconfirm": 4, "confirm": 6},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "41cm連装砲", "need": 1},
+                "mid": {"name": "41cm連装砲", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "41cm連装砲",
@@ -277,7 +494,19 @@
                 "name": "陸奥",
                 "day": [true, true, false, false, true, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 6},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "同装備", "need": 1},
+                "mid": {"name": "同装備", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "試製41cm三連装砲",
@@ -293,7 +522,19 @@
                 "name": "陸奥改",
                 "day": [false, false, true, true, false, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 4, "confirm": 6},
+                "mid": {"nonconfirm": 5, "confirm": 8},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "41cm連装砲", "need": 2},
+                "mid": {"name": "41cm連装砲", "need": 3},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "試製46cm連装砲",
@@ -309,7 +550,19 @@
                 "name": "武蔵",
                 "day": [false, false, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 5},
+                "mid": {"nonconfirm": 4, "confirm": 7},
+                "max": {"nonconfirm": 8, "confirm": 14}
+            },
+            "equipment": {
+                "begin": {"name": "41cm連装砲", "need": 2},
+                "mid": {"name": "41cm連装砲", "need": 3},
+                "max": {"name": "41cm連装砲", "need": 4}       
+            }
+        }
     },
     {
         "name": "46cm三連装砲",
@@ -325,7 +578,19 @@
                 "name": "武蔵",
                 "day": [true, true, false, false, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 4, "confirm": 6},
+                "mid": {"nonconfirm": 5, "confirm": 8},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "同装備", "need": 1},
+                "mid": {"name": "同装備", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "試製51cm連装砲",
@@ -341,7 +606,19 @@
                 "name": "武蔵改",
                 "day": [false, true, false, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 5, "confirm": 7},
+                "mid": {"nonconfirm": 7, "confirm": 10},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "46cm三連装砲", "need": 2},
+                "mid": {"name": "46cm三連装砲", "need": 3},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "90mm単装高角砲",
@@ -357,7 +634,19 @@
                 "name": "Roma",
                 "day": [true, false, false, false, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 1, "confirm": 2},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "10cm連装高角砲", "need": 1},
+                "mid": {"name": "10cm連装高角砲", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "15.2cm単装砲",
@@ -377,7 +666,19 @@
                 "name": "山城",
                 "day": [false, true, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 2, "confirm": 3},
+                "max": {"nonconfirm": 3, "confirm": 5}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 2}       
+            }
+        }
     },
     {
         "name": "OTO 152mm三連装速射砲",
@@ -393,7 +694,19 @@
                 "name": "Roma",
                 "day": [true, true, false, false, true, true, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "15.5cm三連装砲", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "61cm三連装魚雷",
@@ -409,7 +722,19 @@
                 "name": "叢雲",
                 "day": [true, true, true, false, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 1},
+                "mid": {"nonconfirm": 1, "confirm": 2},
+                "max": {"nonconfirm": 2, "confirm": 4}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 2}       
+            }
+        }
     },
     {
         "name": "61cm三連装(酸素)魚雷",
@@ -421,7 +746,19 @@
                 "name": "吹雪改二",
                 "day": [false, false, false, false, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 1},
+                "mid": {"nonconfirm": 1, "confirm": 3},
+                "max": {"nonconfirm": 3, "confirm": 6}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "61cm三連装魚雷", "need": 1},
+                "max": {"name": "61cm三連装魚雷", "need": 2}       
+            }
+        }
     },
     {
         "name": "61cm四連装魚雷",
@@ -433,7 +770,19 @@
                 "name": "無",
                 "day": [true, true, true, false, false, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 1, "confirm": 2},
+                "max": {"nonconfirm": 3, "confirm": 6}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 2}       
+            }
+        }
     },
     {
         "name": "61cm四連装(酸素)魚雷",
@@ -449,7 +798,19 @@
                 "name": "北上",
                 "day": [true, true, true, true, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": 5, "confirm": 11}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 3}       
+            }
+        }
     },
     {
         "name": "61cm五連装(酸素)魚雷",
@@ -461,7 +822,19 @@
                 "name": "島風",
                 "day": [false, false, false, true, true, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 5},
+                "mid": {"nonconfirm": 3, "confirm": 7},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "零式水上観測機",
@@ -477,7 +850,19 @@
                 "name": "武蔵",
                 "day": [false, false, false, false, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 5},
+                "mid": {"nonconfirm": 4, "confirm": 7},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "瑞雲", "need": 0},
+                "mid": {"name": "零式水上観測機", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "Ro.43水偵",
@@ -497,7 +882,19 @@
                 "name": "Roma改",
                 "day": [false, false, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": 3, "confirm": 5}
+            },
+            "equipment": {
+                "begin": {"name": "零式水上偵察機", "need": 1},
+                "mid": {"name": "瑞雲", "need": 1},
+                "max": {"name": "零式水上偵察機", "need": 2}       
+            }
+        }
     },
     {
         "name": "13号対空電探",
@@ -521,7 +918,19 @@
                 "name": "照月",
                 "day": [false, true, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": 5, "confirm": 12}
+            },
+            "equipment": {
+                "begin": {"name": "同装備", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "21号対空電探", "need": 1}       
+            }
+        }
     },
     {
         "name": "13号対空電探改",
@@ -541,7 +950,19 @@
                 "name": "雪風",
                 "day": [true, true, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 4},
+                "mid": {"nonconfirm": 4, "confirm": 8},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "13号対空電探", "need": 1},
+                "mid": {"name": "13号対空電探", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "22号対水上電探",
@@ -561,7 +982,19 @@
                 "name": "島風",
                 "day": [false, false, false, true, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": 8, "confirm": 14}
+            },
+            "equipment": {
+                "begin": {"name": "同装備", "need": 1},
+                "mid": {"name": "同装備", "need": 2},
+                "max": {"name": "同装備", "need": 3}       
+            }
+        }
     },
     {
         "name": "22号対水上電探改四",
@@ -581,7 +1014,19 @@
                 "name": "金剛改二",
                 "day": [false, false, true, true, true, true, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 4},
+                "mid": {"nonconfirm": 4, "confirm": 8},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "22号対水上電探", "need": 1},
+                "mid": {"name": "22号対水上電探改四", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "21号対空電探",
@@ -597,7 +1042,19 @@
                 "name": "日向",
                 "day": [false, false, false, true, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": 5, "confirm": 13}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 2}       
+            }
+        }
     },
     {
         "name": "21号対空電探改",
@@ -613,7 +1070,19 @@
                 "name": "武蔵",
                 "day": [false, false, true, true, true, true, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 4, "confirm": 8},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "21号対空電探", "need": 1},
+                "mid": {"name": "21号対空電探", "need": 2},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "32号対水上電探",
@@ -629,7 +1098,19 @@
                 "name": "日向",
                 "day": [true, true, true, false, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 4},
+                "mid": {"nonconfirm": 4, "confirm": 7},
+                "max": {"nonconfirm": 10, "confirm": 15}
+            },
+            "equipment": {
+                "begin": {"name": "22号対水上電探", "need": 1},
+                "mid": {"name": "22号対水上電探", "need": 2},
+                "max": {"name": "32号対水上電探", "need": 1}       
+            }
+        }
     },
     {
         "name": "32号対水上電探改",
@@ -645,7 +1126,19 @@
                 "name": "日向",
                 "day": [false, false, false, true, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 5, "confirm": 6},
+                "mid": {"nonconfirm": 7, "confirm": 10},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "22号対水上電探", "need": 3},
+                "mid": {"name": "32号対水上電探", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "九三式水中聴音機",
@@ -669,7 +1162,19 @@
                 "name": "香取改",
                 "day": [true, false, false, false, false, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 2, "confirm": 3},
+                "max": {"nonconfirm": "3-6", "confirm": "5-12"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備 / 三式水中探信儀", "need": 2}       
+            }
+        }
     },
     {
         "name": "三式水中探信儀",
@@ -685,7 +1190,19 @@
                 "name": "五十鈴改二",
                 "day": [true, false, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "四式水中聴音機",
@@ -709,7 +1226,19 @@
                 "name": "照月",
                 "day": [false, false, false, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 5},
+                "mid": {"nonconfirm": 4, "confirm": 6},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "九三式水中聴音機", "need": 2},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "九四式爆雷投射機",
@@ -721,7 +1250,19 @@
                 "name": "無",
                 "day": [false, false, false, true, true, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 1, "confirm": 3},
+                "max": {"nonconfirm": 3, "confirm": 8}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 2}       
+            }
+        }
     },
     {
         "name": "三式爆雷投射機",
@@ -733,7 +1274,19 @@
                 "name": "五十鈴改二",
                 "day": [false, false, false, true, true, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "四式水中聴音機", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "九一式徹甲弾",
@@ -749,7 +1302,19 @@
                 "name": "霧島",
                 "day": [true, true, false, false, false, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 1},
+                "mid": {"nonconfirm": 1, "confirm": 2},
+                "max": {"nonconfirm": 4, "confirm": 9}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 3}       
+            }
+        }
     },
     {
         "name": "一式徹甲弾",
@@ -765,7 +1330,19 @@
                 "name": "榛名",
                 "day": [false, true, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 1},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "九一式徹甲弾", "need": 2},
+                "mid": {"name": "一式徹甲弾", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     },
     {
         "name": "25mm連装機銃",
@@ -777,7 +1354,19 @@
                 "name": "五十鈴改二",
                 "day": [true, false, false, false, false, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 1},
+                "mid": {"nonconfirm": 1, "confirm": 2},
+                "max": {"nonconfirm": 1, "confirm": 2}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 1}       
+            }
+        }
     },
     {
         "name": "25mm三連装機銃",
@@ -797,7 +1386,19 @@
                 "name": "摩耶改二",
                 "day": [true, true, false, false, false, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 1},
+                "mid": {"nonconfirm": 1, "confirm": 2},
+                "max": {"nonconfirm": 3, "confirm": 7}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "同装備", "need": 5}       
+            }
+        }
     },
     {
         "name": "91式高射装置",
@@ -817,7 +1418,19 @@
                 "name": "照月",
                 "day": [true, false, false, false, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 1, "confirm": 2},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": 4, "confirm": 7}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "12.7cm連装高角砲", "need": 1},
+                "max": {"name": "10cm連装高角砲", "need": 2}       
+            }
+        }
     },
     {
         "name": "94式高射装置",
@@ -841,7 +1454,19 @@
                 "name": "摩耶改二",
                 "day": [true, false, false, false, true, true, true]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 3, "confirm": 5},
+                "max": {"nonconfirm": 5, "confirm": "9-10"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "10cm連装高角砲 / 12.7cm連装高角砲", "need": 1},
+                "max": {"name": "10cm連装高角砲 / 12.7cm連装高角砲", "need": 2}       
+            }
+        }
     },
     {
         "name": "探照灯",
@@ -865,7 +1490,19 @@
                 "name": "綾波",
                 "day": [false, true, true, true, false, false, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 2, "confirm": 3},
+                "mid": {"nonconfirm": 2, "confirm": 4},
+                "max": {"nonconfirm": 3, "confirm": 7}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 0},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "熟練見張員", "need": 1}       
+            }
+        }
     },
     {
         "name": "96式150cm探照灯",
@@ -881,6 +1518,18 @@
                 "name": "霧島",
                 "day": [false, false, true, true, true, true, false]
             }
-        ]
+        ],
+        "comsumption": {
+            "screws": {
+                "begin": {"nonconfirm": 3, "confirm": 4},
+                "mid": {"nonconfirm": 3, "confirm": 7},
+                "max": {"nonconfirm": "-", "confirm": "-"}
+            },
+            "equipment": {
+                "begin": {"name": "-", "need": 1},
+                "mid": {"name": "同装備", "need": 1},
+                "max": {"name": "-", "need": "-"}       
+            }
+        }
     }
 ]
