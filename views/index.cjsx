@@ -15,17 +15,42 @@ DATA = fs.readJsonSync path.join(__dirname, "..", "assets", "data.json")
 
 ItemInfoRow = React.createClass
   render: ->
-    <tr>
-      <td style={{paddingLeft: 20}}>
-        <Input type="checkbox" checked={@props.highlight} onClick={@props.onClick} />
-        <SlotitemIcon slotitemId={@props.icon} />
-        {@props.type}
-      </td>
-      <td>{@props.name}</td>
-      <td>{@props.hisho}</td>
-      <td>{@props.screw.begin.nonconfirm}/{@props.screw.begin.confirm}</td>
-      <td>{@props.screw.mid.nonconfirm}/{@props.screw.mid.confirm}</td>
-      <td>{@props.screw.max.nonconfirm}/{@props.screw.max.confirm}</td>
+    <tr className="vertical">
+	      <td style={{paddingLeft: 20}}>
+	        <Input type="checkbox" checked={@props.highlight} onClick={@props.onClick} />
+	        <SlotitemIcon slotitemId={@props.icon} />
+	        {@props.type}
+	      </td>
+	      <td>{@props.name}</td>
+	      <td>{@props.hisho}</td>
+	      <td>
+		      <div>
+			      <p>★0~★6 </p>
+			      <p>★6~★max </p>
+			      <p>★max </p>
+		      </div>
+	      </td>
+	      <td>
+	      	<div>
+	      		<p>{@props.screw.begin.nonconfirm} / {@props.screw.begin.confirm}</p>
+	      		<p>{@props.screw.mid.nonconfirm} / {@props.screw.mid.confirm}</p>
+	      		<p>{@props.screw.max.nonconfirm} / {@props.screw.max.confirm}</p>
+	      	</div>
+	      </td>
+	      <td>
+	      	<div>
+	      		<p>{@props.equipment.begin.name}</p>
+	      		<p>{@props.equipment.mid.name}</p>
+	      		<p>{@props.equipment.max.name}</p>
+	      	</div>
+	      </td>
+	      <td>
+	      	<div>
+	      		<p>{@props.equipment.begin.need}</p>
+	      		<p>{@props.equipment.mid.need}</p>
+	      		<p>{@props.equipment.max.need}</p>
+	      	</div>
+	      </td>
     </tr>
 
 ItemInfoArea = React.createClass
@@ -95,9 +120,10 @@ ItemInfoArea = React.createClass
               <th width="200" ><div style={paddingLeft: '55px'}>{__ "Type"}</div></th>
               <th width="250" >{__ "Name"}</th>
               <th width="200" >{__ "2nd Ship"}</th>
-              <th width="100" >螺丝耗费0~6</th>
-              <th width="100" >螺丝耗费6~max</th>
-              <th width="100" >螺丝耗费max</th>
+              <th width="200" ></th>
+              <th width="200" >螺丝消耗</th>
+              <th width="400" >装备消耗</th>
+              <th width="200" >数量</th>
             </tr>
           </thead>
           <tbody>

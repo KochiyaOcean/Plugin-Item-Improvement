@@ -1235,7 +1235,7 @@
             },
             "equipment": {
                 "begin": {"name": "九三式水中聴音機", "need": 2},
-                "mid": {"name": "四式水中聴音機", "need": 1},
+                "mid": {"name": "同装備", "need": 1},
                 "max": {"name": "-", "need": "-"}       
             }
         }
