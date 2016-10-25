@@ -25,7 +25,7 @@ class ItemInfoRow extends Component {
 
   render(){
     return(
-      <tr onClick={this.handleExpanded}>
+      <tr onClick={this.handleExpanded} className="expandable">
         <td style={{paddingLeft: 20}}>
           <Checkbox type="checkbox"
                  className={'new-checkbox'}
@@ -34,7 +34,7 @@ class ItemInfoRow extends Component {
           <SlotitemIcon slotitemId={this.props.icon} />
           {this.props.type}
         </td>
-        <td className="expandable">{this.props.name}</td>
+        <td>{this.props.name}</td>
         <td>{this.props.hisho}</td>
       </tr>
     )
