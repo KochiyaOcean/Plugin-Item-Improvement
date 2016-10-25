@@ -102,3 +102,11 @@ img.svg {
   height: 0 !important;
   padding: 0 !important;
 }
+
+.detail-table {
+  margin: 0;
+}
+
+th, td {
+  vertical-align: middle !important;
+}

@@ -18,13 +18,14 @@ const queryData = (id) => _.find(DATA, (item) => item.id == id)
 
 // React Elements
 class ItemInfoRow extends Component {
-  handleExpanded = () => {
-    return this.props.setExpanded(!this.props.rowExpanded)
+  handleExpanded = (e) => {
+    if (e.target.tagName === 'INPUT') return
+    this.props.setExpanded(!this.props.rowExpanded)
   }
 
   render(){
     return(
-      <tr>
+      <tr onClick={this.handleExpanded}>
         <td style={{paddingLeft: 20}}>
           <Checkbox type="checkbox"
                  className={'new-checkbox'}
@@ -33,7 +34,7 @@ class ItemInfoRow extends Component {
           <SlotitemIcon slotitemId={this.props.icon} />
           {this.props.type}
         </td>
-        <td onClick = {this.handleExpanded} className="expandable">{this.props.name}</td>
+        <td className="expandable">{this.props.name}</td>
         <td>{this.props.hisho}</td>
       </tr>
     )
@@ -41,8 +42,8 @@ class ItemInfoRow extends Component {
 }
 
 const DetailRow = (props) =>{
-  let result = []
   let data = queryData(props.id)
+  let result = []
   for(let improvement of data.improvement){
     let hishos = []
     for (let req of improvement.req){
@@ -58,19 +59,6 @@ const DetailRow = (props) =>{
       continue
     }
 
-    if(improvement.upgrade){
-      result.push(
-        <UpgradeRow
-        icon = {improvement.upgrade.icon}
-        name = {__r(improvement.upgrade.name)}
-        level = {improvement.upgrade.level}
-        hishos = {hishos.join(" / ")}
-        />
-      )
-    }
-
-    result.push(<ConsumeRow consume = {improvement.consume}/>)
-
     improvement.consume.material.forEach((mat, index) =>{
       if (mat.improvement[0]){
         result.push(
@@ -79,6 +67,8 @@ const DetailRow = (props) =>{
           development = {mat.development}
           improvement = {mat.improvement}
           item = {mat.item}
+          upgrade = {improvement.upgrade}
+          hishos = {hishos}
           />
         )
       }
@@ -90,15 +80,25 @@ const DetailRow = (props) =>{
       <td colSpan = {3} className='detail-td'>
         <Collapse in = {props.rowExpanded}>
           <div>
-            <table width ="100%">
-            <colgroup>
-              <col width="25%"></col>
-              <col></col>
-            </colgroup>
+            <Table width ="100%" bordered condensed className='detail-table'>
+              <thead>
+                <tr>
+                  <th style={{width: '20%'}}></th>
+                  <th style={{width: '33%'}}>
+                    <span><MaterialIcon materialId={1}/>{data.improvement[0].consume.fuel}</span>
+                    <span><MaterialIcon materialId={2}/>{data.improvement[0].consume.ammo}</span>
+                    <span><MaterialIcon materialId={3}/>{data.improvement[0].consume.steel}</span>
+                    <span><MaterialIcon materialId={4}/>{data.improvement[0].consume.bauxite}</span>
+                  </th>
+                  <th style={{width: '7%'}}><MaterialIcon materialId={7}/></th>
+                  <th style={{width: '7%'}}><MaterialIcon materialId={8}/></th>
+                  <th style={{width: '33%'}}>{__('Equipment')}</th>
+                </tr>
+              </thead>
               <tbody>
                 {result}
               </tbody>
-            </table>
+            </Table>
           </div>
         </Collapse>
       </td>
@@ -120,37 +120,6 @@ const Weekday = (props) => {
   )
 }
 
-const UpgradeRow = (props) => {
-  let star = ''
-  if (props.level){
-    star = <span> <FontAwesome name='star' />{` ${props.level}`}</span>
-  }
-  return(
-    <tr>
-      <td colSpan={2} className="cell-header">{__("upgrade to")}:
-        <SlotitemIcon slotitemId={props.icon} />
-        {props.name}
-        {star}
-        <span> [{props.hishos}]</span>
-      </td>
-    </tr>
-  )
-}
-
-const ConsumeRow = (props) => {
-  return(
-    <tr>
-      <td className="cell-left">{__("Resource to consume")}</td>
-      <td className="cell-right">
-        <span><MaterialIcon materialId={1}/>{props.consume.fuel}</span>
-        <span><MaterialIcon materialId={2}/>{props.consume.ammo}</span>
-        <span><MaterialIcon materialId={3}/>{props.consume.steel}</span>
-        <span><MaterialIcon materialId={4}/>{props.consume.bauxite}</span>
-      </td>
-    </tr>
-  )
-}
-
 const MatRow = (props) => {
   let result = []
   let stage = ''
@@ -163,30 +132,48 @@ const MatRow = (props) => {
     stage = <span><FontAwesome name='star' /> 6 ~ <FontAwesome name='star' /> MAX </span>
     break
   case 2:
-    stage = <span>{__("upgrade")}</span>
+    let star = ''
+    if (props.upgrade.level){
+      star = <span> <FontAwesome name='star' />{` ${props.upgrade.level}`}</span>
+    }
+    stage = <div>
+      <SlotitemIcon slotitemId={props.upgrade.icon} />
+      {window.i18n.resources.__(props.upgrade.name)}
+      {star}
+    </div>
     break
   }
 
-  if (props.item.icon){
-    result.push(
-      <SlotitemIcon
-        slotitemId={props.item.icon}
-      />
-    )
-    result.push(
-      <i>{__r(props.item.name)} × {props.item.count}</i>
-    )
-  }
+  let rowCnt = props.upgrade ? 3 : 2
 
   return(
     <tr>
-      <td className="cell-left">
+      {
+        props.stage === 0 ?
+        <td rowSpan={rowCnt}>{props.hishos.map(hisho => <div>{hisho}</div>)}</td>
+        : null
+      }
+      <td>
         {stage}
       </td>
-      <td className="cell-right">
-        <span><MaterialIcon materialId={7}/>{props.development[0]}({props.development[1]})</span>
-        <span><MaterialIcon materialId={8}/>{props.improvement[0]}({props.improvement[1]})</span>
-        { result }
+      <td>
+        {props.development[0]}({props.development[1]})
+      </td>
+      <td>
+        {props.improvement[0]}({props.improvement[1]})
+      </td>
+      <td>
+        {
+          props.item.icon ?
+          <div>
+            {props.item.count} ×
+            <SlotitemIcon
+              slotitemId={props.item.icon}
+            />
+            {__r(props.item.name)}
+          </div>
+          : ''
+        }
       </td>
     </tr>
   )
@@ -339,9 +326,9 @@ class ItemInfoArea extends Component{
             <Table bordered condensed hover id="main-table">
             <thead className="item-table">
               <tr>
-                <th width="200" ><div style={{paddingLeft: '55px'}}>{__ ("Type")}</div></th>
-                <th width="250" >{__ ("Name")}</th>
-                <th width="200" >{__ ("2nd Ship")}</th>
+                <th style={{width: '30%'}}><div style={{paddingLeft: '55px'}}>{__ ("Type")}</div></th>
+                <th style={{width: '40%'}}>{__ ("Name")}</th>
+                <th style={{width: '30%'}}>{__ ("2nd Ship")}</th>
               </tr>
             </thead>
             <tbody>
