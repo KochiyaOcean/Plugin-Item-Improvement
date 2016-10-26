@@ -111,6 +111,12 @@ th, td {
   vertical-align: middle !important;
 }
 
+.hisho-col{
+  display: block;
+  line-height: 95%;
+  margin: 1.5em auto 1.5em auto;
+}
+
 .available-days {
   font-size: 80%;
   font-style: italic;

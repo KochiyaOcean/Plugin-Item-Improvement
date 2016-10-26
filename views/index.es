@@ -136,7 +136,7 @@ const MatRow = (props) => {
         days = '(' + days.join(' / ') +')'
       }
       return(
-        <div>
+        <div className = {"hisho-col"}>
           {hisho.name}<br/>
           <span className={'available-days'}>{days}</span>
         </div>
