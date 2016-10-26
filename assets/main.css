@@ -110,3 +110,8 @@ img.svg {
 th, td {
   vertical-align: middle !important;
 }
+
+.available-days {
+  font-size: 80%;
+  font-style: italic;
+}

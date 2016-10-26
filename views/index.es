@@ -3,7 +3,7 @@ import path from 'path-extra'
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import FontAwesome from 'react-fontawesome'
-import { Button, Nav, NavItem, Col, Grid, Table, Collapse, ButtonGroup, Checkbox } from 'react-bootstrap'
+import { Button, Nav, NavItem, Col, Grid, Table, Collapse, ButtonGroup, Checkbox, Tooltip, OverlayTrigger } from 'react-bootstrap'
 import { Divider } from './divider'
 import { SlotitemIcon, MaterialIcon } from 'views/components/etc/icon'
 import _ from 'lodash'
@@ -12,7 +12,7 @@ const {$, __, __r, config} = window
 
 let data_json = fs.readJsonSync(path.join(__dirname, "..", "assets", "data.json"))
 const DATA = _.sortBy(data_json, ['icon', 'id'])
-const WEEKDATE = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+const WEEKDAY = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
 
 const queryData = (id) => _.find(DATA, (item) => item.id == id)
 
@@ -48,8 +48,20 @@ const DetailRow = (props) =>{
     let hishos = []
     for (let req of improvement.req){
       for (let secretary of req.secretary){
-        if(req.day[props.day]){
-          hishos.push(__(window.i18n.resources.__(secretary)))
+        // day = -1 means show all items
+        if (props.day == -1){
+          hishos.push ({
+            name: (__(window.i18n.resources.__ (secretary))),
+            day: req.day,
+          })
+        }
+        else {
+          if (req.day[props.day]){
+            hishos.push ({
+              name: (__(window.i18n.resources.__ (secretary))),
+              day: req.day,
+            })
+          }
         }
       }
     }
@@ -63,12 +75,13 @@ const DetailRow = (props) =>{
       if (mat.improvement[0]){
         result.push(
           <MatRow
-          stage = {index}
-          development = {mat.development}
-          improvement = {mat.improvement}
-          item = {mat.item}
-          upgrade = {improvement.upgrade}
-          hishos = {hishos}
+            stage = {index}
+            development = {mat.development}
+            improvement = {mat.improvement}
+            item = {mat.item}
+            upgrade = {improvement.upgrade}
+            hishos = {hishos}
+            day = {props.day}
           />
         )
       }
@@ -106,24 +119,35 @@ const DetailRow = (props) =>{
   )
 }
 
-const Weekday = (props) => {
-  return(
-    <ButtonGroup bsSize="small">
-      {
-        props.day.map ((v,i) =>{
-          <Button bsStyle={v ? 'success' : ''} active>
-            {__(WEEKDATE[i])}
-          </Button>
-        })
-      }
-    </ButtonGroup>
-  )
-}
-
 const MatRow = (props) => {
-  let result = []
-  let stage = ''
 
+  let rowCnt = props.upgrade ? 3 : 2
+
+  let hishoCol = ''
+  // console.log(props.day)
+  if (props.day == -1){
+    hishoCol = props.hishos.map(hisho => {
+      let days =[]
+      hisho.day.forEach((v,i)=> {if(v) days.push(__(WEEKDAY[i]))})
+      if(days.length == 7){
+        days = ''
+      }
+      else{
+        days = '(' + days.join(' / ') +')'
+      }
+      return(
+        <div>
+          {hisho.name}<br/>
+          <span className={'available-days'}>{days}</span>
+        </div>
+      )
+    })
+  }
+  else {
+    hishoCol = props.hishos.map(hisho => <div>{hisho.name}</div>)
+  }
+
+  let stage = ''
   switch (props.stage){
   case 0:
     stage = <span><FontAwesome name='star' /> 1 ~ <FontAwesome name='star' /> 6 </span>
@@ -144,13 +168,12 @@ const MatRow = (props) => {
     break
   }
 
-  let rowCnt = props.upgrade ? 3 : 2
 
   return(
     <tr>
       {
         props.stage === 0 ?
-        <td rowSpan={rowCnt}>{props.hishos.map(hisho => <div>{hisho}</div>)}</td>
+        <td rowSpan={rowCnt}>{hishoCol}</td>
         : null
       }
       <td>
@@ -207,8 +230,14 @@ class ItemInfoArea extends Component{
       for (let improvement of item.improvement){
         for (let req of improvement.req){
           for (let secretary of req.secretary){
-            if (req.day[day]){
+            // day = -1 means show all items
+            if (day == -1){
               hishos.push (__(window.i18n.resources.__ (secretary)))
+            }
+            else {
+              if (req.day[day]){
+                hishos.push (__(window.i18n.resources.__ (secretary)))
+              }
             }
           }
         }
@@ -318,6 +347,7 @@ class ItemInfoArea extends Component{
                 <NavItem eventKey={4}>{__ ("Thursday")}</NavItem>
                 <NavItem eventKey={5}>{__ ("Friday")}</NavItem>
                 <NavItem eventKey={6}>{__ ("Saturday")}</NavItem>
+                <NavItem eventKey={-1}>{__ ("All")}</NavItem>
               </Nav>
             </Col>
           </Grid>
