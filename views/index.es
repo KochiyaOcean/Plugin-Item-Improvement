@@ -82,6 +82,7 @@ const DetailRow = (props) =>{
             upgrade = {improvement.upgrade}
             hishos = {hishos}
             day = {props.day}
+            key = {`${index}-${props.day}-${JSON.stringify(hishos)}`}
           />
         )
       }
@@ -126,7 +127,7 @@ const MatRow = (props) => {
   let hishoCol = ''
   // console.log(props.day)
   if (props.day == -1){
-    hishoCol = props.hishos.map(hisho => {
+    hishoCol = props.hishos.map( (hisho, index) => {
       let days =[]
       hisho.day.forEach((v,i)=> {if(v) days.push(__(WEEKDAY[i]))})
       if(days.length == 7){
@@ -136,7 +137,7 @@ const MatRow = (props) => {
         days = '(' + days.join(' / ') +')'
       }
       return(
-        <div className = {"hisho-col"}>
+        <div className = {"hisho-col"} key={`${hisho.name}-${index}`}>
           {hisho.name}<br/>
           <span className={'available-days'}>{days}</span>
         </div>
@@ -144,10 +145,11 @@ const MatRow = (props) => {
     })
   }
   else {
-    hishoCol = props.hishos.map(hisho => <div>{hisho.name}</div>)
+    hishoCol = props.hishos.map( (hisho, index) => <div key={`${hisho.name}-${index}`}>{hisho.name}</div>)
   }
 
   let stage = ''
+  let star = ''
   switch (props.stage){
   case 0:
     stage = <span><FontAwesome name='star' /> 1 ~ <FontAwesome name='star' /> 6 </span>
@@ -156,7 +158,6 @@ const MatRow = (props) => {
     stage = <span><FontAwesome name='star' /> 6 ~ <FontAwesome name='star' /> MAX </span>
     break
   case 2:
-    let star = ''
     if (props.upgrade.level){
       star = <span> <FontAwesome name='star' />{` ${props.upgrade.level}`}</span>
     }
@@ -322,6 +323,7 @@ class ItemInfoArea extends Component{
             name = {row.name}
             rowExpanded = {rowExpanded}
             day = {this.state.day}
+
           />
         )
       }
