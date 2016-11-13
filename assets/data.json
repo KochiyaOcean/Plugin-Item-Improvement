@@ -2430,6 +2430,100 @@
     ]
   },
   {
+    "id": 135,
+    "type": "副砲",
+    "icon": 16,
+    "name": "90mm単装高角砲",
+    "improvement": [
+      {
+        "upgrade": false,
+        "req": [
+          {
+            "day": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false
+            ],
+            "secretary": [
+              "Littorio"
+            ]
+          },
+          {
+            "day": [
+              true,
+              false,
+              false,
+              false,
+              true,
+              true,
+              true
+            ],
+            "secretary": [
+              "Roma"
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 10,
+          "ammo": 20,
+          "steel": 70,
+          "bauxite": 10,
+          "material": [
+            {
+              "development": [
+                1,
+                2
+              ],
+              "improvement": [
+                1,
+                2
+              ],
+              "item": {
+                "icon": 16,
+                "name": "10cm連装高角砲",
+                "count": 1
+              }
+            },
+            {
+              "development": [
+                2,
+                3
+              ],
+              "improvement": [
+                1,
+                2
+              ],
+              "item": {
+                "icon": 16,
+                "name": "10cm連装高角砲",
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                0,
+                0
+              ],
+              "improvement": [
+                0,
+                0
+              ],
+              "item": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
     "id": 11,
     "type": "副砲",
     "icon": 4,
