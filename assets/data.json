@@ -5917,6 +5917,20 @@
             "secretary": [
               "皐月改二"
             ]
+          },
+          {
+            "day": [
+              false,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "secretary": [
+              "鬼怒改二"
+            ]
           }
         ],
         "consume": {
@@ -6015,6 +6029,20 @@
             "secretary": [
               "文月"
             ]
+          },
+          {
+            "day": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              false,
+              false
+            ],
+            "secretary": [
+              "鬼怒改二"
+            ]
           }
         ],
         "consume": {
@@ -6074,10 +6102,10 @@
     ]
   },
   {
-    "id": 122,
-    "type": "小口径主砲",
-    "icon": 16,
-    "name": "10cm連装高角砲+高射装置",
+    "id": 131,
+    "type": "対空機銃",
+    "icon": 15,
+    "name": "25mm三連装機銃 集中配備",
     "improvement": [
       {
         "upgrade": false,
@@ -6085,21 +6113,6 @@
           {
             "day": [
               false,
-              true,
-              true,
-              true,
-              true,
-              false,
-              false
-            ],
-            "secretary": [
-              "秋月",
-              "初月"
-            ]
-          },
-          {
-            "day": [
-              true,
               false,
               false,
               false,
@@ -6108,138 +6121,58 @@
               true
             ],
             "secretary": [
-              "照月"
+              "摩耶改二"
+            ]
+          },
+          {
+            "day": [
+              true,
+              false,
+              false,
+              false,
+              false,
+              true,
+              true
+            ],
+            "secretary": [
+              "鬼怒改二"
             ]
           }
         ],
         "consume": {
-          "fuel": 10,
-          "ammo": 60,
-          "steel": 150,
-          "bauxite": 50,
+          "fuel": 0,
+          "ammo": 90,
+          "steel": 90,
+          "bauxite": 150,
           "material": [
             {
               "development": [
-                6,
-                7
+                3,
+                5
               ],
               "improvement": [
                 3,
-                4
+                5
               ],
               "item": {
-                "icon": 0,
-                "name": "",
-                "count": 0
+                "icon": 15,
+                "name": "25mm三連装機銃",
+                "count": 3
               }
             },
             {
               "development": [
-                5,
-                8
+                6,
+                9
               ],
               "improvement": [
-                4,
-                7
+                6,
+                9
               ],
               "item": {
-                "icon": 16,
-                "name": "10cm連装高角砲",
-                "count": 2
-              }
-            },
-            {
-              "development": [
-                0,
-                0
-              ],
-              "improvement": [
-                0,
-                0
-              ],
-              "item": {
-                "icon": 0,
-                "name": "",
-                "count": 0
-              }
-            }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": 135,
-    "type": "副砲",
-    "icon": 16,
-    "name": "90mm単装高角砲",
-    "improvement": [
-      {
-        "upgrade": false,
-        "req": [
-          {
-            "day": [
-              false,
-              true,
-              true,
-              true,
-              true,
-              false,
-              false
-            ],
-            "secretary": [
-              "Littorio"
-            ]
-          },
-          {
-            "day": [
-              true,
-              false,
-              false,
-              false,
-              true,
-              true,
-              true
-            ],
-            "secretary": [
-              "Roma"
-            ]
-          }
-        ],
-        "consume": {
-          "fuel": 10,
-          "ammo": 20,
-          "steel": 70,
-          "bauxite": 10,
-          "material": [
-            {
-              "development": [
-                1,
-                2
-              ],
-              "improvement": [
-                1,
-                2
-              ],
-              "item": {
-                "icon": 16,
-                "name": "10cm連装高角砲",
-                "count": 1
-              }
-            },
-            {
-              "development": [
-                2,
-                3
-              ],
-              "improvement": [
-                1,
-                2
-              ],
-              "item": {
-                "icon": 16,
-                "name": "10cm連装高角砲",
-                "count": 2
+                "icon": 15,
+                "name": "25mm三連装機銃",
+                "count": 5
               }
             },
             {
@@ -6949,6 +6882,176 @@
                 "icon": 15,
                 "name": "12.7mm単装機銃",
                 "count": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "upgrade": {
+          "level": 0,
+          "name": "特大発動艇",
+          "icon": 20
+        },
+        "req": [
+          {
+            "day": [
+              true,
+              false,
+              false,
+              false,
+              true,
+              true,
+              true
+            ],
+            "secretary": [
+              "鬼怒改二"
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 50,
+          "ammo": 30,
+          "steel": 30,
+          "bauxite": 10,
+          "material": [
+            {
+              "development": [
+                1,
+                2
+              ],
+              "improvement": [
+                1,
+                2
+              ],
+              "item": {
+                "icon": 25,
+                "name": "ドラム缶(輸送用)",
+                "count": 1
+              }
+            },
+            {
+              "development": [
+                1,
+                4
+              ],
+              "improvement": [
+                2,
+                3
+              ],
+              "item": {
+                "icon": 15,
+                "name": "7.7mm機銃",
+                "count": 1
+              }
+            },
+            {
+              "development": [
+                8,
+                16
+              ],
+              "improvement": [
+                6,
+                12
+              ],
+              "item": {
+                "icon": 20,
+                "name": "大発動艇",
+                "count": 4
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "type": "上陸用舟艇",
+    "icon": 20,
+    "name": "特大発動艇",
+    "improvement": [
+      {
+        "upgrade": false,
+        "req": [
+          {
+            "day": [
+              true,
+              true,
+              false,
+              false,
+              false,
+              true,
+              true
+            ],
+            "secretary": [
+              "鬼怒改二"
+            ]
+          },
+          {
+            "day": [
+              false,
+              false,
+              true,
+              true,
+              true,
+              false,
+              false
+            ],
+            "secretary": [
+              "あきつ丸"
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 70,
+          "ammo": 80,
+          "steel": 120,
+          "bauxite": 30,
+          "material": [
+            {
+              "development": [
+                3,
+                5
+              ],
+              "improvement": [
+                2,
+                3
+              ],
+              "item": {
+                "icon": 25,
+                "name": "ドラム缶(輸送用)",
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                4,
+                8
+              ],
+              "improvement": [
+                4,
+                6
+              ],
+              "item": {
+                "icon": 20,
+                "name": "大発動艇",
+                "count": 1
+              }
+            },
+            {
+              "development": [
+                0,
+                0
+              ],
+              "improvement": [
+                0,
+                0
+              ],
+              "item": {
+                "icon": 0,
+                "name": "",
+                "count": 0
               }
             }
           ]
