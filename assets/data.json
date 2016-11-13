@@ -165,6 +165,101 @@
     ]
   },
   {
+    "id": 122,
+    "type": "小口径主砲",
+    "icon": 16,
+    "name": "10cm連装高角砲+高射装置",
+    "improvement": [
+       {
+         "upgrade": false,
+         "req": [
+           {
+             "day": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false
+            ],
+            "secretary": [
+              "秋月",
+              "初月"
+            ]
+          },
+          {
+            "day": [
+              true,
+               false,
+               false,
+               false,
+               true,
+               true,
+               true
+             ],
+             "secretary": [
+              "照月"
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 10,
+          "ammo": 60,
+          "steel": 150,
+          "bauxite": 50,
+          "material": [
+            {
+              "development": [
+                6,
+                7
+              ],
+              "improvement": [
+                3,
+                4
+              ],
+              "item": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              }
+            },
+            {
+              "development": [
+                5,
+                8
+              ],
+              "improvement": [
+                4,
+                7
+              ],
+              "item": {
+                "icon": 16,
+                "name": "10cm連装高角砲",
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                0,
+                0
+              ],
+              "improvement": [
+                0,
+                0
+              ],
+              "item": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
     "id": 4,
     "type": "中口径主砲",
     "icon": 2,
