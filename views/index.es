@@ -74,7 +74,6 @@ const DetailRow = (props) =>{
 
     improvement.consume.material.forEach((mat, index) =>{
       if (mat.improvement[0]){
-        console.log(mat)
         result.push(
           <MatRow
             stage = {index}
