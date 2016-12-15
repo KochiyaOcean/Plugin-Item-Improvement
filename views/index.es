@@ -209,6 +209,7 @@ const MatRow = (props) => {
             {useitem.count} ×
             <UseitemIcon
               useitemId={useitem.icon}
+              className={'useitem'}
             />
             {__r(useitem.name)}
           </span> : ''
