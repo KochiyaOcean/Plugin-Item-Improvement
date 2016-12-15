@@ -59,6 +59,10 @@ body {
   top: 0px !important;
   bottom: 0px !important;
 }
+img.png {
+  width: 36px;
+  height: 36px;
+}
 img.svg {
   width: 26px;
   height: 23px;

@@ -6,6 +6,7 @@ import FontAwesome from 'react-fontawesome'
 import { Nav, NavItem, Col, Grid, Table, Collapse, Checkbox } from 'react-bootstrap'
 import { Divider } from './divider'
 import { SlotitemIcon, MaterialIcon } from 'views/components/etc/icon'
+import UseitemIcon from './useitem-icon'
 import _ from 'lodash'
 
 const {$, __, __r, config} = window
@@ -73,12 +74,14 @@ const DetailRow = (props) =>{
 
     improvement.consume.material.forEach((mat, index) =>{
       if (mat.improvement[0]){
+        console.log(mat)
         result.push(
           <MatRow
             stage = {index}
             development = {mat.development}
             improvement = {mat.improvement}
             item = {mat.item}
+            useitem = {mat.useitem}
             upgrade = {improvement.upgrade}
             hishos = {hishos}
             day = {props.day}
@@ -122,7 +125,7 @@ const DetailRow = (props) =>{
 
 const MatRow = (props) => {
 
-  let rowCnt = props.upgrade ? 3 : 2
+  let rowCnt = props.upgrade.icon != 0 ? 3 : 2
 
   let hishoCol = ''
   // console.log(props.day)
@@ -169,6 +172,7 @@ const MatRow = (props) => {
     break
   }
 
+  const useitem = props.useitem || {}
 
   return(
     <tr>
@@ -187,17 +191,30 @@ const MatRow = (props) => {
         {props.improvement[0]}({props.improvement[1]})
       </td>
       <td>
+        <div>
         {
           props.item.icon ?
-          <div>
+          <span>
             {props.item.count} ×
             <SlotitemIcon
               slotitemId={props.item.icon}
             />
             {__r(props.item.name)}
-          </div>
-          : ''
+          </span> : ''
         }
+        </div>
+        <div>
+        {
+          useitem.icon ?
+          <span>
+            {useitem.count} ×
+            <UseitemIcon
+              useitemId={useitem.icon}
+            />
+            {__r(useitem.name)}
+          </span> : ''
+        }
+        </div>
       </td>
     </tr>
   )
