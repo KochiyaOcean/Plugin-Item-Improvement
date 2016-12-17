@@ -7,6 +7,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 63,
           "level": 0,
           "name": "12.7cm連装砲B型改二",
           "icon": 1
@@ -23,7 +24,11 @@
               true
             ],
             "secretary": [
-              "None"
+            {
+              "id": 0,
+              "sortNumber": 0,
+              "name": ""
+            }
             ]
           }
         ],
@@ -43,6 +48,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -58,6 +64,7 @@
                 2
               ],
               "item": {
+                "id": 2,
                 "icon": 1,
                 "name": "12.7cm連装砲",
                 "count": 1
@@ -73,11 +80,13 @@
                 6
               ],
               "item": {
+                "id": 2,
                 "icon": 1,
                 "name": "12.7cm連装砲",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -98,7 +107,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -112,8 +122,16 @@
               false
             ],
             "secretary": [
-              "夕立改二",
-              "綾波改二"
+            {
+              "id": 144,
+              "sortNumber": 144,
+              "name": "夕立改二"
+            },
+            {
+              "id": 195,
+              "sortNumber": 195,
+              "name": "綾波改二"
+            }
             ]
           }
         ],
@@ -133,6 +151,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -148,6 +167,7 @@
                 4
               ],
               "item": {
+                "id": 63,
                 "icon": 1,
                 "name": "12.7cm連装砲B型改二",
                 "count": 1
@@ -163,11 +183,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -186,6 +208,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 119,
           "level": 0,
           "name": "14cm連装砲",
           "icon": 2
@@ -202,7 +225,11 @@
               true
             ],
             "secretary": [
-              "None"
+            {
+              "id": 0,
+              "sortNumber": 0,
+              "name": ""
+            }
             ]
           }
         ],
@@ -222,6 +249,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -237,6 +265,7 @@
                 2
               ],
               "item": {
+                "id": 4,
                 "icon": 2,
                 "name": "14cm単装砲",
                 "count": 1
@@ -252,11 +281,13 @@
                 6
               ],
               "item": {
+                "id": 4,
                 "icon": 2,
                 "name": "14cm単装砲",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -277,7 +308,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -291,7 +323,11 @@
               true
             ],
             "secretary": [
-              "最上"
+            {
+              "id": 70,
+              "sortNumber": 51,
+              "name": "最上"
+            }
             ]
           },
           {
@@ -305,7 +341,11 @@
               false
             ],
             "secretary": [
-              "大淀"
+            {
+              "id": 183,
+              "sortNumber": 183,
+              "name": "大淀"
+            }
             ]
           }
         ],
@@ -325,6 +365,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -340,6 +381,7 @@
                 4
               ],
               "item": {
+                "id": 5,
                 "icon": 2,
                 "name": "15.5cm三連装砲",
                 "count": 1
@@ -355,11 +397,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -378,6 +422,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 90,
           "level": 0,
           "name": "20.3cm(2号)連装砲",
           "icon": 2
@@ -394,7 +439,11 @@
               true
             ],
             "secretary": [
-              "青葉"
+            {
+              "id": 61,
+              "sortNumber": 54,
+              "name": "青葉"
+            }
             ]
           },
           {
@@ -408,7 +457,11 @@
               true
             ],
             "secretary": [
-              "衣笠"
+            {
+              "id": 123,
+              "sortNumber": 120,
+              "name": "衣笠"
+            }
             ]
           }
         ],
@@ -428,6 +481,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -443,6 +497,7 @@
                 3
               ],
               "item": {
+                "id": 6,
                 "icon": 2,
                 "name": "20.3cm連装砲",
                 "count": 1
@@ -458,11 +513,13 @@
                 10
               ],
               "item": {
+                "id": 6,
                 "icon": 2,
                 "name": "20.3cm連装砲",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -483,7 +540,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -497,7 +555,11 @@
               false
             ],
             "secretary": [
-              "三隈"
+            {
+              "id": 120,
+              "sortNumber": 116,
+              "name": "三隈"
+            }
             ]
           }
         ],
@@ -517,6 +579,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -532,6 +595,7 @@
                 5
               ],
               "item": {
+                "id": 50,
                 "icon": 2,
                 "name": "20.3cm(3号)連装砲",
                 "count": 1
@@ -547,11 +611,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -570,6 +636,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 139,
           "level": 0,
           "name": "15.2cm連装砲改",
           "icon": 2
@@ -586,7 +653,11 @@
               true
             ],
             "secretary": [
-              "阿賀野"
+            {
+              "id": 137,
+              "sortNumber": 137,
+              "name": "阿賀野"
+            }
             ]
           },
           {
@@ -600,7 +671,11 @@
               true
             ],
             "secretary": [
-              "能代"
+            {
+              "id": 138,
+              "sortNumber": 138,
+              "name": "能代"
+            }
             ]
           },
           {
@@ -614,7 +689,11 @@
               false
             ],
             "secretary": [
-              "矢矧"
+            {
+              "id": 139,
+              "sortNumber": 139,
+              "name": "矢矧"
+            }
             ]
           }
         ],
@@ -634,6 +713,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -649,6 +729,7 @@
                 4
               ],
               "item": {
+                "id": 65,
                 "icon": 2,
                 "name": "15.2cm連装砲",
                 "count": 1
@@ -664,11 +745,13 @@
                 10
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 1
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -687,6 +770,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 50,
           "level": 0,
           "name": "20.3cm(3号)連装砲",
           "icon": 2
@@ -703,7 +787,11 @@
               false
             ],
             "secretary": [
-              "妙高"
+            {
+              "id": 62,
+              "sortNumber": 55,
+              "name": "妙高"
+            }
             ]
           }
         ],
@@ -723,6 +811,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -738,6 +827,7 @@
                 4
               ],
               "item": {
+                "id": 90,
                 "icon": 2,
                 "name": "20.3cm(2号)連装砲",
                 "count": 1
@@ -753,11 +843,13 @@
                 11
               ],
               "item": {
+                "id": 90,
                 "icon": 2,
                 "name": "20.3cm(2号)連装砲",
                 "count": 1
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -778,7 +870,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -792,7 +885,11 @@
               false
             ],
             "secretary": [
-              "夕張"
+            {
+              "id": 115,
+              "sortNumber": 111,
+              "name": "夕張"
+            }
             ]
           }
         ],
@@ -812,6 +909,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -827,6 +925,7 @@
                 3
               ],
               "item": {
+                "id": 119,
                 "icon": 2,
                 "name": "14cm連装砲",
                 "count": 1
@@ -842,11 +941,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -867,7 +968,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -881,7 +983,11 @@
               true
             ],
             "secretary": [
-              "矢矧"
+            {
+              "id": 139,
+              "sortNumber": 139,
+              "name": "矢矧"
+            }
             ]
           },
           {
@@ -895,7 +1001,11 @@
               true
             ],
             "secretary": [
-              "酒匂"
+            {
+              "id": 140,
+              "sortNumber": 140,
+              "name": "酒匂"
+            }
             ]
           }
         ],
@@ -915,6 +1025,7 @@
                 3
               ],
               "item": {
+                "id": 65,
                 "icon": 2,
                 "name": "15.2cm連装砲",
                 "count": 1
@@ -930,6 +1041,7 @@
                 6
               ],
               "item": {
+                "id": 65,
                 "icon": 2,
                 "name": "15.2cm連装砲",
                 "count": 1
@@ -945,11 +1057,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -968,6 +1082,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 103,
           "level": 0,
           "name": "試製35.6cm三連装砲",
           "icon": 3
@@ -984,7 +1099,11 @@
               true
             ],
             "secretary": [
-              "扶桑"
+            {
+              "id": 26,
+              "sortNumber": 26,
+              "name": "扶桑"
+            }
             ]
           }
         ],
@@ -1004,6 +1123,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1019,6 +1139,7 @@
                 4
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 1
@@ -1034,11 +1155,13 @@
                 12
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 3
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1059,7 +1182,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -1073,7 +1197,11 @@
               true
             ],
             "secretary": [
-              "長門"
+            {
+              "id": 80,
+              "sortNumber": 1,
+              "name": "長門"
+            }
             ]
           },
           {
@@ -1087,7 +1215,11 @@
               false
             ],
             "secretary": [
-              "陸奥"
+            {
+              "id": 81,
+              "sortNumber": 2,
+              "name": "陸奥"
+            }
             ]
           }
         ],
@@ -1107,6 +1239,7 @@
                 3
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 1
@@ -1122,6 +1255,7 @@
                 6
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 2
@@ -1137,11 +1271,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1162,7 +1298,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -1176,7 +1313,11 @@
               true
             ],
             "secretary": [
-              "大和"
+            {
+              "id": 131,
+              "sortNumber": 131,
+              "name": "大和"
+            }
             ]
           },
           {
@@ -1190,7 +1331,11 @@
               false
             ],
             "secretary": [
-              "武蔵"
+            {
+              "id": 143,
+              "sortNumber": 143,
+              "name": "武蔵"
+            }
             ]
           }
         ],
@@ -1210,6 +1355,7 @@
                 6
               ],
               "item": {
+                "id": 9,
                 "icon": 3,
                 "name": "46cm三連装砲",
                 "count": 1
@@ -1225,6 +1371,7 @@
                 8
               ],
               "item": {
+                "id": 9,
                 "icon": 3,
                 "name": "46cm三連装砲",
                 "count": 2
@@ -1240,11 +1387,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1263,6 +1412,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 114,
           "level": 3,
           "name": "38cm連装砲改",
           "icon": 3
@@ -1279,7 +1429,11 @@
               true
             ],
             "secretary": [
-              "Bismarck"
+            {
+              "id": 171,
+              "sortNumber": 171,
+              "name": "Bismarck"
+            }
             ]
           }
         ],
@@ -1299,6 +1453,7 @@
                 3
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 1
@@ -1314,6 +1469,7 @@
                 5
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 2
@@ -1329,11 +1485,13 @@
                 13
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1354,7 +1512,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -1368,7 +1527,11 @@
               false
             ],
             "secretary": [
-              "金剛改二"
+            {
+              "id": 149,
+              "sortNumber": 149,
+              "name": "金剛改二"
+            }
             ]
           },
           {
@@ -1382,7 +1545,11 @@
               false
             ],
             "secretary": [
-              "榛名改二"
+            {
+              "id": 151,
+              "sortNumber": 151,
+              "name": "榛名改二"
+            }
             ]
           },
           {
@@ -1396,7 +1563,11 @@
               true
             ],
             "secretary": [
-              "扶桑改二"
+            {
+              "id": 411,
+              "sortNumber": 211,
+              "name": "扶桑改二"
+            }
             ]
           },
           {
@@ -1410,7 +1581,11 @@
               true
             ],
             "secretary": [
-              "山城改二"
+            {
+              "id": 412,
+              "sortNumber": 212,
+              "name": "山城改二"
+            }
             ]
           }
         ],
@@ -1430,6 +1605,7 @@
                 4
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 2
@@ -1445,6 +1621,7 @@
                 7
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 3
@@ -1460,11 +1637,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1485,7 +1664,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -1499,7 +1679,11 @@
               true
             ],
             "secretary": [
-              "榛名改二"
+            {
+              "id": 151,
+              "sortNumber": 151,
+              "name": "榛名改二"
+            }
             ]
           }
         ],
@@ -1519,6 +1703,7 @@
                 3
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 1
@@ -1534,6 +1719,7 @@
                 5
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 2
@@ -1549,11 +1735,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1574,7 +1762,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -1588,7 +1777,11 @@
               false
             ],
             "secretary": [
-              "長門改"
+            {
+              "id": 275,
+              "sortNumber": 1375,
+              "name": "長門改"
+            }
             ]
           },
           {
@@ -1602,7 +1795,11 @@
               true
             ],
             "secretary": [
-              "陸奥改"
+            {
+              "id": 276,
+              "sortNumber": 1376,
+              "name": "陸奥改"
+            }
             ]
           }
         ],
@@ -1622,6 +1819,7 @@
                 6
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 2
@@ -1637,6 +1835,7 @@
                 8
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 3
@@ -1652,11 +1851,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1677,7 +1878,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -1691,7 +1893,11 @@
               false
             ],
             "secretary": [
-              "Bismarck"
+            {
+              "id": 171,
+              "sortNumber": 171,
+              "name": "Bismarck"
+            }
             ]
           }
         ],
@@ -1711,6 +1917,7 @@
                 4
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 1
@@ -1726,6 +1933,7 @@
                 6
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 2
@@ -1741,11 +1949,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1764,6 +1974,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 9,
           "level": 5,
           "name": "46cm三連装砲",
           "icon": 3
@@ -1780,7 +1991,11 @@
               false
             ],
             "secretary": [
-              "大和"
+            {
+              "id": 131,
+              "sortNumber": 131,
+              "name": "大和"
+            }
             ]
           },
           {
@@ -1794,7 +2009,11 @@
               false
             ],
             "secretary": [
-              "武蔵"
+            {
+              "id": 143,
+              "sortNumber": 143,
+              "name": "武蔵"
+            }
             ]
           }
         ],
@@ -1814,6 +2033,7 @@
                 5
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 2
@@ -1829,6 +2049,7 @@
                 7
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 3
@@ -1844,11 +2065,13 @@
                 14
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 4
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1869,7 +2092,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -1883,7 +2107,11 @@
               false
             ],
             "secretary": [
-              "大和改"
+            {
+              "id": 136,
+              "sortNumber": 136,
+              "name": "大和改"
+            }
             ]
           },
           {
@@ -1897,7 +2125,11 @@
               false
             ],
             "secretary": [
-              "武蔵改"
+            {
+              "id": 148,
+              "sortNumber": 148,
+              "name": "武蔵改"
+            }
             ]
           }
         ],
@@ -1917,6 +2149,7 @@
                 7
               ],
               "item": {
+                "id": 9,
                 "icon": 3,
                 "name": "46cm三連装砲",
                 "count": 2
@@ -1932,6 +2165,7 @@
                 10
               ],
               "item": {
+                "id": 9,
                 "icon": 3,
                 "name": "46cm三連装砲",
                 "count": 3
@@ -1947,11 +2181,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -1970,6 +2206,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 137,
           "level": 3,
           "name": "381mm/50 三連装砲改",
           "icon": 3
@@ -1986,7 +2223,11 @@
               false
             ],
             "secretary": [
-              "Littorio"
+            {
+              "id": 441,
+              "sortNumber": 241,
+              "name": "Littorio"
+            }
             ]
           },
           {
@@ -2000,7 +2241,11 @@
               true
             ],
             "secretary": [
-              "Roma"
+            {
+              "id": 442,
+              "sortNumber": 242,
+              "name": "Roma"
+            }
             ]
           }
         ],
@@ -2020,6 +2265,7 @@
                 3
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 1
@@ -2035,6 +2281,7 @@
                 5
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 2
@@ -2050,11 +2297,13 @@
                 14
               ],
               "item": {
+                "id": 39,
                 "icon": 15,
                 "name": "25mm連装機銃",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2075,7 +2324,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -2089,7 +2339,11 @@
               true
             ],
             "secretary": [
-              "Littorio"
+            {
+              "id": 441,
+              "sortNumber": 241,
+              "name": "Littorio"
+            }
             ]
           },
           {
@@ -2103,7 +2357,11 @@
               false
             ],
             "secretary": [
-              "Roma"
+            {
+              "id": 442,
+              "sortNumber": 242,
+              "name": "Roma"
+            }
             ]
           }
         ],
@@ -2123,6 +2381,7 @@
                 4
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 1
@@ -2138,6 +2397,7 @@
                 6
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 2
@@ -2153,11 +2413,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2176,6 +2438,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 183,
           "level": 0,
           "name": "16inch三連装砲 Mk.7+GFCS",
           "icon": 3
@@ -2192,7 +2455,11 @@
               true
             ],
             "secretary": [
-              "Iowa"
+            {
+              "id": 440,
+              "sortNumber": 240,
+              "name": "Iowa"
+            }
             ]
           }
         ],
@@ -2212,6 +2479,7 @@
                 8
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 3
@@ -2227,6 +2495,7 @@
                 12
               ],
               "item": {
+                "id": 9,
                 "icon": 3,
                 "name": "46cm三連装砲",
                 "count": 3
@@ -2242,11 +2511,13 @@
                 20
               ],
               "item": {
+                "id": 31,
                 "icon": 11,
                 "name": "32号対水上電探",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2267,7 +2538,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -2281,7 +2553,11 @@
               true
             ],
             "secretary": [
-              "Iowa"
+            {
+              "id": 440,
+              "sortNumber": 240,
+              "name": "Iowa"
+            }
             ]
           }
         ],
@@ -2301,6 +2577,7 @@
                 12
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 2
@@ -2316,6 +2593,7 @@
                 16
               ],
               "item": {
+                "id": 31,
                 "icon": 11,
                 "name": "32号対水上電探",
                 "count": 2
@@ -2331,11 +2609,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2354,6 +2634,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 192,
           "level": 0,
           "name": "38.1cm Mk.I/N連装砲改",
           "icon": 3
@@ -2370,7 +2651,11 @@
               true
             ],
             "secretary": [
-              "Warspite"
+            {
+              "id": 439,
+              "sortNumber": 239,
+              "name": "Warspite"
+            }
             ]
           }
         ],
@@ -2390,6 +2675,7 @@
                 4
               ],
               "item": {
+                "id": 7,
                 "icon": 3,
                 "name": "35.6cm連装砲",
                 "count": 2
@@ -2405,6 +2691,7 @@
                 5
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 2
@@ -2420,11 +2707,13 @@
                 12
               ],
               "item": {
+                "id": 49,
                 "icon": 15,
                 "name": "25mm単装機銃",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2445,7 +2734,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -2459,7 +2749,11 @@
               false
             ],
             "secretary": [
-              "Warspite"
+            {
+              "id": 439,
+              "sortNumber": 239,
+              "name": "Warspite"
+            }
             ]
           }
         ],
@@ -2479,6 +2773,7 @@
                 5
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 1
@@ -2494,6 +2789,7 @@
                 7
               ],
               "item": {
+                "id": 8,
                 "icon": 3,
                 "name": "41cm連装砲",
                 "count": 2
@@ -2509,11 +2805,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2532,6 +2830,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 65,
           "level": 0,
           "name": "15.2cm連装砲",
           "icon": 2
@@ -2548,7 +2847,11 @@
               false
             ],
             "secretary": [
-              "山城"
+            {
+              "id": 27,
+              "sortNumber": 27,
+              "name": "山城"
+            }
             ]
           },
           {
@@ -2562,7 +2865,11 @@
               true
             ],
             "secretary": [
-              "金剛"
+            {
+              "id": 78,
+              "sortNumber": 21,
+              "name": "金剛"
+            }
             ]
           },
           {
@@ -2576,7 +2883,11 @@
               false
             ],
             "secretary": [
-              "阿賀野"
+            {
+              "id": 137,
+              "sortNumber": 137,
+              "name": "阿賀野"
+            }
             ]
           }
         ],
@@ -2596,6 +2907,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2611,6 +2923,7 @@
                 3
               ],
               "item": {
+                "id": 11,
                 "icon": 4,
                 "name": "15.2cm単装砲",
                 "count": 1
@@ -2626,11 +2939,13 @@
                 5
               ],
               "item": {
+                "id": 11,
                 "icon": 4,
                 "name": "15.2cm単装砲",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2651,7 +2966,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -2665,7 +2981,11 @@
               true
             ],
             "secretary": [
-              "Littorio"
+            {
+              "id": 441,
+              "sortNumber": 241,
+              "name": "Littorio"
+            }
             ]
           },
           {
@@ -2679,7 +2999,11 @@
               false
             ],
             "secretary": [
-              "Roma"
+            {
+              "id": 442,
+              "sortNumber": 242,
+              "name": "Roma"
+            }
             ]
           }
         ],
@@ -2699,6 +3023,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2714,6 +3039,7 @@
                 5
               ],
               "item": {
+                "id": 5,
                 "icon": 2,
                 "name": "15.5cm三連装砲",
                 "count": 1
@@ -2729,11 +3055,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2752,6 +3080,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 125,
           "level": 0,
           "name": "61cm三連装(酸素)魚雷",
           "icon": 5
@@ -2768,7 +3097,11 @@
               true
             ],
             "secretary": [
-              "吹雪"
+            {
+              "id": 9,
+              "sortNumber": 11,
+              "name": "吹雪"
+            }
             ]
           },
           {
@@ -2782,7 +3115,11 @@
               false
             ],
             "secretary": [
-              "叢雲"
+            {
+              "id": 33,
+              "sortNumber": 15,
+              "name": "叢雲"
+            }
             ]
           }
         ],
@@ -2802,6 +3139,7 @@
                 1
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2817,6 +3155,7 @@
                 2
               ],
               "item": {
+                "id": 13,
                 "icon": 5,
                 "name": "61cm三連装魚雷",
                 "count": 1
@@ -2832,11 +3171,13 @@
                 4
               ],
               "item": {
+                "id": 13,
                 "icon": 5,
                 "name": "61cm三連装魚雷",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2855,6 +3196,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 15,
           "level": 3,
           "name": "61cm四連装(酸素)魚雷",
           "icon": 5
@@ -2871,7 +3213,11 @@
               true
             ],
             "secretary": [
-              "None"
+            {
+              "id": 0,
+              "sortNumber": 0,
+              "name": ""
+            }
             ]
           }
         ],
@@ -2891,6 +3237,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2906,6 +3253,7 @@
                 2
               ],
               "item": {
+                "id": 14,
                 "icon": 5,
                 "name": "61cm四連装魚雷",
                 "count": 1
@@ -2921,11 +3269,13 @@
                 6
               ],
               "item": {
+                "id": 14,
                 "icon": 5,
                 "name": "61cm四連装魚雷",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2944,6 +3294,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 58,
           "level": 0,
           "name": "61cm五連装(酸素)魚雷",
           "icon": 5
@@ -2960,8 +3311,16 @@
               true
             ],
             "secretary": [
-              "大井",
-              "北上"
+            {
+              "id": 24,
+              "sortNumber": 19,
+              "name": "大井"
+            },
+            {
+              "id": 25,
+              "sortNumber": 20,
+              "name": "北上"
+            }
             ]
           }
         ],
@@ -2981,6 +3340,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -2996,6 +3356,7 @@
                 4
               ],
               "item": {
+                "id": 15,
                 "icon": 5,
                 "name": "61cm四連装(酸素)魚雷",
                 "count": 1
@@ -3011,11 +3372,13 @@
                 11
               ],
               "item": {
+                "id": 15,
                 "icon": 5,
                 "name": "61cm四連装(酸素)魚雷",
                 "count": 3
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3036,7 +3399,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -3050,7 +3414,11 @@
               false
             ],
             "secretary": [
-              "島風"
+            {
+              "id": 50,
+              "sortNumber": 10,
+              "name": "島風"
+            }
             ]
           }
         ],
@@ -3070,6 +3438,7 @@
                 5
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3085,6 +3454,7 @@
                 7
               ],
               "item": {
+                "id": 58,
                 "icon": 5,
                 "name": "61cm五連装(酸素)魚雷",
                 "count": 1
@@ -3100,11 +3470,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3123,6 +3495,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 15,
           "level": 5,
           "name": "61cm四連装(酸素)魚雷",
           "icon": 5
@@ -3139,7 +3512,11 @@
               true
             ],
             "secretary": [
-              "吹雪改二"
+            {
+              "id": 426,
+              "sortNumber": 226,
+              "name": "吹雪改二"
+            }
             ]
           }
         ],
@@ -3159,6 +3536,7 @@
                 1
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3174,6 +3552,7 @@
                 3
               ],
               "item": {
+                "id": 13,
                 "icon": 5,
                 "name": "61cm三連装魚雷",
                 "count": 1
@@ -3189,11 +3568,13 @@
                 6
               ],
               "item": {
+                "id": 14,
                 "icon": 5,
                 "name": "61cm四連装魚雷",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3214,7 +3595,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -3228,7 +3610,11 @@
               true
             ],
             "secretary": [
-              "島風"
+            {
+              "id": 50,
+              "sortNumber": 10,
+              "name": "島風"
+            }
             ]
           },
           {
@@ -3242,7 +3628,11 @@
               true
             ],
             "secretary": [
-              "初月"
+            {
+              "id": 423,
+              "sortNumber": 223,
+              "name": "初月"
+            }
             ]
           }
         ],
@@ -3262,6 +3652,7 @@
                 6
               ],
               "item": {
+                "id": 15,
                 "icon": 5,
                 "name": "61cm四連装(酸素)魚雷",
                 "count": 2
@@ -3277,6 +3668,7 @@
                 12
               ],
               "item": {
+                "id": 58,
                 "icon": 5,
                 "name": "61cm五連装(酸素)魚雷",
                 "count": 1
@@ -3292,11 +3684,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3315,6 +3709,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 20,
           "level": 3,
           "name": "零式艦戦21型",
           "icon": 6
@@ -3331,7 +3726,11 @@
               true
             ],
             "secretary": [
-              "鳳翔"
+            {
+              "id": 89,
+              "sortNumber": 25,
+              "name": "鳳翔"
+            }
             ]
           }
         ],
@@ -3351,6 +3750,7 @@
                 2
               ],
               "item": {
+                "id": 19,
                 "icon": 6,
                 "name": "九六式艦戦",
                 "count": 1
@@ -3366,6 +3766,7 @@
                 3
               ],
               "item": {
+                "id": 37,
                 "icon": 15,
                 "name": "7.7mm機銃",
                 "count": 1
@@ -3381,11 +3782,13 @@
                 4
               ],
               "item": {
+                "id": 19,
                 "icon": 6,
                 "name": "九六式艦戦",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3404,6 +3807,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 181,
           "level": 3,
           "name": "零式艦戦32型",
           "icon": 6
@@ -3420,7 +3824,11 @@
               true
             ],
             "secretary": [
-              "赤城"
+            {
+              "id": 83,
+              "sortNumber": 6,
+              "name": "赤城"
+            }
             ]
           },
           {
@@ -3434,7 +3842,11 @@
               false
             ],
             "secretary": [
-              "加賀"
+            {
+              "id": 84,
+              "sortNumber": 7,
+              "name": "加賀"
+            }
             ]
           }
         ],
@@ -3454,6 +3866,7 @@
                 3
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 1
@@ -3469,6 +3882,7 @@
                 4
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 2
@@ -3484,11 +3898,13 @@
                 5
               ],
               "item": {
+                "id": 37,
                 "icon": 15,
                 "name": "7.7mm機銃",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3509,7 +3925,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -3523,7 +3940,11 @@
               true
             ],
             "secretary": [
-              "翔鶴"
+            {
+              "id": 110,
+              "sortNumber": 106,
+              "name": "翔鶴"
+            }
             ]
           },
           {
@@ -3537,7 +3958,11 @@
               false
             ],
             "secretary": [
-              "瑞鶴"
+            {
+              "id": 111,
+              "sortNumber": 107,
+              "name": "瑞鶴"
+            }
             ]
           }
         ],
@@ -3557,6 +3982,7 @@
                 4
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 1
@@ -3572,6 +3998,7 @@
                 5
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 2
@@ -3587,11 +4014,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3610,6 +4039,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 182,
           "level": 3,
           "name": "零式艦戦32型(熟練)",
           "icon": 6
@@ -3626,7 +4056,11 @@
               true
             ],
             "secretary": [
-              "赤城"
+            {
+              "id": 83,
+              "sortNumber": 6,
+              "name": "赤城"
+            }
             ]
           },
           {
@@ -3640,7 +4074,11 @@
               false
             ],
             "secretary": [
-              "加賀"
+            {
+              "id": 84,
+              "sortNumber": 7,
+              "name": "加賀"
+            }
             ]
           }
         ],
@@ -3660,6 +4098,7 @@
                 3
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 2
@@ -3675,6 +4114,7 @@
                 5
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 3
@@ -3690,11 +4130,13 @@
                 5
               ],
               "item": {
+                "id": 37,
                 "icon": 15,
                 "name": "7.7mm機銃",
                 "count": 3
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3715,7 +4157,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -3729,7 +4172,11 @@
               true
             ],
             "secretary": [
-              "大鳳"
+            {
+              "id": 153,
+              "sortNumber": 153,
+              "name": "大鳳"
+            }
             ]
           },
           {
@@ -3743,7 +4190,11 @@
               true
             ],
             "secretary": [
-              "雲龍"
+            {
+              "id": 404,
+              "sortNumber": 201,
+              "name": "雲龍"
+            }
             ]
           }
         ],
@@ -3763,6 +4214,7 @@
                 5
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 2
@@ -3778,6 +4230,7 @@
                 6
               ],
               "item": {
+                "id": 17,
                 "icon": 8,
                 "name": "天山",
                 "count": 2
@@ -3793,11 +4246,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3818,7 +4273,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -3832,7 +4288,11 @@
               true
             ],
             "secretary": [
-              "翔鶴"
+            {
+              "id": 110,
+              "sortNumber": 106,
+              "name": "翔鶴"
+            }
             ]
           },
           {
@@ -3846,7 +4306,11 @@
               false
             ],
             "secretary": [
-              "瑞鶴"
+            {
+              "id": 111,
+              "sortNumber": 107,
+              "name": "瑞鶴"
+            }
             ]
           }
         ],
@@ -3866,6 +4330,7 @@
                 5
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 2
@@ -3881,6 +4346,7 @@
                 6
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 3
@@ -3896,11 +4362,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -3921,7 +4389,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -3935,7 +4404,11 @@
               false
             ],
             "secretary": [
-              "瑞鶴"
+            {
+              "id": 111,
+              "sortNumber": 107,
+              "name": "瑞鶴"
+            }
             ]
           }
         ],
@@ -3955,6 +4428,7 @@
                 5
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 2
@@ -3970,6 +4444,7 @@
                 6
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 3
@@ -3985,11 +4460,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4010,7 +4487,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -4024,7 +4502,11 @@
               true
             ],
             "secretary": [
-              "瑞鶴"
+            {
+              "id": 111,
+              "sortNumber": 107,
+              "name": "瑞鶴"
+            }
             ]
           }
         ],
@@ -4044,6 +4526,7 @@
                 5
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 2
@@ -4059,6 +4542,7 @@
                 6
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 3
@@ -4074,11 +4558,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4099,7 +4585,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -4113,7 +4600,11 @@
               true
             ],
             "secretary": [
-              "瑞鶴"
+            {
+              "id": 111,
+              "sortNumber": 107,
+              "name": "瑞鶴"
+            }
             ]
           }
         ],
@@ -4133,6 +4624,7 @@
                 5
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 2
@@ -4148,6 +4640,7 @@
                 6
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 3
@@ -4163,11 +4656,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4186,6 +4681,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 21,
           "level": 3,
           "name": "零式艦戦52型",
           "icon": 6
@@ -4202,7 +4698,11 @@
               false
             ],
             "secretary": [
-              "赤城"
+            {
+              "id": 83,
+              "sortNumber": 6,
+              "name": "赤城"
+            }
             ]
           },
           {
@@ -4216,7 +4716,11 @@
               false
             ],
             "secretary": [
-              "加賀"
+            {
+              "id": 84,
+              "sortNumber": 7,
+              "name": "加賀"
+            }
             ]
           }
         ],
@@ -4236,6 +4740,7 @@
                 3
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 1
@@ -4251,6 +4756,7 @@
                 4
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 2
@@ -4266,11 +4772,13 @@
                 6
               ],
               "item": {
+                "id": 181,
                 "icon": 6,
                 "name": "零式艦戦32型",
                 "count": 1
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4289,6 +4797,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 152,
           "level": 3,
           "name": "零式艦戦52型(熟練)",
           "icon": 6
@@ -4305,7 +4814,11 @@
               false
             ],
             "secretary": [
-              "赤城"
+            {
+              "id": 83,
+              "sortNumber": 6,
+              "name": "赤城"
+            }
             ]
           },
           {
@@ -4319,7 +4832,11 @@
               false
             ],
             "secretary": [
-              "加賀"
+            {
+              "id": 84,
+              "sortNumber": 7,
+              "name": "加賀"
+            }
             ]
           }
         ],
@@ -4339,6 +4856,7 @@
                 3
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 2
@@ -4354,6 +4872,7 @@
                 5
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 3
@@ -4369,11 +4888,13 @@
                 6
               ],
               "item": {
+                "id": 181,
                 "icon": 6,
                 "name": "零式艦戦32型",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4392,6 +4913,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 198,
           "level": 0,
           "name": "F4F-4",
           "icon": 6
@@ -4408,7 +4930,11 @@
               true
             ],
             "secretary": [
-              "Saratoga"
+            {
+              "id": 433,
+              "sortNumber": 233,
+              "name": "Saratoga"
+            }
             ]
           },
           {
@@ -4422,7 +4948,11 @@
               true
             ],
             "secretary": [
-              "Saratoga改"
+            {
+              "id": 438,
+              "sortNumber": 238,
+              "name": "Saratoga改"
+            }
             ]
           }
         ],
@@ -4442,6 +4972,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4457,6 +4988,7 @@
                 4
               ],
               "item": {
+                "id": 19,
                 "icon": 6,
                 "name": "九六式艦戦",
                 "count": 1
@@ -4472,11 +5004,13 @@
                 5
               ],
               "item": {
+                "id": 38,
                 "icon": 15,
                 "name": "12.7mm単装機銃",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4497,7 +5031,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -4511,7 +5046,11 @@
               false
             ],
             "secretary": [
-              "Saratoga"
+            {
+              "id": 433,
+              "sortNumber": 233,
+              "name": "Saratoga"
+            }
             ]
           },
           {
@@ -4525,7 +5064,11 @@
               false
             ],
             "secretary": [
-              "Saratoga改"
+            {
+              "id": 438,
+              "sortNumber": 238,
+              "name": "Saratoga改"
+            }
             ]
           }
         ],
@@ -4545,6 +5088,7 @@
                 4
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 1
@@ -4560,6 +5104,7 @@
                 6
               ],
               "item": {
+                "id": 181,
                 "icon": 6,
                 "name": "零式艦戦32型",
                 "count": 1
@@ -4575,11 +5120,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4600,7 +5147,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -4614,7 +5162,11 @@
               true
             ],
             "secretary": [
-              "隼鷹"
+            {
+              "id": 92,
+              "sortNumber": 66,
+              "name": "隼鷹"
+            }
             ]
           },
           {
@@ -4628,7 +5180,11 @@
               false
             ],
             "secretary": [
-              "翔鶴"
+            {
+              "id": 110,
+              "sortNumber": 106,
+              "name": "翔鶴"
+            }
             ]
           }
         ],
@@ -4648,6 +5204,7 @@
                 5
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 2
@@ -4663,6 +5220,7 @@
                 6
               ],
               "item": {
+                "id": 24,
                 "icon": 7,
                 "name": "彗星",
                 "count": 2
@@ -4678,11 +5236,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4703,7 +5263,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -4717,7 +5278,11 @@
               false
             ],
             "secretary": [
-              "瑞鶴"
+            {
+              "id": 111,
+              "sortNumber": 107,
+              "name": "瑞鶴"
+            }
             ]
           }
         ],
@@ -4737,6 +5302,7 @@
                 5
               ],
               "item": {
+                "id": 21,
                 "icon": 6,
                 "name": "零式艦戦52型",
                 "count": 2
@@ -4752,6 +5318,7 @@
                 6
               ],
               "item": {
+                "id": 24,
                 "icon": 7,
                 "name": "彗星",
                 "count": 2
@@ -4767,11 +5334,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -4790,6 +5359,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 199,
           "level": 0,
           "name": "噴式景雲改",
           "icon": 39
@@ -4806,7 +5376,11 @@
               true
             ],
             "secretary": [
-              "翔鶴改二甲"
+            {
+              "id": 466,
+              "sortNumber": 266,
+              "name": "翔鶴改二甲"
+            }
             ]
           },
           {
@@ -4820,7 +5394,11 @@
               false
             ],
             "secretary": [
-              "瑞鶴改二甲"
+            {
+              "id": 467,
+              "sortNumber": 267,
+              "name": "瑞鶴改二甲"
+            }
             ]
           }
         ],
@@ -4840,6 +5418,7 @@
                 8
               ],
               "item": {
+                "id": 18,
                 "icon": 8,
                 "name": "流星",
                 "count": 1
@@ -4855,6 +5434,7 @@
                 10
               ],
               "item": {
+                "id": 22,
                 "icon": 6,
                 "name": "烈風",
                 "count": 1
@@ -4870,11 +5450,13 @@
                 13
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 71,
                 "icon": 71,
                 "name": "ネ式エンジン",
                 "count": 1
@@ -4893,6 +5475,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 165,
           "level": 0,
           "name": "二式水戦改",
           "icon": 10
@@ -4909,7 +5492,11 @@
               true
             ],
             "secretary": [
-              "千歳甲"
+            {
+              "id": 106,
+              "sortNumber": 99,
+              "name": "千歳甲"
+            }
             ]
           },
           {
@@ -4923,7 +5510,11 @@
               false
             ],
             "secretary": [
-              "千代田甲"
+            {
+              "id": 107,
+              "sortNumber": 100,
+              "name": "千代田甲"
+            }
             ]
           },
           {
@@ -4937,7 +5528,11 @@
               true
             ],
             "secretary": [
-              "秋津洲改"
+            {
+              "id": 450,
+              "sortNumber": 250,
+              "name": "秋津洲改"
+            }
             ]
           },
           {
@@ -4951,7 +5546,11 @@
               true
             ],
             "secretary": [
-              "瑞穂"
+            {
+              "id": 451,
+              "sortNumber": 251,
+              "name": "瑞穂"
+            }
             ]
           }
         ],
@@ -4971,6 +5570,7 @@
                 3
               ],
               "item": {
+                "id": 25,
                 "icon": 10,
                 "name": "零式水上偵察機",
                 "count": 1
@@ -4986,6 +5586,7 @@
                 5
               ],
               "item": {
+                "id": 25,
                 "icon": 10,
                 "name": "零式水上偵察機",
                 "count": 2
@@ -5001,11 +5602,13 @@
                 10
               ],
               "item": {
+                "id": 20,
                 "icon": 6,
                 "name": "零式艦戦21型",
                 "count": 3
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5026,7 +5629,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -5040,7 +5644,11 @@
               true
             ],
             "secretary": [
-              "武蔵"
+            {
+              "id": 143,
+              "sortNumber": 143,
+              "name": "武蔵"
+            }
             ]
           },
           {
@@ -5054,7 +5662,11 @@
               true
             ],
             "secretary": [
-              "瑞穂"
+            {
+              "id": 451,
+              "sortNumber": 251,
+              "name": "瑞穂"
+            }
             ]
           }
         ],
@@ -5074,6 +5686,7 @@
                 5
               ],
               "item": {
+                "id": 26,
                 "icon": 10,
                 "name": "瑞雲",
                 "count": 1
@@ -5089,6 +5702,7 @@
                 7
               ],
               "item": {
+                "id": 59,
                 "icon": 10,
                 "name": "零式水上観測機",
                 "count": 1
@@ -5104,11 +5718,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5129,7 +5745,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -5143,7 +5760,11 @@
               true
             ],
             "secretary": [
-              "川内改二"
+            {
+              "id": 158,
+              "sortNumber": 158,
+              "name": "川内改二"
+            }
             ]
           }
         ],
@@ -5163,6 +5784,7 @@
                 4
               ],
               "item": {
+                "id": 25,
                 "icon": 10,
                 "name": "零式水上偵察機",
                 "count": 1
@@ -5178,6 +5800,7 @@
                 8
               ],
               "item": {
+                "id": 25,
                 "icon": 10,
                 "name": "零式水上偵察機",
                 "count": 2
@@ -5193,11 +5816,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5216,6 +5841,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 164,
           "level": 0,
           "name": "Ro.44水上戦闘機",
           "icon": 10
@@ -5232,7 +5858,11 @@
               false
             ],
             "secretary": [
-              "Zara改"
+            {
+              "id": 358,
+              "sortNumber": 1438,
+              "name": "Zara改"
+            }
             ]
           },
           {
@@ -5246,7 +5876,11 @@
               true
             ],
             "secretary": [
-              "Italia"
+            {
+              "id": 446,
+              "sortNumber": 246,
+              "name": "Italia"
+            }
             ]
           },
           {
@@ -5260,7 +5894,11 @@
               false
             ],
             "secretary": [
-              "Roma改"
+            {
+              "id": 447,
+              "sortNumber": 247,
+              "name": "Roma改"
+            }
             ]
           }
         ],
@@ -5280,6 +5918,7 @@
                 2
               ],
               "item": {
+                "id": 25,
                 "icon": 10,
                 "name": "零式水上偵察機",
                 "count": 1
@@ -5295,6 +5934,7 @@
                 4
               ],
               "item": {
+                "id": 26,
                 "icon": 10,
                 "name": "瑞雲",
                 "count": 1
@@ -5310,11 +5950,13 @@
                 5
               ],
               "item": {
+                "id": 25,
                 "icon": 10,
                 "name": "零式水上偵察機",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5333,6 +5975,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 106,
           "level": 0,
           "name": "13号対空電探改",
           "icon": 11
@@ -5349,7 +5992,11 @@
               true
             ],
             "secretary": [
-              "五十鈴改二"
+            {
+              "id": 141,
+              "sortNumber": 141,
+              "name": "五十鈴改二"
+            }
             ]
           },
           {
@@ -5363,7 +6010,11 @@
               true
             ],
             "secretary": [
-              "時雨改二"
+            {
+              "id": 145,
+              "sortNumber": 145,
+              "name": "時雨改二"
+            }
             ]
           },
           {
@@ -5377,7 +6028,11 @@
               false
             ],
             "secretary": [
-              "秋月"
+            {
+              "id": 421,
+              "sortNumber": 221,
+              "name": "秋月"
+            }
             ]
           },
           {
@@ -5391,7 +6046,11 @@
               false
             ],
             "secretary": [
-              "照月"
+            {
+              "id": 422,
+              "sortNumber": 222,
+              "name": "照月"
+            }
             ]
           }
         ],
@@ -5411,6 +6070,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5426,6 +6086,7 @@
                 5
               ],
               "item": {
+                "id": 27,
                 "icon": 11,
                 "name": "13号対空電探",
                 "count": 1
@@ -5441,11 +6102,13 @@
                 12
               ],
               "item": {
+                "id": 30,
                 "icon": 11,
                 "name": "21号対空電探",
                 "count": 1
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5464,6 +6127,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 88,
           "level": 0,
           "name": "22号対水上電探改四",
           "icon": 11
@@ -5480,7 +6144,11 @@
               true
             ],
             "secretary": [
-              "島風"
+            {
+              "id": 50,
+              "sortNumber": 10,
+              "name": "島風"
+            }
             ]
           },
           {
@@ -5494,7 +6162,11 @@
               true
             ],
             "secretary": [
-              "日向"
+            {
+              "id": 87,
+              "sortNumber": 4,
+              "name": "日向"
+            }
             ]
           },
           {
@@ -5508,7 +6180,11 @@
               true
             ],
             "secretary": [
-              "夕雲"
+            {
+              "id": 133,
+              "sortNumber": 133,
+              "name": "夕雲"
+            }
             ]
           }
         ],
@@ -5528,6 +6204,7 @@
                 3
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 1
@@ -5543,6 +6220,7 @@
                 5
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 2
@@ -5558,11 +6236,13 @@
                 14
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 3
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5581,6 +6261,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 89,
           "level": 0,
           "name": "21号対空電探改",
           "icon": 11
@@ -5597,7 +6278,11 @@
               true
             ],
             "secretary": [
-              "伊勢"
+            {
+              "id": 77,
+              "sortNumber": 3,
+              "name": "伊勢"
+            }
             ]
           },
           {
@@ -5611,7 +6296,11 @@
               true
             ],
             "secretary": [
-              "日向"
+            {
+              "id": 87,
+              "sortNumber": 4,
+              "name": "日向"
+            }
             ]
           }
         ],
@@ -5631,6 +6320,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5646,6 +6336,7 @@
                 5
               ],
               "item": {
+                "id": 30,
                 "icon": 11,
                 "name": "21号対空電探",
                 "count": 1
@@ -5661,11 +6352,13 @@
                 13
               ],
               "item": {
+                "id": 30,
                 "icon": 11,
                 "name": "21号対空電探",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5684,6 +6377,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 141,
           "level": 0,
           "name": "32号対水上電探改",
           "icon": 11
@@ -5700,7 +6394,11 @@
               true
             ],
             "secretary": [
-              "伊勢"
+            {
+              "id": 77,
+              "sortNumber": 3,
+              "name": "伊勢"
+            }
             ]
           },
           {
@@ -5714,7 +6412,11 @@
               false
             ],
             "secretary": [
-              "日向"
+            {
+              "id": 87,
+              "sortNumber": 4,
+              "name": "日向"
+            }
             ]
           }
         ],
@@ -5734,6 +6436,7 @@
                 4
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 1
@@ -5749,6 +6452,7 @@
                 7
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 2
@@ -5764,11 +6468,13 @@
                 15
               ],
               "item": {
+                "id": 31,
                 "icon": 11,
                 "name": "32号対水上電探",
                 "count": 1
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5789,7 +6495,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -5803,7 +6510,11 @@
               false
             ],
             "secretary": [
-              "金剛改二"
+            {
+              "id": 149,
+              "sortNumber": 149,
+              "name": "金剛改二"
+            }
             ]
           },
           {
@@ -5817,7 +6528,11 @@
               true
             ],
             "secretary": [
-              "羽黒改二"
+            {
+              "id": 194,
+              "sortNumber": 194,
+              "name": "羽黒改二"
+            }
             ]
           },
           {
@@ -5831,7 +6546,11 @@
               true
             ],
             "secretary": [
-              "妙高改二"
+            {
+              "id": 319,
+              "sortNumber": 191,
+              "name": "妙高改二"
+            }
             ]
           }
         ],
@@ -5851,6 +6570,7 @@
                 4
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 1
@@ -5866,6 +6586,7 @@
                 8
               ],
               "item": {
+                "id": 88,
                 "icon": 11,
                 "name": "22号対水上電探改四",
                 "count": 1
@@ -5881,11 +6602,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -5906,7 +6629,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -5920,7 +6644,11 @@
               true
             ],
             "secretary": [
-              "大和"
+            {
+              "id": 131,
+              "sortNumber": 131,
+              "name": "大和"
+            }
             ]
           },
           {
@@ -5934,7 +6662,11 @@
               false
             ],
             "secretary": [
-              "武蔵"
+            {
+              "id": 143,
+              "sortNumber": 143,
+              "name": "武蔵"
+            }
             ]
           }
         ],
@@ -5954,6 +6686,7 @@
                 3
               ],
               "item": {
+                "id": 30,
                 "icon": 11,
                 "name": "21号対空電探",
                 "count": 1
@@ -5969,6 +6702,7 @@
                 8
               ],
               "item": {
+                "id": 30,
                 "icon": 11,
                 "name": "21号対空電探",
                 "count": 2
@@ -5984,11 +6718,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6009,7 +6745,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -6023,7 +6760,11 @@
               false
             ],
             "secretary": [
-              "雪風"
+            {
+              "id": 20,
+              "sortNumber": 5,
+              "name": "雪風"
+            }
             ]
           },
           {
@@ -6037,7 +6778,11 @@
               true
             ],
             "secretary": [
-              "磯風改"
+            {
+              "id": 320,
+              "sortNumber": 1413,
+              "name": "磯風改"
+            }
             ]
           },
           {
@@ -6051,7 +6796,11 @@
               true
             ],
             "secretary": [
-              "初霜改二"
+            {
+              "id": 419,
+              "sortNumber": 219,
+              "name": "初霜改二"
+            }
             ]
           }
         ],
@@ -6071,6 +6820,7 @@
                 4
               ],
               "item": {
+                "id": 27,
                 "icon": 11,
                 "name": "13号対空電探",
                 "count": 1
@@ -6086,6 +6836,7 @@
                 8
               ],
               "item": {
+                "id": 27,
                 "icon": 11,
                 "name": "13号対空電探",
                 "count": 2
@@ -6101,11 +6852,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6126,7 +6879,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -6140,7 +6894,11 @@
               false
             ],
             "secretary": [
-              "伊勢"
+            {
+              "id": 77,
+              "sortNumber": 3,
+              "name": "伊勢"
+            }
             ]
           },
           {
@@ -6154,7 +6912,11 @@
               true
             ],
             "secretary": [
-              "日向"
+            {
+              "id": 87,
+              "sortNumber": 4,
+              "name": "日向"
+            }
             ]
           }
         ],
@@ -6174,6 +6936,7 @@
                 6
               ],
               "item": {
+                "id": 28,
                 "icon": 11,
                 "name": "22号対水上電探",
                 "count": 3
@@ -6189,6 +6952,7 @@
                 10
               ],
               "item": {
+                "id": 31,
                 "icon": 11,
                 "name": "32号対水上電探",
                 "count": 1
@@ -6204,11 +6968,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6227,6 +6993,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 116,
           "level": 0,
           "name": "一式徹甲弾",
           "icon": 13
@@ -6243,7 +7010,11 @@
               true
             ],
             "secretary": [
-              "霧島"
+            {
+              "id": 85,
+              "sortNumber": 24,
+              "name": "霧島"
+            }
             ]
           },
           {
@@ -6257,7 +7028,11 @@
               true
             ],
             "secretary": [
-              "比叡"
+            {
+              "id": 86,
+              "sortNumber": 22,
+              "name": "比叡"
+            }
             ]
           }
         ],
@@ -6277,6 +7052,7 @@
                 1
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6292,6 +7068,7 @@
                 2
               ],
               "item": {
+                "id": 36,
                 "icon": 13,
                 "name": "九一式徹甲弾",
                 "count": 1
@@ -6307,11 +7084,13 @@
                 9
               ],
               "item": {
+                "id": 36,
                 "icon": 13,
                 "name": "九一式徹甲弾",
                 "count": 3
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6332,7 +7111,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -6346,7 +7126,11 @@
               true
             ],
             "secretary": [
-              "金剛"
+            {
+              "id": 78,
+              "sortNumber": 21,
+              "name": "金剛"
+            }
             ]
           },
           {
@@ -6360,7 +7144,11 @@
               false
             ],
             "secretary": [
-              "榛名"
+            {
+              "id": 79,
+              "sortNumber": 23,
+              "name": "榛名"
+            }
             ]
           }
         ],
@@ -6380,6 +7168,7 @@
                 1
               ],
               "item": {
+                "id": 36,
                 "icon": 13,
                 "name": "九一式徹甲弾",
                 "count": 2
@@ -6395,6 +7184,7 @@
                 4
               ],
               "item": {
+                "id": 116,
                 "icon": 13,
                 "name": "一式徹甲弾",
                 "count": 1
@@ -6410,11 +7200,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6433,6 +7225,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 40,
           "level": 3,
           "name": "25mm三連装機銃",
           "icon": 15
@@ -6449,7 +7242,11 @@
               false
             ],
             "secretary": [
-              "皐月"
+            {
+              "id": 28,
+              "sortNumber": 33,
+              "name": "皐月"
+            }
             ]
           },
           {
@@ -6463,7 +7260,11 @@
               false
             ],
             "secretary": [
-              "文月"
+            {
+              "id": 29,
+              "sortNumber": 34,
+              "name": "文月"
+            }
             ]
           },
           {
@@ -6477,7 +7278,11 @@
               true
             ],
             "secretary": [
-              "五十鈴改二"
+            {
+              "id": 141,
+              "sortNumber": 141,
+              "name": "五十鈴改二"
+            }
             ]
           },
           {
@@ -6491,7 +7296,11 @@
               false
             ],
             "secretary": [
-              "鬼怒改二"
+            {
+              "id": 487,
+              "sortNumber": 287,
+              "name": "鬼怒改二"
+            }
             ]
           }
         ],
@@ -6511,6 +7320,7 @@
                 1
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6526,6 +7336,7 @@
                 2
               ],
               "item": {
+                "id": 39,
                 "icon": 15,
                 "name": "25mm連装機銃",
                 "count": 1
@@ -6541,11 +7352,13 @@
                 2
               ],
               "item": {
+                "id": 39,
                 "icon": 15,
                 "name": "25mm連装機銃",
                 "count": 1
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6566,7 +7379,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -6580,7 +7394,11 @@
               false
             ],
             "secretary": [
-              "摩耶"
+            {
+              "id": 68,
+              "sortNumber": 61,
+              "name": "摩耶"
+            }
             ]
           }
         ],
@@ -6600,6 +7418,7 @@
                 1
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6615,6 +7434,7 @@
                 2
               ],
               "item": {
+                "id": 40,
                 "icon": 15,
                 "name": "25mm三連装機銃",
                 "count": 1
@@ -6630,11 +7450,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6643,9 +7465,10 @@
           ]
         }
       },
-
+      
       {
         "upgrade": {
+          "id": 131,
           "level": 0,
           "name": "25mm三連装機銃 集中配備",
           "icon": 15
@@ -6662,7 +7485,11 @@
               false
             ],
             "secretary": [
-              "五十鈴改二"
+            {
+              "id": 141,
+              "sortNumber": 141,
+              "name": "五十鈴改二"
+            }
             ]
           },
           {
@@ -6676,7 +7503,11 @@
               false
             ],
             "secretary": [
-              "皐月改二"
+            {
+              "id": 418,
+              "sortNumber": 218,
+              "name": "皐月改二"
+            }
             ]
           },
           {
@@ -6690,7 +7521,11 @@
               false
             ],
             "secretary": [
-              "摩耶改二"
+            {
+              "id": 428,
+              "sortNumber": 228,
+              "name": "摩耶改二"
+            }
             ]
           },
           {
@@ -6704,7 +7539,11 @@
               false
             ],
             "secretary": [
-              "鬼怒改二"
+            {
+              "id": 487,
+              "sortNumber": 287,
+              "name": "鬼怒改二"
+            }
             ]
           }
         ],
@@ -6724,6 +7563,7 @@
                 1
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6739,6 +7579,7 @@
                 2
               ],
               "item": {
+                "id": 40,
                 "icon": 15,
                 "name": "25mm三連装機銃",
                 "count": 1
@@ -6754,11 +7595,13 @@
                 7
               ],
               "item": {
+                "id": 40,
                 "icon": 15,
                 "name": "25mm三連装機銃",
                 "count": 5
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6777,6 +7620,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 39,
           "level": 5,
           "name": "25mm連装機銃",
           "icon": 15
@@ -6793,7 +7637,11 @@
               true
             ],
             "secretary": [
-              "皐月"
+            {
+              "id": 28,
+              "sortNumber": 33,
+              "name": "皐月"
+            }
             ]
           },
           {
@@ -6807,7 +7655,11 @@
               true
             ],
             "secretary": [
-              "文月"
+            {
+              "id": 29,
+              "sortNumber": 34,
+              "name": "文月"
+            }
             ]
           },
           {
@@ -6821,7 +7673,11 @@
               false
             ],
             "secretary": [
-              "鬼怒改二"
+            {
+              "id": 487,
+              "sortNumber": 287,
+              "name": "鬼怒改二"
+            }
             ]
           }
         ],
@@ -6841,6 +7697,7 @@
                 1
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6856,6 +7713,7 @@
                 1
               ],
               "item": {
+                "id": 49,
                 "icon": 15,
                 "name": "25mm単装機銃",
                 "count": 1
@@ -6871,11 +7729,13 @@
                 2
               ],
               "item": {
+                "id": 49,
                 "icon": 15,
                 "name": "25mm単装機銃",
                 "count": 1
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6896,7 +7756,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -6910,7 +7771,11 @@
               true
             ],
             "secretary": [
-              "摩耶改二"
+            {
+              "id": 428,
+              "sortNumber": 228,
+              "name": "摩耶改二"
+            }
             ]
           },
           {
@@ -6924,7 +7789,11 @@
               true
             ],
             "secretary": [
-              "鬼怒改二"
+            {
+              "id": 487,
+              "sortNumber": 287,
+              "name": "鬼怒改二"
+            }
             ]
           }
         ],
@@ -6944,6 +7813,7 @@
                 5
               ],
               "item": {
+                "id": 40,
                 "icon": 15,
                 "name": "25mm三連装機銃",
                 "count": 3
@@ -6959,6 +7829,7 @@
                 9
               ],
               "item": {
+                "id": 40,
                 "icon": 15,
                 "name": "25mm三連装機銃",
                 "count": 5
@@ -6974,11 +7845,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -6999,7 +7872,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -7013,8 +7887,16 @@
               false
             ],
             "secretary": [
-              "秋月",
-              "初月"
+            {
+              "id": 421,
+              "sortNumber": 221,
+              "name": "秋月"
+            },
+            {
+              "id": 423,
+              "sortNumber": 223,
+              "name": "初月"
+            }
             ]
           },
           {
@@ -7028,7 +7910,11 @@
               true
             ],
             "secretary": [
-              "照月"
+            {
+              "id": 422,
+              "sortNumber": 222,
+              "name": "照月"
+            }
             ]
           }
         ],
@@ -7048,6 +7934,7 @@
                 4
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7063,6 +7950,7 @@
                 7
               ],
               "item": {
+                "id": 3,
                 "icon": 16,
                 "name": "10cm連装高角砲",
                 "count": 2
@@ -7078,11 +7966,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7103,7 +7993,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -7117,7 +8008,11 @@
               false
             ],
             "secretary": [
-              "Littorio"
+            {
+              "id": 441,
+              "sortNumber": 241,
+              "name": "Littorio"
+            }
             ]
           },
           {
@@ -7131,7 +8026,11 @@
               true
             ],
             "secretary": [
-              "Roma"
+            {
+              "id": 442,
+              "sortNumber": 242,
+              "name": "Roma"
+            }
             ]
           }
         ],
@@ -7151,6 +8050,7 @@
                 2
               ],
               "item": {
+                "id": 3,
                 "icon": 16,
                 "name": "10cm連装高角砲",
                 "count": 1
@@ -7166,6 +8066,7 @@
                 2
               ],
               "item": {
+                "id": 3,
                 "icon": 16,
                 "name": "10cm連装高角砲",
                 "count": 2
@@ -7181,11 +8082,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7204,6 +8107,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 45,
           "level": 3,
           "name": "三式爆雷投射機",
           "icon": 17
@@ -7220,7 +8124,11 @@
               false
             ],
             "secretary": [
-              "None"
+            {
+              "id": 0,
+              "sortNumber": 0,
+              "name": ""
+            }
             ]
           }
         ],
@@ -7240,6 +8148,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7255,6 +8164,7 @@
                 3
               ],
               "item": {
+                "id": 44,
                 "icon": 17,
                 "name": "九四式爆雷投射機",
                 "count": 1
@@ -7270,11 +8180,13 @@
                 8
               ],
               "item": {
+                "id": 44,
                 "icon": 17,
                 "name": "九四式爆雷投射機",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7295,7 +8207,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -7309,7 +8222,11 @@
               false
             ],
             "secretary": [
-              "五十鈴改二"
+            {
+              "id": 141,
+              "sortNumber": 141,
+              "name": "五十鈴改二"
+            }
             ]
           }
         ],
@@ -7329,6 +8246,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7344,6 +8262,7 @@
                 4
               ],
               "item": {
+                "id": 45,
                 "icon": 17,
                 "name": "三式爆雷投射機",
                 "count": 1
@@ -7359,11 +8278,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7382,6 +8303,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 47,
           "level": 3,
           "name": "三式水中探信儀",
           "icon": 18
@@ -7398,7 +8320,11 @@
               true
             ],
             "secretary": [
-              "夕張"
+            {
+              "id": 115,
+              "sortNumber": 111,
+              "name": "夕張"
+            }
             ]
           },
           {
@@ -7412,7 +8338,11 @@
               false
             ],
             "secretary": [
-              "五十鈴改二"
+            {
+              "id": 141,
+              "sortNumber": 141,
+              "name": "五十鈴改二"
+            }
             ]
           }
         ],
@@ -7432,6 +8362,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7447,6 +8378,7 @@
                 3
               ],
               "item": {
+                "id": 46,
                 "icon": 18,
                 "name": "九三式水中聴音機",
                 "count": 1
@@ -7462,11 +8394,13 @@
                 5
               ],
               "item": {
+                "id": 46,
                 "icon": 18,
                 "name": "九三式水中聴音機",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7475,9 +8409,10 @@
           ]
         }
       },
-
+      
       {
         "upgrade": {
+          "id": 149,
           "level": 0,
           "name": "四式水中聴音機",
           "icon": 18
@@ -7494,7 +8429,11 @@
               false
             ],
             "secretary": [
-              "五十鈴改二"
+            {
+              "id": 141,
+              "sortNumber": 141,
+              "name": "五十鈴改二"
+            }
             ]
           },
           {
@@ -7508,7 +8447,11 @@
               true
             ],
             "secretary": [
-              "時雨改二"
+            {
+              "id": 145,
+              "sortNumber": 145,
+              "name": "時雨改二"
+            }
             ]
           },
           {
@@ -7522,7 +8465,11 @@
               true
             ],
             "secretary": [
-              "香取改"
+            {
+              "id": 343,
+              "sortNumber": 1423,
+              "name": "香取改"
+            }
             ]
           }
         ],
@@ -7542,6 +8489,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7557,6 +8505,7 @@
                 3
               ],
               "item": {
+                "id": 46,
                 "icon": 18,
                 "name": "九三式水中聴音機",
                 "count": 1
@@ -7572,11 +8521,13 @@
                 12
               ],
               "item": {
+                "id": 47,
                 "icon": 18,
                 "name": "三式水中探信儀",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7597,7 +8548,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -7611,7 +8563,11 @@
               false
             ],
             "secretary": [
-              "夕張"
+            {
+              "id": 115,
+              "sortNumber": 111,
+              "name": "夕張"
+            }
             ]
           },
           {
@@ -7625,7 +8581,11 @@
               false
             ],
             "secretary": [
-              "五十鈴改二"
+            {
+              "id": 141,
+              "sortNumber": 141,
+              "name": "五十鈴改二"
+            }
             ]
           }
         ],
@@ -7645,6 +8605,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7660,6 +8621,7 @@
                 5
               ],
               "item": {
+                "id": 47,
                 "icon": 18,
                 "name": "三式水中探信儀",
                 "count": 1
@@ -7675,11 +8637,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7700,7 +8664,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -7714,7 +8679,11 @@
               true
             ],
             "secretary": [
-              "五十鈴改二"
+            {
+              "id": 141,
+              "sortNumber": 141,
+              "name": "五十鈴改二"
+            }
             ]
           },
           {
@@ -7728,7 +8697,11 @@
               false
             ],
             "secretary": [
-              "香取改"
+            {
+              "id": 343,
+              "sortNumber": 1423,
+              "name": "香取改"
+            }
             ]
           },
           {
@@ -7742,7 +8715,11 @@
               false
             ],
             "secretary": [
-              "秋月"
+            {
+              "id": 421,
+              "sortNumber": 221,
+              "name": "秋月"
+            }
             ]
           },
           {
@@ -7756,7 +8733,11 @@
               false
             ],
             "secretary": [
-              "照月"
+            {
+              "id": 422,
+              "sortNumber": 222,
+              "name": "照月"
+            }
             ]
           }
         ],
@@ -7776,6 +8757,7 @@
                 5
               ],
               "item": {
+                "id": 46,
                 "icon": 18,
                 "name": "九三式水中聴音機",
                 "count": 2
@@ -7791,6 +8773,7 @@
                 6
               ],
               "item": {
+                "id": 149,
                 "icon": 18,
                 "name": "四式水中聴音機",
                 "count": 1
@@ -7806,11 +8789,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7829,6 +8814,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 166,
           "level": 0,
           "name": "大発動艇(八九式中戦車&陸戦隊)",
           "icon": 20
@@ -7845,7 +8831,11 @@
               true
             ],
             "secretary": [
-              "あきつ丸"
+            {
+              "id": 161,
+              "sortNumber": 161,
+              "name": "あきつ丸"
+            }
             ]
           },
           {
@@ -7859,7 +8849,11 @@
               true
             ],
             "secretary": [
-              "阿武隈改二"
+            {
+              "id": 200,
+              "sortNumber": 200,
+              "name": "阿武隈改二"
+            }
             ]
           },
           {
@@ -7873,7 +8867,11 @@
               false
             ],
             "secretary": [
-              "皐月改二"
+            {
+              "id": 418,
+              "sortNumber": 218,
+              "name": "皐月改二"
+            }
             ]
           }
         ],
@@ -7893,6 +8891,7 @@
                 2
               ],
               "item": {
+                "id": 75,
                 "icon": 25,
                 "name": "ドラム缶(輸送用)",
                 "count": 1
@@ -7908,6 +8907,7 @@
                 3
               ],
               "item": {
+                "id": 37,
                 "icon": 15,
                 "name": "7.7mm機銃",
                 "count": 1
@@ -7923,11 +8923,13 @@
                 7
               ],
               "item": {
+                "id": 38,
                 "icon": 15,
                 "name": "12.7mm単装機銃",
                 "count": 3
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -7936,9 +8938,10 @@
           ]
         }
       },
-
+      
       {
         "upgrade": {
+          "id": 193,
           "level": 0,
           "name": "特大発動艇",
           "icon": 20
@@ -7955,7 +8958,11 @@
               true
             ],
             "secretary": [
-              "鬼怒改二"
+            {
+              "id": 487,
+              "sortNumber": 287,
+              "name": "鬼怒改二"
+            }
             ]
           }
         ],
@@ -7975,6 +8982,7 @@
                 2
               ],
               "item": {
+                "id": 75,
                 "icon": 25,
                 "name": "ドラム缶(輸送用)",
                 "count": 1
@@ -7990,6 +8998,7 @@
                 3
               ],
               "item": {
+                "id": 37,
                 "icon": 15,
                 "name": "7.7mm機銃",
                 "count": 1
@@ -8005,11 +9014,13 @@
                 12
               ],
               "item": {
+                "id": 68,
                 "icon": 20,
                 "name": "大発動艇",
                 "count": 4
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8028,6 +9039,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 167,
           "level": 0,
           "name": "特二式内火艇",
           "icon": 36
@@ -8044,7 +9056,11 @@
               true
             ],
             "secretary": [
-              "あきつ丸"
+            {
+              "id": 161,
+              "sortNumber": 161,
+              "name": "あきつ丸"
+            }
             ]
           },
           {
@@ -8058,7 +9074,11 @@
               false
             ],
             "secretary": [
-              "阿武隈改二"
+            {
+              "id": 200,
+              "sortNumber": 200,
+              "name": "阿武隈改二"
+            }
             ]
           },
           {
@@ -8072,7 +9092,11 @@
               true
             ],
             "secretary": [
-              "皐月改二"
+            {
+              "id": 418,
+              "sortNumber": 218,
+              "name": "皐月改二"
+            }
             ]
           }
         ],
@@ -8092,6 +9116,7 @@
                 3
               ],
               "item": {
+                "id": 49,
                 "icon": 15,
                 "name": "25mm単装機銃",
                 "count": 1
@@ -8107,6 +9132,7 @@
                 5
               ],
               "item": {
+                "id": 51,
                 "icon": 15,
                 "name": "12cm30連装噴進砲",
                 "count": 2
@@ -8122,11 +9148,13 @@
                 9
               ],
               "item": {
+                "id": 37,
                 "icon": 15,
                 "name": "7.7mm機銃",
                 "count": 3
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8147,7 +9175,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -8161,7 +9190,11 @@
               false
             ],
             "secretary": [
-              "あきつ丸"
+            {
+              "id": 161,
+              "sortNumber": 161,
+              "name": "あきつ丸"
+            }
             ]
           },
           {
@@ -8175,7 +9208,11 @@
               true
             ],
             "secretary": [
-              "鬼怒改二"
+            {
+              "id": 487,
+              "sortNumber": 287,
+              "name": "鬼怒改二"
+            }
             ]
           }
         ],
@@ -8195,6 +9232,7 @@
                 3
               ],
               "item": {
+                "id": 75,
                 "icon": 25,
                 "name": "ドラム缶(輸送用)",
                 "count": 2
@@ -8210,6 +9248,7 @@
                 6
               ],
               "item": {
+                "id": 68,
                 "icon": 20,
                 "name": "大発動艇",
                 "count": 1
@@ -8225,11 +9264,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8248,6 +9289,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 140,
           "level": 0,
           "name": "96式150cm探照灯",
           "icon": 24
@@ -8264,8 +9306,16 @@
               false
             ],
             "secretary": [
-              "綾波",
-              "青葉"
+            {
+              "id": 13,
+              "sortNumber": 17,
+              "name": "綾波"
+            },
+            {
+              "id": 61,
+              "sortNumber": 54,
+              "name": "青葉"
+            }
             ]
           },
           {
@@ -8279,7 +9329,11 @@
               true
             ],
             "secretary": [
-              "暁"
+            {
+              "id": 34,
+              "sortNumber": 71,
+              "name": "暁"
+            }
             ]
           },
           {
@@ -8293,7 +9347,11 @@
               true
             ],
             "secretary": [
-              "神通"
+            {
+              "id": 55,
+              "sortNumber": 47,
+              "name": "神通"
+            }
             ]
           }
         ],
@@ -8313,6 +9371,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8328,6 +9387,7 @@
                 4
               ],
               "item": {
+                "id": 74,
                 "icon": 24,
                 "name": "探照灯",
                 "count": 1
@@ -8343,11 +9403,13 @@
                 7
               ],
               "item": {
+                "id": 129,
                 "icon": 32,
                 "name": "熟練見張員",
                 "count": 1
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8368,7 +9430,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -8382,7 +9445,11 @@
               false
             ],
             "secretary": [
-              "霧島"
+            {
+              "id": 85,
+              "sortNumber": 24,
+              "name": "霧島"
+            }
             ]
           },
           {
@@ -8396,7 +9463,11 @@
               true
             ],
             "secretary": [
-              "比叡"
+            {
+              "id": 86,
+              "sortNumber": 22,
+              "name": "比叡"
+            }
             ]
           }
         ],
@@ -8416,6 +9487,7 @@
                 4
               ],
               "item": {
+                "id": 74,
                 "icon": 24,
                 "name": "探照灯",
                 "count": 1
@@ -8431,6 +9503,7 @@
                 7
               ],
               "item": {
+                "id": 74,
                 "icon": 24,
                 "name": "探照灯",
                 "count": 1
@@ -8446,11 +9519,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8469,6 +9544,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 121,
           "level": 0,
           "name": "94式高射装置",
           "icon": 30
@@ -8485,8 +9561,16 @@
               true
             ],
             "secretary": [
-              "摩耶",
-              "秋月"
+            {
+              "id": 68,
+              "sortNumber": 61,
+              "name": "摩耶"
+            },
+            {
+              "id": 421,
+              "sortNumber": 221,
+              "name": "秋月"
+            }
             ]
           },
           {
@@ -8500,7 +9584,11 @@
               true
             ],
             "secretary": [
-              "照月"
+            {
+              "id": 422,
+              "sortNumber": 222,
+              "name": "照月"
+            }
             ]
           }
         ],
@@ -8520,6 +9608,7 @@
                 2
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8535,6 +9624,7 @@
                 4
               ],
               "item": {
+                "id": 10,
                 "icon": 16,
                 "name": "12.7cm連装高角砲",
                 "count": 1
@@ -8550,11 +9640,13 @@
                 7
               ],
               "item": {
+                "id": 3,
                 "icon": 16,
                 "name": "10cm連装高角砲",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8573,6 +9665,7 @@
     "improvement": [
       {
         "upgrade": {
+          "id": 122,
           "level": 0,
           "name": "10cm連装高角砲+高射装置",
           "icon": 16
@@ -8589,8 +9682,16 @@
               true
             ],
             "secretary": [
-              "秋月",
-              "照月"
+            {
+              "id": 421,
+              "sortNumber": 221,
+              "name": "秋月"
+            },
+            {
+              "id": 422,
+              "sortNumber": 222,
+              "name": "照月"
+            }
             ]
           },
           {
@@ -8604,7 +9705,11 @@
               true
             ],
             "secretary": [
-              "初月"
+            {
+              "id": 423,
+              "sortNumber": 223,
+              "name": "初月"
+            }
             ]
           },
           {
@@ -8618,7 +9723,11 @@
               true
             ],
             "secretary": [
-              "吹雪改二"
+            {
+              "id": 426,
+              "sortNumber": 226,
+              "name": "吹雪改二"
+            }
             ]
           }
         ],
@@ -8638,6 +9747,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8653,6 +9763,7 @@
                 5
               ],
               "item": {
+                "id": 3,
                 "icon": 16,
                 "name": "10cm連装高角砲",
                 "count": 1
@@ -8668,11 +9779,13 @@
                 10
               ],
               "item": {
+                "id": 3,
                 "icon": 16,
                 "name": "10cm連装高角砲",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8681,9 +9794,10 @@
           ]
         }
       },
-
+      
       {
         "upgrade": {
+          "id": 130,
           "level": 0,
           "name": "12.7cm高角砲+高射装置",
           "icon": 16
@@ -8700,7 +9814,11 @@
               true
             ],
             "secretary": [
-              "摩耶改二"
+            {
+              "id": 428,
+              "sortNumber": 228,
+              "name": "摩耶改二"
+            }
             ]
           }
         ],
@@ -8720,6 +9838,7 @@
                 3
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8735,6 +9854,7 @@
                 5
               ],
               "item": {
+                "id": 10,
                 "icon": 16,
                 "name": "12.7cm連装高角砲",
                 "count": 1
@@ -8750,11 +9870,13 @@
                 9
               ],
               "item": {
+                "id": 10,
                 "icon": 16,
                 "name": "12.7cm連装高角砲",
                 "count": 2
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
@@ -8775,7 +9897,8 @@
         "upgrade": {
           "level": 0,
           "name": "",
-          "icon": 0
+          "icon": 0,
+          "id": 0
         },
         "req": [
           {
@@ -8789,7 +9912,11 @@
               true
             ],
             "secretary": [
-              "伊58"
+            {
+              "id": 127,
+              "sortNumber": 127,
+              "name": "伊58"
+            }
             ]
           },
           {
@@ -8803,7 +9930,11 @@
               true
             ],
             "secretary": [
-              "伊8"
+            {
+              "id": 128,
+              "sortNumber": 128,
+              "name": "伊8"
+            }
             ]
           },
           {
@@ -8817,7 +9948,11 @@
               false
             ],
             "secretary": [
-              "伊401"
+            {
+              "id": 155,
+              "sortNumber": 155,
+              "name": "伊401"
+            }
             ]
           }
         ],
@@ -8837,6 +9972,7 @@
                 4
               ],
               "item": {
+                "id": 37,
                 "icon": 15,
                 "name": "7.7mm機銃",
                 "count": 2
@@ -8852,6 +9988,7 @@
                 6
               ],
               "item": {
+                "id": 38,
                 "icon": 15,
                 "name": "12.7mm単装機銃",
                 "count": 3
@@ -8867,11 +10004,13 @@
                 0
               ],
               "item": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0
               },
               "useitem": {
+                "id": 0,
                 "icon": 0,
                 "name": "",
                 "count": 0

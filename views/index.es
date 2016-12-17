@@ -52,14 +52,14 @@ const DetailRow = (props) =>{
         // day = -1 means show all items
         if (props.day == -1){
           hishos.push ({
-            name: (__(window.i18n.resources.__ (secretary))),
+            name: secretary.id != 0 ? __(window.i18n.resources.__ (secretary.name)) : __('None'),
             day: req.day,
           })
         }
         else {
           if (req.day[props.day]){
             hishos.push ({
-              name: (__(window.i18n.resources.__ (secretary))),
+              name: secretary.id != 0 ? __(window.i18n.resources.__ (secretary.name)) : __('None'),
               day: req.day,
             })
           }
@@ -250,11 +250,11 @@ class ItemInfoArea extends Component{
           for (let secretary of req.secretary){
             // day = -1 means show all items
             if (day == -1){
-              hishos.push (__(window.i18n.resources.__ (secretary)))
+              hishos.push(secretary.id != 0 ? __(window.i18n.resources.__ (secretary.name)) : __('None') )
             }
             else {
               if (req.day[day]){
-                hishos.push (__(window.i18n.resources.__ (secretary)))
+                hishos.push(secretary.id != 0 ? __(window.i18n.resources.__ (secretary.name)) : __('None') )
               }
             }
           }
