@@ -13,6 +13,61 @@ const {$, __, __r, config} = window
 
 let data_json = fs.readJsonSync(path.join(__dirname, "..", "assets", "data.json"))
 const DATA = _.sortBy(data_json, ['icon', 'id'])
+// build filter options
+const improveMatOptions = _.uniq(
+  _.flatMap(DATA, 
+    item => 
+      _.flatMap(item.improvement,
+        upgrade => _.flatMap(upgrade.consume.material,
+          stage => (stage.improvement || [])[0]
+        )
+      )
+  )
+).sort((a, b) => a < b ? -1 : 1)
+
+const _itemConsumeOptions = _.uniqBy(
+  _.flatMap(DATA, 
+    item => 
+      _.flatMap(item.improvement,
+        upgrade => _.flatMap(upgrade.consume.material,
+          stage => {
+            let itemList = []
+            if(_.get(stage, 'item.id', 0) != 0) {
+              const {id, icon, name} = stage.item
+              itemList.push({
+                id,
+                icon,
+                name,
+              })
+            }
+            if(_.get(stage, 'useitem.id', 0) != 0) {
+              const {id, icon, name} = stage.useitem
+              itemList.push({
+                id,
+                icon,
+                name,
+              })
+            }
+
+            return itemList
+          }
+        )
+      )
+  ), item => item.id
+)
+const itemConsumeOptions = _.sortBy(_itemConsumeOptions, ['icon', 'id'])
+
+const secretaryOptions = _.uniqBy(
+  _.flatMap(DATA,
+    item => 
+      _.flatMap(item.improvement,
+        upgrade => _.flatMap(upgrade.req,
+          req => req.secretary || []
+        )
+      )
+  ), secretary => secretary.id
+).sort((a, b) => a.sortNumber < b.sortNumber ? -1 : 1)
+// console.log(improveMatOptions, itemConsumeOptions, secretaryOptions)
 const WEEKDAY = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
 
 const queryData = (id) => _.find(DATA, (item) => item.id == id)
