@@ -6643,7 +6643,6 @@
           ]
         }
       },
-
       {
         "upgrade": {
           "level": 0,
@@ -7475,7 +7474,6 @@
           ]
         }
       },
-
       {
         "upgrade": {
           "level": 0,
@@ -7936,7 +7934,6 @@
           ]
         }
       },
-
       {
         "upgrade": {
           "level": 0,
@@ -8213,6 +8210,214 @@
                 "icon": 20,
                 "name": "大発動艇",
                 "count": 1
+              }
+            },
+            {
+              "development": [
+                0,
+                0
+              ],
+              "improvement": [
+                0,
+                0
+              ],
+              "item": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              },
+              "useitem": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "type": "追加装甲(大型)",
+    "icon": 23,
+    "name": "増設バルジ(大型艦)",
+    "improvement": [
+      {
+        "upgrade": {
+          "level": 0,
+          "name": "艦本新設計 増設バルジ(大型艦)",
+          "icon": 23
+        },
+        "req": [
+          {
+            "day": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              true,
+              true
+            ],
+            "secretary": [
+              "長門",
+              "武蔵"
+            ]
+          },
+          {
+            "day": [
+              false,
+              false,
+              false,
+              true,
+              true,
+              true,
+              false
+            ],
+            "secretary": [
+              "陸奥",
+              "大和"
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 80,
+          "ammo": 0,
+          "steel": 880,
+          "bauxite": 0,
+          "material": [
+            {
+              "development": [
+                8,
+                10
+              ],
+              "improvement": [
+                4,
+                5
+              ],
+              "item": {
+                "icon": 23,
+                "name": "増設バルジ(中型艦)",
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                20,
+                30
+              ],
+              "improvement": [
+                6,
+                9
+              ],
+              "item": {
+                "icon": 23,
+                "name": "増設バルジ(大型艦)",
+                "count": 1
+              }
+            },
+            {
+              "development": [
+                32,
+                48
+              ],
+              "improvement": [
+                8,
+                12
+              ],
+              "item": {
+                "icon": 23,
+                "name": "増設バルジ(大型艦)",
+                "count": 2
+              },
+              "useitem": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 204,
+    "type": "追加装甲(大型)",
+    "icon": 23,
+    "name": "艦本新設計 増設バルジ(大型艦)",
+    "improvement": [
+      {
+        "upgrade": {
+          "level": 0,
+          "name": "",
+          "icon": 0
+        },
+        "req": [
+          {
+            "day": [
+              true,
+              false,
+              false,
+              false,
+              false,
+              false,
+              true
+            ],
+            "secretary": [
+              "大和"
+            ]
+          },
+          {
+            "day": [
+              true,
+              false,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "secretary": [
+              "武蔵"
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 180,
+          "ammo": 0,
+          "steel": 980,
+          "bauxite": 80,
+          "material": [
+            {
+              "development": [
+                20,
+                30
+              ],
+              "improvement": [
+                6,
+                9
+              ],
+              "item": {
+                "icon": 23,
+                "name": "増設バルジ(大型艦)",
+                "count": 1
+              }
+            },
+            {
+              "development": [
+                0,
+                0
+              ],
+              "improvement": [
+                0,
+                0
+              ],
+              "item": {
+                "icon": 0,
+                "name": "",
+                "count": 0
               }
             },
             {
@@ -8681,7 +8886,6 @@
           ]
         }
       },
-
       {
         "upgrade": {
           "level": 0,
