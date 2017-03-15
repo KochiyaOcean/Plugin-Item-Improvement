@@ -4496,8 +4496,8 @@
       {
         "upgrade": {
           "level": 0,
-          "name": "",
-          "icon": 0
+          "name": "F6F-3",
+          "icon": 6
         },
         "req": [
           {
@@ -4516,10 +4516,10 @@
           },
           {
             "day": [
-              true,
-              true,
-              true,
               false,
+              true,
+              true,
+              true,
               false,
               false,
               false
@@ -4562,6 +4562,95 @@
               "item": {
                 "icon": 6,
                 "name": "零式艦戦32型",
+                "count": 1
+              }
+            },
+            {
+              "development": [
+                8,
+                16
+              ],
+              "improvement": [
+                6,
+                9
+              ],
+              "item": {
+                "icon": 6,
+                "name": "零式艦戦52型",
+                "count": 2
+              },
+              "useitem": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 205,
+    "type": "艦上戦闘機",
+    "icon": 6,
+    "name": "F6F-3",
+    "improvement": [
+      {
+        "upgrade": {
+          "level": 0,
+          "name": "",
+          "icon": 0
+        },
+        "req": [
+          {
+            "day": [
+              false,
+              false,
+              true,
+              true,
+              true,
+              false,
+              false
+            ],
+            "secretary": [
+              "Saratoga改"
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 160,
+          "ammo": 180,
+          "steel": 0,
+          "bauxite": 380,
+          "material": [
+            {
+              "development": [
+                6,
+                7
+              ],
+              "improvement": [
+                4,
+                6
+              ],
+              "item": {
+                "icon": 6,
+                "name": "零式艦戦52型",
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                8,
+                10
+              ],
+              "improvement": [
+                6,
+                8
+              ],
+              "item": {
+                "icon": 6,
+                "name": "紫電改二",
                 "count": 1
               }
             },
@@ -7792,6 +7881,109 @@
                 "icon": 18,
                 "name": "四式水中聴音機",
                 "count": 1
+              }
+            },
+            {
+              "development": [
+                0,
+                0
+              ],
+              "improvement": [
+                0,
+                0
+              ],
+              "item": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              },
+              "useitem": {
+                "icon": 0,
+                "name": "",
+                "count": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "type": "機関部強化",
+    "icon": 19,
+    "name": "新型高温高圧缶",
+    "improvement": [
+      {
+        "upgrade": {
+          "level": 0,
+          "name": "",
+          "icon": 0
+        },
+        "req": [
+          {
+            "day": [
+              false,
+              true,
+              true,
+              false,
+              false,
+              true,
+              false
+            ],
+            "secretary": [
+              "島風改"
+            ]
+          },
+          {
+            "day": [
+              false,
+              false,
+              true,
+              true,
+              true,
+              false,
+              false
+            ],
+            "secretary": [
+              "天津風改"
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 300,
+          "ammo": 0,
+          "steel": 750,
+          "bauxite": 100,
+          "material": [
+            {
+              "development": [
+                15,
+                30
+              ],
+              "improvement": [
+                8,
+                10
+              ],
+              "item": {
+                "icon": 19,
+                "name": "改良型艦本式タービン",
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                16,
+                32
+              ],
+              "improvement": [
+                9,
+                12
+              ],
+              "item": {
+                "icon": 19,
+                "name": "強化型艦本式缶",
+                "count": 2
               }
             },
             {
