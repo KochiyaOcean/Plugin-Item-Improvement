@@ -1,13 +1,13 @@
 import { remote } from 'electron'
-import {join} from 'path-extra'
+import { join } from 'path-extra'
 import i18n2 from 'i18n-2'
 
 window.config = remote.require('./lib/config')
-const {ROOT, config} = window
+const { ROOT, config } = window
 
 // Shortcuts and Components
-window.$ = (param) => document.querySelector(param)
-window.$$ = (param) => document.querySelectorAll(param)
+window.$ = param => document.querySelector(param)
+window.$$ = param => document.querySelectorAll(param)
  // Node modules
 
  // language setting
@@ -44,27 +44,26 @@ const i18n = new i18n2({
 })
 i18n.setLocale(window.language)
 
-if(i18n.resources == null){
+if (i18n.resources == null) {
   i18n.resources = {}
 }
 
-if(i18n.resources.__ == null){
-  i18n.resources.__ = (str) => str
+if (i18n.resources.__ == null) {
+  i18n.resources.__ = str => str
 }
-if(i18n.resources.translate == null){
+if (i18n.resources.translate == null) {
   i18n.resources.translate = (locale, str) => str
 }
-if(i18n.resources.setLocale == null){
+if (i18n.resources.setLocale == null) {
   i18n.resources.setLocale = (str) => {}
 }
 
 window.i18n = i18n
 
-try{
+try {
   require('poi-plugin-translator').pluginDidLoad()
-}
-catch(error){
-  console.warn('plugin-translator',error)
+} catch (error) {
+  console.warn('plugin-translator', error)
 }
 
 
