@@ -356,5 +356,4 @@ class ItemInfoArea extends Component {
   }
 }
 
-
-ReactDOM.render(<ItemInfoArea />, $('item-improvement'))
+ReactDOM.render(<ItemInfoArea />, $('#item-improvement'))
