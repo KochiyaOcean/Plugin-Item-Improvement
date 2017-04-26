@@ -1,5 +1,3 @@
-import fs from 'fs-extra'
-import path from 'path-extra'
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Nav, NavItem, Col, Grid, Table } from 'react-bootstrap'
@@ -11,10 +9,11 @@ import { Divider } from './Divider'
 import { ItemInfoRow } from './ItemInfoRow'
 import { DetailRow } from './DetailRow'
 
+import { improveData } from '../improve-db'
+
 const { $, __, config } = window
 
-const dataJson = fs.readJsonSync(path.join(__dirname, '..', 'assets', 'data.json'))
-const DATA = _.sortBy(dataJson, ['icon', 'id'])
+const DATA = improveData
 
 window.store = store
 
@@ -138,7 +137,6 @@ class ItemInfoArea extends Component {
 
     return (result)
   }
-
 
   render() {
     return (
