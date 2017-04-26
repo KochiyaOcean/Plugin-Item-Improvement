@@ -13,24 +13,25 @@ class StaticUseitemIcon extends Component {
   }
 
   // all fields are primitives
-  // so a shallow / deep comparison hardly making any differance
+  // so shallow / deep comparisons are hardly making any difference
   shouldComponentUpdate = nextProps =>
     ! _.isEqual(nextProps, this.props)
 
   render() {
-    const getClassName = (props, isSVG) => {
-      const type = isSVG ? 'svg' : 'png'
-      return classnames(type, props)
-    }
     const {useitemId, className, useSVGIcon} = this.props
-    const svgPath = resolve(__dirname, `../assets/svg/useitem-icon/${useitemId}.svg`)
-    const pngPath = resolve(__dirname, `../assets/img/useitem-icon/${useitemId}.png`)
-
+    const path = resolve(
+      __dirname,
+      useSVGIcon
+      ? `../assets/svg/useitem-icon/${useitemId}.svg`
+      : `../assets/img/useitem-icon/${useitemId}.png`)
+    const classNames = classnames(
+      useSVGIcon ? 'svg' : 'png',
+      className)
     return (
       <img
-        src={useSVGIcon ? svgPath : pngPath}
+        src={path}
         alt={`useitem #${useitemId}`}
-        className={getClassName(className, useSVGIcon)}
+        className={classNames}
       />)
   }
 }
