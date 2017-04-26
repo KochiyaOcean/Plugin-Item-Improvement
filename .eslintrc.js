@@ -27,7 +27,8 @@ module.exports = {
     'no-confusing-arrow': ['error', {'allowParens': true}],
     'import/prefer-default-export': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
-    'arrow-parens': ["error", "as-needed"]
+    'arrow-parens': ['error', 'as-needed'],
+    'no-underscore-dangle': ['error', { 'allow': ['__'] }]
   },
   'settings': {
     'import/resolver': {
