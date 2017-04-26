@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { Nav, NavItem, Col, Grid, Table } from 'react-bootstrap'
 import _ from 'lodash'
+import { Provider } from 'react-redux'
+import { store } from 'views/create-store'
 
 import { Divider } from './Divider'
 import { ItemInfoRow } from './ItemInfoRow'
@@ -13,6 +15,8 @@ const { $, __, config } = window
 
 const dataJson = fs.readJsonSync(path.join(__dirname, '..', 'assets', 'data.json'))
 const DATA = _.sortBy(dataJson, ['icon', 'id'])
+
+window.store = store
 
 // React Elements
 class ItemInfoArea extends Component {
@@ -176,4 +180,8 @@ class ItemInfoArea extends Component {
   }
 }
 
-ReactDOM.render(<ItemInfoArea />, $('#item-improvement'))
+ReactDOM.render(
+  <Provider store={store}>
+    <ItemInfoArea />
+  </Provider>,
+  $('#item-improvement'))
