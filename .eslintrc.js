@@ -30,7 +30,9 @@ module.exports = {
     'arrow-parens': ['error', 'as-needed'],
     'no-underscore-dangle': ['error', { 'allow': ['__'] }],
     'no-console': ['error', { "allow": ["warn", "error"] }],
-    'space-in-parens': 'off'
+    'space-in-parens': 'off',
+    'object-curly-spacing': 'off',
+    'space-unary-ops': 'off'
   },
   'settings': {
     'import/resolver': {

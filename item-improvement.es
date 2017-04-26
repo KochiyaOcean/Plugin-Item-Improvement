@@ -1,3 +1,4 @@
+import 'views/env'
 import { remote } from 'electron'
 import { join } from 'path-extra'
 import i18n2 from 'i18n-2'
@@ -10,8 +11,8 @@ window.$ = param => document.querySelector(param)
 window.$$ = param => document.querySelectorAll(param)
  // Node modules
 
- // language setting
-window.language = config.get('poi.language', navigator.language)
+// language setting TODO: ?
+// window.language = config.get('poi.language', navigator.language)
 
  // Custom theme
 require(`${ROOT}/views/env-parts/theme`)
@@ -31,7 +32,7 @@ additionalStyle.innerHTML = `
 `
 
 // User setting
-window.useSVGIcon = config.get('poi.useSVGIcon', false)
+// window.useSVGIcon = config.get('poi.useSVGIcon', false)
 
 // i18n
 const i18n = new i18n2({

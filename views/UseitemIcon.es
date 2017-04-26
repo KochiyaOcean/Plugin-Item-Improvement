@@ -1,82 +1,44 @@
 import classnames from 'classnames'
 import React, { Component } from 'react'
 import { resolve } from 'path'
+import { connect } from 'react-redux'
+import { configSelector } from 'views/utils/selectors'
+import _ from 'lodash'
 
-const getClassName = (props, isSVG) => {
-  const type = isSVG ? 'svg' : 'png'
-  return classnames(type, props)
-}
-
-class iconConf {
-  constructor() {
-    this.callbacks = new Map()
-  }
-  setConf = val => {
-    this.callbacks.forEach(f => f(val))
-  }
-  reg = (key, func) => {
-    this.callbacks.set(key, func)
-  }
-  unreg = key => {
-    this.callbacks.delete(key)
-  }
-}
-
-const iconConfSetter = new iconConf()
-
-const setIcon = (path, val) => {
-  if (path === 'poi.useSVGIcon') {
-    iconConfSetter.setConf(val)
-  }
-}
-
-config.addListener('config.set', setIcon)
-
-window.addEventListener('unload', (e) => {
-  config.removeListener('config.set', setIcon)
-})
-
-class UseitemIcon extends Component {
+class StaticUseitemIcon extends Component {
   static propTypes = {
-    useitemId: React.PropTypes.number,
-    className: React.PropTypes.string,
+    useitemId: React.PropTypes.number.isRequired,
+    className: React.PropTypes.string.isRequired,
+    useSVGIcon: React.PropTypes.bool.isRequired,
   }
 
-  state = {
-    useSVGIcon: config.get('poi.useSVGIcon', false),
-  }
+  // all fields are primitives
+  // so a shallow / deep comparison hardly making any differance
+  shouldComponentUpdate = nextProps =>
+    ! _.isEqual(nextProps, this.props)
 
-  shouldComponentUpdate = (nextProps, nextState) => (
-    !(nextProps.useitemId === this.props.useitemId &&
-      nextProps.className === this.props.className &&
-      nextState.useSVGIcon === this.state.useSVGIcon)
-  )
-
-  setUseSvg = val => {
-    this.setState({
-      useSVGIcon: val,
-    })
-  }
-  componentDidMount = () => {
-    this.key = `${process.hrtime()[0]}${process.hrtime()[1]}`
-    iconConfSetter.reg(this.key, this.setUseSvg)
-  }
-  componentWillUnmount = () => {
-    iconConfSetter.unreg(this.key)
-  }
-
-  render(){
-    const {useitemId, className} = this.props
-    const {useSVGIcon} = this.state
+  render() {
+    const getClassName = (props, isSVG) => {
+      const type = isSVG ? 'svg' : 'png'
+      return classnames(type, props)
+    }
+    const {useitemId, className, useSVGIcon} = this.props
     const svgPath = resolve(__dirname, `../assets/svg/useitem-icon/${useitemId}.svg`)
     const pngPath = resolve(__dirname, `../assets/img/useitem-icon/${useitemId}.png`)
 
-    if(useSVGIcon) {
-      return <img src={svgPath} className={getClassName(className, true)} />
-    } else {
-      return <img src={pngPath} className={getClassName(className, false)} />
-    }
+    return (
+      <img
+        src={useSVGIcon ? svgPath : pngPath}
+        alt={`useitem #${useitemId}`}
+        className={getClassName(className, useSVGIcon)}
+      />)
   }
 }
+
+const UseitemIcon = connect(
+  state => (
+    { useSVGIcon: _.get(configSelector(state), 'poi.useSVGIcon') }
+  )
+)(StaticUseitemIcon)
 
 export { UseitemIcon }
