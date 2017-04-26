@@ -3,11 +3,13 @@ import path from 'path-extra'
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import FontAwesome from 'react-fontawesome'
-import { Nav, NavItem, Col, Grid, Table, Collapse, Checkbox } from 'react-bootstrap'
-import { Divider } from './divider'
+import { Nav, NavItem, Col, Grid, Table, Collapse } from 'react-bootstrap'
 import { SlotitemIcon, MaterialIcon } from 'views/components/etc/icon'
-import UseitemIcon from './useitem-icon'
 import _ from 'lodash'
+
+import { Divider } from './Divider'
+import UseitemIcon from './useitem-icon'
+import { ItemInfoRow } from './ItemInfoRow'
 
 const { $, __, __r, config } = window
 
@@ -15,35 +17,9 @@ const dataJson = fs.readJsonSync(path.join(__dirname, '..', 'assets', 'data.json
 const DATA = _.sortBy(dataJson, ['icon', 'id'])
 const WEEKDAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
-const queryData = id => _.find(DATA, item => item.id == id)
+const queryData = id => _.find(DATA, item => item.id === id)
 
 // React Elements
-class ItemInfoRow extends Component {
-  handleExpanded = (e) => {
-    if (e.target.tagName === 'INPUT') return
-    this.props.setExpanded(!this.props.rowExpanded)
-  }
-
-  render() {
-    return (
-      <tr onClick={this.handleExpanded} className="expandable">
-        <td style={{ paddingLeft: 20 }}>
-          <Checkbox
-            type="checkbox"
-            className={'new-checkbox'}
-            checked={this.props.highlight}
-            onChange={this.props.clickCheckbox}
-          />
-          <SlotitemIcon slotitemId={this.props.icon} />
-          {this.props.type}
-        </td>
-        <td>{this.props.name}</td>
-        <td>{this.props.hisho}</td>
-      </tr>
-    )
-  }
-}
-
 const DetailRow = (props) => {
   const data = queryData(props.id)
   const result = []
@@ -52,7 +28,7 @@ const DetailRow = (props) => {
     for (const req of improvement.req) {
       for (const secretary of req.secretary) {
         // day = -1 means show all items
-        if (props.day == -1) {
+        if (props.day === -1) {
           hishos.push({
             name: (__(window.i18n.resources.__(secretary))),
             day: req.day,
@@ -67,7 +43,7 @@ const DetailRow = (props) => {
     }
 
     // skip the entry if no secretary availbale for chosen day
-    if (hishos.length == 0) {
+    if (hishos.length === 0) {
       continue
     }
 
@@ -122,11 +98,10 @@ const DetailRow = (props) => {
 }
 
 const MatRow = (props) => {
-  const rowCnt = props.upgrade.icon != 0 ? 3 : 2
+  const rowCnt = props.upgrade.icon !== 0 ? 3 : 2
 
   let hishoCol = ''
-  // console.log(props.day)
-  if (props.day == -1) {
+  if (props.day === -1) {
     hishoCol = props.hishos.map((hisho, index) => {
       let days = []
       hisho.day.forEach((v, i) => { if (v) days.push(__(WEEKDAY[i])) })
@@ -279,7 +254,7 @@ class ItemInfoArea extends Component {
   handleClickItem = (id) => {
     let highlights = _.clone(this.state.highlights)
     if (_.includes(highlights, id)) {
-      highlights = highlights.filter(v => v != id)
+      highlights = highlights.filter(v => v !== id)
     } else {
       highlights.push(id)
     }

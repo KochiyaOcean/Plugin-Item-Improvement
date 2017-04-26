@@ -23,9 +23,11 @@ module.exports = {
     'no-underscore-dangle': ['error', { 'allowAfterThis': true }],
     'import/extensions': ['error', { 'es': 'never' }],
     'import/no-extraneous-dependencies': 'off',
-    'import/prefer-default-export': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     'no-confusing-arrow': ['error', {'allowParens': true}],
+    'import/prefer-default-export': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'arrow-parens': ["error", "as-needed"]
   },
   'settings': {
     'import/resolver': {
