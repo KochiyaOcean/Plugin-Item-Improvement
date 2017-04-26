@@ -1,6 +1,6 @@
 import fs from 'fs-extra'
 import path from 'path-extra'
-import React from 'react'
+import React, { PropTypes } from 'react'
 import _ from 'lodash'
 import { Table, Collapse } from 'react-bootstrap'
 
@@ -89,6 +89,12 @@ const DetailRow = props => {
       </td>
     </tr>
   )
+}
+
+DetailRow.propTypes = {
+  rowExpanded: PropTypes.bool.isRequired,
+  id: PropTypes.number.isRequired,
+  day: PropTypes.number.isRequired,
 }
 
 export { DetailRow }
