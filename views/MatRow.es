@@ -13,7 +13,7 @@ const MatRow = props => {
 
   let hishoCol = ''
   if (props.day === -1) {
-    hishoCol = props.hishos.map((hisho, index) => {
+    hishoCol = props.hishos.map(hisho => {
       let days = []
       hisho.day.forEach((v, i) => { if (v) days.push(__(WEEKDAY[i])) })
       if (days.length === 7) {
@@ -22,14 +22,14 @@ const MatRow = props => {
         days = `(${days.join(' / ')})`
       }
       return (
-        <div className={'hisho-col'} key={`${hisho.name}-${index}`}>
+        <div className={'hisho-col'} key={hisho.name}>
           {hisho.name}<br />
           <span className={'available-days'}>{days}</span>
         </div>
       )
     })
   } else {
-    hishoCol = props.hishos.map((hisho, index) => <div key={`${hisho.name}-${index}`}>{hisho.name}</div>)
+    hishoCol = props.hishos.map(hisho => <div key={hisho.name}>{hisho.name}</div>)
   }
 
   let stage = ''

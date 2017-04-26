@@ -35,10 +35,11 @@ const DetailRow = props => {
     }
 
     improvement.consume.material.forEach((mat, index) => {
+      const stage = index
       if (mat.improvement[0]) {
         result.push(
           <MatRow
-            stage={index}
+            stage={stage}
             development={mat.development}
             improvement={mat.improvement}
             item={mat.item}
@@ -46,7 +47,7 @@ const DetailRow = props => {
             upgrade={improvement.upgrade}
             hishos={hishos}
             day={props.day}
-            key={`${index}-${props.day}-${JSON.stringify(hishos)}`}
+            key={`${stage}-${props.day}-${JSON.stringify(hishos)}`}
           />
         )
       }
