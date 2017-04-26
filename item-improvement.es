@@ -63,7 +63,8 @@ window.i18n = i18n
 try {
   require('poi-plugin-translator').pluginDidLoad()
 } catch (error) {
-  console.warn('plugin-translator', error)
+  // TODO
+  // console.warn('plugin-translator', error)
 }
 
 
