@@ -11,13 +11,13 @@ class iconConf {
   constructor() {
     this.callbacks = new Map()
   }
-  setConf = (val) => {
-    this.callbacks.forEach((f) => f(val))
+  setConf = val => {
+    this.callbacks.forEach(f => f(val))
   }
   reg = (key, func) => {
     this.callbacks.set(key, func)
   }
-  unreg = (key) => {
+  unreg = key => {
     this.callbacks.delete(key)
   }
 }
@@ -36,7 +36,7 @@ window.addEventListener('unload', (e) => {
   config.removeListener('config.set', setIcon)
 })
 
-export default class UseitemIcon extends Component {
+class UseitemIcon extends Component {
   static propTypes = {
     useitemId: React.PropTypes.number,
     className: React.PropTypes.string,
@@ -52,7 +52,7 @@ export default class UseitemIcon extends Component {
       nextState.useSVGIcon === this.state.useSVGIcon)
   )
 
-  setUseSvg = (val) => {
+  setUseSvg = val => {
     this.setState({
       useSVGIcon: val,
     })
@@ -78,3 +78,5 @@ export default class UseitemIcon extends Component {
     }
   }
 }
+
+export { UseitemIcon }
