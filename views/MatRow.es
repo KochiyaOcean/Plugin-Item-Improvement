@@ -52,6 +52,8 @@ const MatRow = props => {
         {star}
       </div>)
       break
+    default:
+      console.error('unreachable code: stage is out of range')
   }
 
   const useitem = props.useitem
