@@ -8,7 +8,6 @@ const { __, __r } = window
 
 const WEEKDAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
-
 // React Elements
 const MatRow = props => {
   const rowCnt = props.upgrade.icon !== 0 ? 3 : 2

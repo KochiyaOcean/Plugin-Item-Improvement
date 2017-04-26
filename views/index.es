@@ -123,9 +123,6 @@ class ItemInfoArea extends Component {
           <DetailRow
             key={`detail-${row.id}`}
             id={row.id}
-            icon={row.icon}
-            type={row.type}
-            name={row.name}
             rowExpanded={rowExpanded}
             day={this.state.day}
 
