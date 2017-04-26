@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
 import { SlotitemIcon } from 'views/components/etc/icon'
 
@@ -54,8 +54,7 @@ const MatRow = props => {
       break
   }
 
-  const useitem = props.useitem || {}
-
+  const useitem = props.useitem
   return (
     <tr>
       {
@@ -101,6 +100,38 @@ const MatRow = props => {
       </td>
     </tr>
   )
+}
+
+MatRow.propTypes = {
+  day: PropTypes.number.isRequired,
+  development: PropTypes.arrayOf(PropTypes.number).isRequired,
+  improvement: PropTypes.arrayOf(PropTypes.number).isRequired,
+  stage: PropTypes.number.isRequired,
+  item: PropTypes.shape({
+    count: PropTypes.number.isRequired,
+    icon: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  upgrade: PropTypes.shape({
+    level: PropTypes.number.isRequired,
+    icon: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  useitem: PropTypes.shape({
+    count: PropTypes.number,
+    icon: PropTypes.number,
+    name: PropTypes.string,
+  }),
+  hishos: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.arrayOf(PropTypes.bool).isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+}
+
+MatRow.defaultProps = {
+  useitem: {},
 }
 
 export { MatRow }
