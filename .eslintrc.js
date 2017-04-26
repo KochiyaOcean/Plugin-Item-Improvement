@@ -32,7 +32,11 @@ module.exports = {
     'no-console': ['error', { "allow": ["warn", "error"] }],
     'space-in-parens': 'off',
     'object-curly-spacing': 'off',
-    'space-unary-ops': 'off'
+    'space-unary-ops': 'off',
+    'space-infix-ops': 'off',
+    'curly': 'off',
+    'comma-spacing': 'off',
+    'array-callback-return': 'off'
   },
   'settings': {
     'import/resolver': {

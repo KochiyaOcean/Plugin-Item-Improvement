@@ -9,7 +9,7 @@ import { Divider } from './Divider'
 import { ItemInfoRow } from './ItemInfoRow'
 import { DetailRow } from './DetailRow'
 
-import { improveData } from '../improve-db'
+import { improveData, getJSTDayofWeek } from '../improve-db'
 
 const { $, __, config } = window
 
@@ -23,37 +23,26 @@ class ItemInfoArea extends Component {
   constructor(props) {
     super(props)
 
-    let day = (new Date()).getUTCDay()
-    if ((new Date()).getUTCHours() >= 15) {
-      day = (day + 1) % 7
-    }
-
     this.state = {
-      day,
+      day: getJSTDayofWeek(),
       highlights: config.get('plugin.ItemImprovement.highlights', []),
       rowsExpanded: {},
     }
   }
 
-
   getRows = () => {
-    const day = this.state.day
+    const { day } = this.state
     const rows = []
 
-    for (const item of DATA) {
+    DATA.map( item => {
       const hishos = []
-      for (const improvement of item.improvement) {
-        for (const req of improvement.req) {
-          for (const secretary of req.secretary) {
-            // day = -1 means show all items
-            if (day === -1) {
-              hishos.push(__(window.i18n.resources.__(secretary)))
-            } else if (req.day[day]) {
+      item.improvement.map( improvement =>
+        improvement.req.map( req =>
+          req.secretary.map( secretary => {
+            if (day === -1 || req.day[day]) {
               hishos.push(__(window.i18n.resources.__(secretary)))
             }
-          }
-        }
-      }
+          })))
       const highlight = _.includes(this.state.highlights, item.id)
       if (hishos.length > 0) {
         const row = {
@@ -66,7 +55,7 @@ class ItemInfoArea extends Component {
         }
         rows.push(row)
       }
-    }
+    })
     return rows
   }
 
@@ -77,7 +66,7 @@ class ItemInfoArea extends Component {
     })
   }
 
-  handleClickItem = id => {
+  handleClickItem = id => () => {
     let highlights = _.clone(this.state.highlights)
     if (_.includes(highlights, id)) {
       highlights = highlights.filter(v => v !== id)
@@ -91,7 +80,7 @@ class ItemInfoArea extends Component {
     })
   }
 
-  handleRowExpanded = (id, expanded) => {
+  handleRowExpanded = id => expanded => {
     const rowsExpanded = _.clone(this.state.rowsExpanded)
     rowsExpanded[id] = expanded
     this.setState({
@@ -105,7 +94,7 @@ class ItemInfoArea extends Component {
     const normal = []
     let result = []
     if (rows != null) {
-      for (const row of rows) {
+      rows.map( row => {
         const ref = row.highlight ? highlighted : normal
 
         const rowExpanded = this.state.rowsExpanded[row.id] || false
@@ -117,9 +106,9 @@ class ItemInfoArea extends Component {
             name={row.name}
             hisho={row.hisho}
             highlight={row.highlight}
-            clickCheckbox={this.handleClickItem.bind(this, row.id)}
+            clickCheckbox={this.handleClickItem(row.id)}
             rowExpanded={rowExpanded}
-            setExpanded={this.handleRowExpanded.bind(this, row.id)}
+            setExpanded={this.handleRowExpanded(row.id)}
           />
         )
         ref.push(
@@ -131,7 +120,7 @@ class ItemInfoArea extends Component {
 
           />
         )
-      }
+      })
       result = _.concat(highlighted, normal)
     }
 
