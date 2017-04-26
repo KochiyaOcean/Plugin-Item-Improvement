@@ -23,6 +23,7 @@ module.exports = {
     'no-underscore-dangle': ['error', { 'allowAfterThis': true }],
     'import/extensions': ['error', { 'es': 'never' }],
     'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
     'comma-dangle': ['error', 'always-multiline'],
     'no-confusing-arrow': ['error', {'allowParens': true}],
   },
