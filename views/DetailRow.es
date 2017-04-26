@@ -1,21 +1,14 @@
-import fs from 'fs-extra'
-import path from 'path-extra'
 import React, { PropTypes } from 'react'
-import _ from 'lodash'
 import { Table, Collapse } from 'react-bootstrap'
 
 import { MaterialIcon } from 'views/components/etc/icon'
 import { MatRow } from './MatRow'
+import { improveTable } from '../improve-db'
 
 const { __ } = window
 
-const dataJson = fs.readJsonSync(path.join(__dirname, '..', 'assets', 'data.json'))
-const DATA = _.sortBy(dataJson, ['icon', 'id'])
-
-const queryData = id => _.find(DATA, item => item.id === id)
-
 const DetailRow = props => {
-  const data = queryData(props.id)
+  const data = improveTable.get(props.id)
   const result = []
   for (const improvement of data.improvement) {
     const hishos = []
