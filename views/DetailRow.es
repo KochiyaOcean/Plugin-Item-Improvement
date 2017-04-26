@@ -10,10 +10,10 @@ const { __ } = window
 const DetailRow = props => {
   const data = improveTable.get(props.id)
   const result = []
-  for (const improvement of data.improvement) {
+  data.improvement.map( improvement => {
     const hishos = []
-    for (const req of improvement.req) {
-      for (const secretary of req.secretary) {
+    improvement.req.map( req => {
+      req.secretary.map( secretary => {
         // day = -1 means show all items
         if (props.day === -1) {
           hishos.push({
@@ -26,12 +26,12 @@ const DetailRow = props => {
             day: req.day,
           })
         }
-      }
-    }
+      })
+    })
 
     // skip the entry if no secretary availbale for chosen day
     if (hishos.length === 0) {
-      continue
+      return
     }
 
     improvement.consume.material.forEach((mat, index) => {
@@ -51,7 +51,7 @@ const DetailRow = props => {
         )
       }
     })
-  }
+  })
 
   return (
     <tr>
@@ -63,10 +63,22 @@ const DetailRow = props => {
                 <tr>
                   <th style={{ width: '20%' }} />
                   <th style={{ width: '33%' }}>
-                    <span><MaterialIcon materialId={1} />{data.improvement[0].consume.fuel}</span>
-                    <span><MaterialIcon materialId={2} />{data.improvement[0].consume.ammo}</span>
-                    <span><MaterialIcon materialId={3} />{data.improvement[0].consume.steel}</span>
-                    <span><MaterialIcon materialId={4} />{data.improvement[0].consume.bauxite}</span>
+                    <span>
+                      <MaterialIcon materialId={1} />
+                      {data.improvement[0].consume.fuel}
+                    </span>
+                    <span>
+                      <MaterialIcon materialId={2} />
+                      {data.improvement[0].consume.ammo}
+                    </span>
+                    <span>
+                      <MaterialIcon materialId={3} />
+                      {data.improvement[0].consume.steel}
+                    </span>
+                    <span>
+                      <MaterialIcon materialId={4} />
+                      {data.improvement[0].consume.bauxite}
+                    </span>
                   </th>
                   <th style={{ width: '7%' }}><MaterialIcon materialId={7} /></th>
                   <th style={{ width: '7%' }}><MaterialIcon materialId={8} /></th>
@@ -87,7 +99,6 @@ const DetailRow = props => {
 DetailRow.propTypes = {
   rowExpanded: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
-  day: PropTypes.number.isRequired,
 }
 
 export { DetailRow }
