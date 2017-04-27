@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { SlotitemIcon } from 'views/components/etc/icon'
 
 import {
@@ -7,9 +7,9 @@ import {
 } from 'react-bootstrap'
 
 import { EquipListView } from './EquipListView'
+import { isEquipMasterEqual } from './utils'
 
 const { _, FontAwesome } = window
-import { isEquipMasterEqual } from './utils'
 
 // props:
 // - $equips
@@ -21,6 +21,23 @@ import { isEquipMasterEqual } from './utils'
 // - plans
 // - viewMode
 class EquipCategoryView extends Component {
+  static propTypes = {
+    $equips: PropTypes.object.isRequired,
+    collapsed: PropTypes.bool.isRequired,
+    viewMode: PropTypes.bool.isRequired,
+    catInfo: PropTypes.shape({
+      group: PropTypes.arrayOf(PropTypes.number).isRequired,
+      icons: PropTypes.arrayOf(PropTypes.number).isRequired,
+    }).isRequired,
+    equipLevels: PropTypes.object.isRequired,
+    plans: PropTypes.object.isRequired,
+    equipType: PropTypes.shape({
+      api_id: PropTypes.number.isRequired,
+      api_name: PropTypes.string.isRequired,
+    }).isRequired,
+    onToggle: PropTypes.func.isRequired,
+  }
+
   shouldComponentUpdate(nextProps) {
     // skipping "catInfo" as it's generated from $equips
     return this.props.collapsed !== nextProps.collapsed ||
@@ -46,32 +63,32 @@ class EquipCategoryView extends Component {
         <Button
             onClick={this.props.onToggle}
             style={{
-              width: "100%",
-              margin: "2px",
-              display:"flex", alignItems: "center",
+              width: '100%',
+              margin: '2px',
+              display: 'flex', alignItems: 'center',
             }} >
           { !this.props.viewMode &&
             (<FontAwesome
                  className="eqcat-collapse-toggle"
-                 style={{marginRight: "10px"}}
-                 name={collapsed ? "chevron-right" : "chevron-down"}
+                 style={{marginRight: '10px'}}
+                 name={collapsed ? 'chevron-right' : 'chevron-down'}
              />)
           }
           <div
-              style={{flex: "1", textAlign: "left"}}
+              style={{flex: '1', textAlign: 'left'}}
               key="name">{et.api_name}</div>
           <div>
-          {
-            ci.icons.map( (iconId,ind) =>
-            <SlotitemIcon
-                key={ind}
-                slotitemId={iconId} className="equip-icon" />)
-          }
+            {
+              ci.icons.map( (iconId,ind) =>
+                <SlotitemIcon
+                    key={ind}
+                    slotitemId={iconId} className="equip-icon" />)
+            }
           </div>
         </Button>
         <Collapse timeout={100} in={!collapsed}>
           <div
-              style={{paddingLeft:"20px"}}
+              style={{paddingLeft: '20px'}}
           >
             <EquipListView
                 viewMode={this.props.viewMode}
