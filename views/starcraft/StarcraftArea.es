@@ -7,6 +7,8 @@ import { store } from 'views/create-store'
 import { prepareEquipTypeInfo } from './equiptype'
 import { EquipCategoryView } from './EquipCategoryView'
 import { ControlPanel } from './ControlPanel'
+import { Divider } from '../Divider'
+
 import { keyPlans } from './utils'
 
 const { _, $, remote } = window
@@ -106,6 +108,7 @@ class Main extends Component {
             onControlAction={this.handleControlAction}
             onExportAsImage={this.handleRefToImage}
         />
+        <Divider />
         <div ref={this.updateRef}>
           {
             Object.keys(equipTypes).map( (k,ind) => {
