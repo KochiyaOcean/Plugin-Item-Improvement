@@ -130,37 +130,37 @@ class ItemInfoArea extends Component {
   render() {
     return (
       <div>
-          <Divider />
-          <Grid className="vertical-center">
-            <Col xs={12}>
-              <Nav bsStyle="pills" activeKey={this.state.day} onSelect={this.handleKeyChange}>
-                <NavItem eventKey={0}>{__('Sunday')}</NavItem>
-                <NavItem eventKey={1}>{__('Monday')}</NavItem>
-                <NavItem eventKey={2}>{__('Tuesday')}</NavItem>
-                <NavItem eventKey={3}>{__('Wednesday')}</NavItem>
-                <NavItem eventKey={4}>{__('Thursday')}</NavItem>
-                <NavItem eventKey={5}>{__('Friday')}</NavItem>
-                <NavItem eventKey={6}>{__('Saturday')}</NavItem>
-                <NavItem eventKey={-1}>{__('All')}</NavItem>
-              </Nav>
-            </Col>
-          </Grid>
-          <Divider />
-          <Grid>
-            <Table bordered condensed hover id="main-table">
-              <thead className="item-table">
-                <tr>
-                  <th style={{ width: '30%' }}><div style={{ paddingLeft: '55px' }}>{__('Type')}</div></th>
-                  <th style={{ width: '40%' }}>{__('Name')}</th>
-                  <th style={{ width: '30%' }}>{__('2nd Ship')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {this.renderRows()}
-              </tbody>
-            </Table>
-          </Grid>
-        </div>
+        <Divider />
+        <Grid className="vertical-center">
+          <Col xs={12}>
+            <Nav bsStyle="pills" activeKey={this.state.day} onSelect={this.handleKeyChange}>
+              <NavItem eventKey={0}>{__('Sunday')}</NavItem>
+              <NavItem eventKey={1}>{__('Monday')}</NavItem>
+              <NavItem eventKey={2}>{__('Tuesday')}</NavItem>
+              <NavItem eventKey={3}>{__('Wednesday')}</NavItem>
+              <NavItem eventKey={4}>{__('Thursday')}</NavItem>
+              <NavItem eventKey={5}>{__('Friday')}</NavItem>
+              <NavItem eventKey={6}>{__('Saturday')}</NavItem>
+              <NavItem eventKey={-1}>{__('All')}</NavItem>
+            </Nav>
+          </Col>
+        </Grid>
+        <Divider />
+        <Grid>
+          <Table bordered condensed hover id="main-table">
+            <thead className="item-table">
+              <tr>
+                <th style={{ width: '30%' }}><div style={{ paddingLeft: '55px' }}>{__('Type')}</div></th>
+                <th style={{ width: '40%' }}>{__('Name')}</th>
+                <th style={{ width: '30%' }}>{__('2nd Ship')}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.renderRows()}
+            </tbody>
+          </Table>
+        </Grid>
+      </div>
     )
   }
 }
