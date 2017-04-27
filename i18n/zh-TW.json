@@ -26,5 +26,26 @@
   "Resource to consume": "需要資材",
   "upgrade": "升級",
   "Equipment": "装備",
-  "All": "全部装備"
+  "All": "全部装備",
+
+  "Content": "內容",
+  "View": "瀏覽",
+
+  "Default": "默認",
+  "Expand All": "全部展開",
+  "Collapse All": "全部摺疊",
+  "View Mode": "瀏覽模式",
+  "Export as Image": "導出圖片",
+
+  "Owned": "持有",
+  "Add": "添加",
+  "Remove": "刪除",
+  "Modify": "修改",
+  "Invalid": "無效",
+
+  "New equipment plan": "新建裝備計劃",
+  "Expand only non-empty categories": "僅展開內容非空的裝備類別",
+
+  "Starcraft": "星海爭霸",
+  "Your personal planner for crafting stars": "裝備改修規劃書"
 }
