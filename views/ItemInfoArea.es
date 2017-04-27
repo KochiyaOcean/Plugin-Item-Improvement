@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Nav, NavItem, Col, Grid, Table } from 'react-bootstrap'
 import _ from 'lodash'
 
+import { Divider } from './Divider'
 import { ItemInfoRow } from './ItemInfoRow'
 import { DetailRow } from './DetailRow'
 
@@ -10,12 +11,6 @@ import { improveData, getJSTDayofWeek } from '../improve-db'
 const { __, config } = window
 
 const DATA = improveData
-
-const Divider = () => (
-  <hr
-    className="divider"
-    style={{width: '100%'}}
-  />)
 
 
 class ItemInfoArea extends Component {
@@ -130,7 +125,6 @@ class ItemInfoArea extends Component {
   render() {
     return (
       <div>
-        <Divider />
         <Grid className="vertical-center">
           <Col xs={12}>
             <Nav bsStyle="pills" activeKey={this.state.day} onSelect={this.handleKeyChange}>
