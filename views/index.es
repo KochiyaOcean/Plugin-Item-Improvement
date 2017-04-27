@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { Nav, NavItem, Col, Grid, Table } from 'react-bootstrap'
-import _ from 'lodash'
+import { Nav, NavItem, Grid } from 'react-bootstrap'
 import { Provider } from 'react-redux'
 import { store } from 'views/create-store'
 
+import { Divider } from './Divider'
 import { ItemInfoArea } from './ItemInfoArea'
 
-const { $, __, config } = window
+const { $ } = window
 
 window.store = store
 
@@ -31,6 +31,7 @@ class Main extends Component {
           <NavItem eventKey={'info'}>Information</NavItem>
           <NavItem eventKey={'starcraft'}>Starcraft</NavItem>
         </Nav>
+        <Divider />
         <div style={{display: this.state.part === 'info' ? 'initial' : 'none'}} >
           <ItemInfoArea />
         </div>
