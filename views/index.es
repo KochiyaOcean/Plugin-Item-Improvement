@@ -6,6 +6,7 @@ import { store } from 'views/create-store'
 
 import { Divider } from './Divider'
 import { ItemInfoArea } from './ItemInfoArea'
+import { StarcraftArea } from './starcraft/StarcraftArea'
 
 const { $ } = window
 
@@ -36,7 +37,7 @@ class Main extends Component {
           <ItemInfoArea />
         </div>
         <div style={{display: this.state.part === 'starcraft' ? 'initial' : 'none'}} >
-          placeholder for starcraft
+          <StarcraftArea />
         </div>
       </Grid>
     )

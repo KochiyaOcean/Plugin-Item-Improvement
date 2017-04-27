@@ -26,5 +26,26 @@
   "Resource to consume": "需要资材",
   "upgrade": "升级",
   "Equipment": "装备",
-  "All": "全部装备"
+  "All": "全部装备",
+
+  "Content": "内容",
+  "View": "浏览",
+
+  "Default": "默认",
+  "Expand All": "全部展开",
+  "Collapse All": "全部折叠",
+  "View Mode": "浏览模式",
+  "Export as Image": "导出图片",
+
+  "Owned": "持有",
+  "Add": "添加",
+  "Remove": "删除",
+  "Modify": "修改",
+  "Invalid": "无效",
+
+  "New equipment plan": "新建装备计划",
+  "Expand only non-empty categories": "仅展开内容非空的装备类别",
+
+  "Starcraft": "星级争霸",
+  "Your personal planner for crafting stars": "装备改修规划书"
 }

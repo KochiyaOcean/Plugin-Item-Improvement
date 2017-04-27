@@ -1,4 +1,5 @@
 import 'views/env'
+
 import { remote } from 'electron'
 import { join } from 'path-extra'
 import i18n2 from 'i18n-2'
