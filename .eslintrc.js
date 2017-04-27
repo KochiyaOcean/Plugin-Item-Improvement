@@ -36,7 +36,8 @@ module.exports = {
     'space-infix-ops': 'off',
     'curly': 'off',
     'comma-spacing': 'off',
-    'array-callback-return': 'off'
+    'array-callback-return': 'off',
+    'no-nested-ternary': 'off'
   },
   'settings': {
     'import/resolver': {
