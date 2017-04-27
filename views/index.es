@@ -8,7 +8,7 @@ import { Divider } from './Divider'
 import { ItemInfoArea } from './ItemInfoArea'
 import { StarcraftArea } from './starcraft/StarcraftArea'
 
-const { $ } = window
+const { $, __ } = window
 
 window.store = store
 
@@ -29,8 +29,8 @@ class Main extends Component {
     return (
       <Grid>
         <Nav bsStyle="pills" activeKey={this.state.part} onSelect={this.handlePartChange}>
-          <NavItem eventKey={'info'}>Information</NavItem>
-          <NavItem eventKey={'starcraft'}>Starcraft</NavItem>
+          <NavItem eventKey={'info'}>{__('Improvement information')}</NavItem>
+          <NavItem eventKey={'starcraft'}>{__('Starcraft')}</NavItem>
         </Nav>
         <Divider />
         <div style={{display: this.state.part === 'info' ? 'initial' : 'none'}} >
