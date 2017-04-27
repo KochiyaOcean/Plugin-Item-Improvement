@@ -54,9 +54,9 @@ class AddNewEquipView extends Component {
             componentClass="select">
           <option key="none" value="none">{__('New equipment plan')}</option>
           {
-            this.props.equips.map((equip, ind) =>
+            this.props.equips.map(equip =>
               <option
-                  key={ind} value={equip.mstId}>
+                  key={equip.mstId} value={equip.mstId}>
                 {`${equip.mstId}: ${equip.name}`}
               </option>
             )

@@ -106,8 +106,8 @@ class PlanModifyControl extends Component {
             style={{flex: 1, marginRight: '10px', maxWidth: '100px'}}
             componentClass="select">
           {
-            _.range(0,10+1).map((star, ind) =>
-              <option key={ind} value={star}>
+            _.range(0,10+1).map(star =>
+              <option key={star} value={star}>
                 {starText(star)}
               </option>
             )

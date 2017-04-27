@@ -79,9 +79,9 @@ class EquipCategoryView extends Component {
               key="name">{et.api_name}</div>
           <div>
             {
-              ci.icons.map( (iconId,ind) =>
+              ci.icons.map( iconId =>
                 <SlotitemIcon
-                    key={ind}
+                    key={iconId}
                     slotitemId={iconId} className="equip-icon" />)
             }
           </div>
