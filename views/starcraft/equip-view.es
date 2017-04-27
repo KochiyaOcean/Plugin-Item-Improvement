@@ -67,11 +67,11 @@ class EquipView extends Component {
           width: '80%', maxWidth: '500px',
           margin: 'auto', marginBottom: '2px', marginTop: '2px'}} >
           {
-            planArr.map( (args, ind) => (
+            planArr.map( args => (
               <PlanView
                   viewMode={this.props.viewMode}
                   mstId={mstId}
-                  key={ind}
+                  key={`plan-${mstId}-${args.star}`}
                   { ... args } />
             ))
           }

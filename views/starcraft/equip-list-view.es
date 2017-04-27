@@ -59,10 +59,10 @@ class EquipListView extends Component {
     return (
       <ListGroup style={{marginBottom: '0'}}>
         {
-          equipList.map( (args,ind) => (
+          equipList.map( args => (
             <ListGroupItem
                 style={{padding: '0'}}
-                key={ind}>
+                key={args.mstId}>
               <div>
                 <EquipView
                     viewMode={this.props.viewMode}

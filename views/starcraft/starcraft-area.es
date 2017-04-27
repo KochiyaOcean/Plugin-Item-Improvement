@@ -110,13 +110,13 @@ class Main extends Component {
         <Divider />
         <div ref={this.updateRef}>
           {
-            Object.keys(equipTypes).map( (k,ind) => {
+            Object.keys(equipTypes).map( k => {
               const et = equipTypes[k]
               const ci = equipTypeInfo.catInfo[et.api_id]
               return (
                 <EquipCategoryView
                     viewMode={viewMode}
-                    key={ind}
+                    key={et.api_id}
                     collapsed={equipTypeCollapsed[k]}
                     onToggle={this.handleToggle(k)}
                     equipType={et}
