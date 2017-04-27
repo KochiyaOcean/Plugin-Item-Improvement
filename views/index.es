@@ -31,12 +31,12 @@ class Main extends Component {
           <NavItem eventKey={'info'}>Information</NavItem>
           <NavItem eventKey={'starcraft'}>Starcraft</NavItem>
         </Nav>
-        { this.state.part === 'info' ?
-          (<ItemInfoArea />)
-          : this.state.part === 'starcraft'
-          ? (<div> Starcraft! </div>)
-          : null
-        }
+        <div style={{display: this.state.part === 'info' ? 'initial' : 'none'}} >
+          <ItemInfoArea />
+        </div>
+        <div style={{display: this.state.part === 'starcraft' ? 'initial' : 'none'}} >
+          placeholder for starcraft
+        </div>
       </Grid>
     )
   }
