@@ -5,7 +5,6 @@ import _ from 'lodash'
 import { Provider } from 'react-redux'
 import { store } from 'views/create-store'
 
-import { Divider } from './Divider'
 import { ItemInfoRow } from './ItemInfoRow'
 import { DetailRow } from './DetailRow'
 
@@ -16,6 +15,12 @@ const { $, __, config } = window
 const DATA = improveData
 
 window.store = store
+
+const Divider = () => (
+  <hr
+    className="divider"
+    style={{width: '100%'}}
+  />)
 
 // React Elements
 class ItemInfoArea extends Component {
@@ -131,7 +136,7 @@ class ItemInfoArea extends Component {
     return (
       <Grid id="item-info-area">
         <div id="item-info-settings">
-          <Divider text={__('Weekday setting')} />
+          <Divider />
           <Grid className="vertical-center">
             <Col xs={12}>
               <Nav bsStyle="pills" activeKey={this.state.day} onSelect={this.handleKeyChange}>
@@ -146,7 +151,7 @@ class ItemInfoArea extends Component {
               </Nav>
             </Col>
           </Grid>
-          <Divider text={__('Improvement information')} />
+          <Divider />
           <Grid>
             <Table bordered condensed hover id="main-table">
               <thead className="item-table">
