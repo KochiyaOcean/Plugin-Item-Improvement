@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Table, Collapse } from 'react-bootstrap'
 
 import { MaterialIcon } from 'views/components/etc/icon'
-import { MatRow } from './MatRow'
+import { MatRow } from './mat-row'
 import { improveTable } from '../improve-db'
 
 const { __ } = window

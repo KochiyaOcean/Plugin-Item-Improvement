@@ -5,10 +5,8 @@ import {
   ListGroupItem,
 } from 'react-bootstrap'
 
-import {
-  EquipView,
-  AddNewEquipView,
-} from './EquipView'
+import { EquipView } from './equip-view'
+import { AddNewEquipView } from './add-new-equip-view'
 import { getIconId } from './equiptype'
 import { isEquipMasterEqual } from './utils'
 

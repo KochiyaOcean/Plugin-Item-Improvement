@@ -4,9 +4,9 @@ import { Nav, NavItem, Grid } from 'react-bootstrap'
 import { Provider } from 'react-redux'
 import { store } from 'views/create-store'
 
-import { Divider } from './Divider'
-import { ItemInfoArea } from './ItemInfoArea'
-import { StarcraftArea } from './starcraft/StarcraftArea'
+import { Divider } from './divider'
+import { ItemInfoArea } from './item-info-area'
+import { StarcraftArea } from './starcraft/starcraft-area'
 
 const { $, __ } = window
 

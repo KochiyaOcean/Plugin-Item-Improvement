@@ -1,16 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 
-import {
-  Button,
-  FormControl,
-} from 'react-bootstrap'
-
+import { Button } from 'react-bootstrap'
 import { SlotitemIcon } from 'views/components/etc/icon'
-import { PlanView } from './PlanView'
-import { PlanModifyControl } from './PlanModifyControl'
+
+import { PlanView } from './plan-view'
+import { PlanModifyControl } from './plan-modify-control'
 import { modifyPlans } from './utils'
 
-const { __, FontAwesome } = window
+const { __ } = window
 
 // props:
 // - mstId, name, iconId, plans, viewMode
@@ -89,71 +86,5 @@ class EquipView extends Component {
   }
 }
 
-// props:
-// - equips
-class AddNewEquipView extends Component {
-  static propTypes = {
-    equips: PropTypes.arrayOf(PropTypes.shape({
-      iconId: PropTypes.number.isRequired,
-      mstId: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-    })).isRequired,
-  }
 
-  constructor() {
-    super()
-    this.state = {
-      selected: 'none',
-    }
-  }
-  handleChange = e => {
-    this.setState( { selected: e.target.value } )
-  }
-  handleAddItem = () => {
-    const { selected } = this.state
-    if (selected !== 'none') {
-      modifyPlans(plans => ({ ...plans, [selected]: {} }))
-    } else {
-      console.error( 'trying adding an invaid equipment' )
-    }
-  }
-
-  render() {
-    return (
-      <div style={{
-        display: 'flex',
-        margin: '5px',
-        fontSize: '12px',
-        alignItems: 'center'}} >
-        <FontAwesome
-            style={{marginRight: '10px'}}
-            name="plus"
-        />
-        <FormControl
-            style={{marginRight: '10px',fontSize: '14px'}}
-            onChange={this.handleChange}
-            value={this.state.selected}
-            componentClass="select">
-          <option key="none" value="none">{__('New equipment plan')}</option>
-          {
-            this.props.equips.map((equip, ind) =>
-              <option
-                  key={ind} value={equip.mstId}>
-                {`${equip.mstId}: ${equip.name}`}
-              </option>
-            )
-          }
-        </FormControl>
-        <Button
-            disabled={this.state.selected === 'none'}
-            onClick={this.handleAddItem}
-            bsStyle="primary">{__('Add')}</Button>
-      </div>
-    )
-  }
-}
-
-export {
-  EquipView,
-  AddNewEquipView,
-}
+export { EquipView }

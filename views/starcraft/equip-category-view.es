@@ -6,7 +6,7 @@ import {
   Collapse,
 } from 'react-bootstrap'
 
-import { EquipListView } from './EquipListView'
+import { EquipListView } from './equip-list-view'
 import { isEquipMasterEqual } from './utils'
 
 const { _, FontAwesome } = window
