@@ -1,6 +1,6 @@
 import domtoimage from 'dom-to-image'
 
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import { connect } from 'react-redux'
 import { store } from 'views/create-store'
@@ -17,13 +17,18 @@ $('#fontawesome-css')
   .setAttribute('href', require.resolve('font-awesome/css/font-awesome.css'))
 
 class Main extends Component {
-  constructor(props) {
-    super()
-    this.state = { ...this.prepareAutoCollapse(props), viewMode: false }
-    this.viewRef = null
+  static propTypes = {
+    $equips: PropTypes.object.isRequired,
+    equipLevels: PropTypes.object.isRequired,
+    equipTypes: PropTypes.object.isRequired,
+    plans: PropTypes.object.isRequired,
+    equipTypeInfo: PropTypes.shape( {
+      catInfo: PropTypes.object.isRequired,
+      iconInfo: PropTypes.object.isRequired,
+    }).isRequired,
   }
 
-  prepareAutoCollapse(props) {
+  static prepareAutoCollapse(props) {
     const equipTypeCollapsed = {}
     const {equipTypes, equipTypeInfo, plans} = props
     Object.keys( equipTypes ).map( k => {
@@ -34,6 +39,12 @@ class Main extends Component {
     })
 
     return { equipTypeCollapsed }
+  }
+
+  constructor(props) {
+    super()
+    this.state = { ...Main.prepareAutoCollapse(props), viewMode: false }
+    this.viewRef = null
   }
 
   handleToggle = k => () => {
@@ -88,7 +99,7 @@ class Main extends Component {
     return (
       <div
           id="starcraft-root"
-          style={{margin: "5px 10px 5px 5px"}} >
+          style={{margin: '5px 10px 5px 5px'}} >
         <ControlPanel
             viewMode={viewMode}
             onToggleViewMode={this.handleToggleViewMode}
@@ -130,7 +141,9 @@ const StarcraftArea = connect(
     const equipLevels = {}
     Object.keys( equips ).map( rstId => {
       const { api_level, api_slotitem_id } = equips[rstId]
+      /* eslint-disable camelcase */
       const mstId = api_slotitem_id
+      /* eslint-enable camelcase */
       const l = equipLevels[mstId] || []
       l.push( api_level )
       equipLevels[mstId] = l
@@ -139,7 +152,7 @@ const StarcraftArea = connect(
     // plans[<equipment master id>] = undefined or object
     // plans[...][0 .. 10] = number of planned count
     // connected plans:
-    const plans = _.get(state,'config.' + keyPlans, {})
+    const plans = _.get(state,`config.${keyPlans}`, {})
 
     // filter equipTypes to remove empty categories
     // before any UI rendering happens

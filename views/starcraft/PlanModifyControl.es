@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import {
   Button,
@@ -6,12 +6,18 @@ import {
 } from 'react-bootstrap'
 
 import NumericInput from 'react-numeric-input'
-const { _, __, FontAwesome } = window
 import { starText, modifyPlans } from './utils'
+
+const { _, __, FontAwesome } = window
 
 // props:
 // - plans: star to plan count
 class PlanModifyControl extends Component {
+  static propTypes = {
+    mstId: PropTypes.number.isRequired,
+    plans: PropTypes.object.isRequired,
+  }
+
   constructor() {
     super()
     this.state = {
@@ -19,50 +25,54 @@ class PlanModifyControl extends Component {
       planCount: 1,
     }
   }
-  handleChangeStar = e => {
-    const star = parseInt(e.target.value, 10)
-    this.setState({ star })
-  }
-  handleChangeCount = valAsNum => {
-    // note that "valAsNum" could be "null"
-    this.setState({ planCount: valAsNum })
-  }
+
   // The button action depends on current state
   getCurrentAction = () => {
-    if (typeof this.state.planCount !== "number")
-      return "invalid"
+    if (typeof this.state.planCount !== 'number')
+      return 'invalid'
 
     const { star, planCount } = this.state
     const oldPlanCount = this.props.plans[star]
 
     if (oldPlanCount) {
       // we are editing an existing one
-      return planCount === 0 ? "remove" : "modify"
+      return planCount === 0 ? 'remove' : 'modify'
     } else {
       // we are creating a new one
-      return planCount === 0 ? "invalid" : "add"
+      return planCount === 0 ? 'invalid' : 'add'
     }
   }
+
+  handleChangeStar = e => {
+    const star = parseInt(e.target.value, 10)
+    this.setState({ star })
+  }
+
+  handleChangeCount = valAsNum => {
+    // note that 'valAsNum' could be 'null'
+    this.setState({ planCount: valAsNum })
+  }
+
   handleAction = (action,{star,planCount}) => () => {
-    if (action === "invalid")
+    if (action === 'invalid')
       return
 
     const mstId = this.props.mstId
-    if (action === "add" || action === "modify") {
+    if (action === 'add' || action === 'modify') {
       modifyPlans( plans => {
-        const newPlans = { ... plans }
+        const newPlans = { ...plans }
         // it's safe to assume that plans[mstId] must exist at this point
-        newPlans[mstId] = { ... plans[mstId] }
+        newPlans[mstId] = { ...plans[mstId] }
         newPlans[mstId][star] = planCount
         return newPlans
       })
       return
     }
-    if (action === "remove") {
+    if (action === 'remove') {
       modifyPlans( plans => {
-        const newPlans = { ... plans }
+        const newPlans = { ...plans }
         // it's safe to assume that plans[mstId] must exist at this point
-        newPlans[mstId] = { ... plans[mstId] }
+        newPlans[mstId] = { ...plans[mstId] }
         delete newPlans[mstId][star]
         return newPlans
       })
@@ -72,28 +82,28 @@ class PlanModifyControl extends Component {
     console.error(`undefined action: ${action}`)
   }
 
-  render () {
+  render() {
     const action = this.getCurrentAction()
     const [faIcon, btnStyle, btnText] =
-      action === "add" ? ["plus", "primary", "Add"]
-      : action === "remove" ? ["minus", "warning", "Remove"]
-      : action === "modify" ? ["pencil", "success", "Modify"]
-      : action === "invalid" ? ["ban", "danger", "Invalid"]
+      action === 'add' ? ['plus', 'primary', 'Add']
+      : action === 'remove' ? ['minus', 'warning', 'Remove']
+      : action === 'modify' ? ['pencil', 'success', 'Modify']
+      : action === 'invalid' ? ['ban', 'danger', 'Invalid']
       : console.error(`invalid action: ${action}`)
 
     return (
       <div style={{
-        display: "flex", alignItems: "center",
-        justifyContent: "space-between",
-        minHeight: "50px"}}>
+        display: 'flex', alignItems: 'center',
+        justifyContent: 'space-between',
+        minHeight: '50px'}}>
         <FontAwesome
-            style={{marginRight: "10px", maxWidth: "100px"}}
+            style={{marginRight: '10px', maxWidth: '100px'}}
             name={faIcon}
         />
         <FormControl
             value={this.state.star}
             onChange={this.handleChangeStar}
-            style={{flex: 1, marginRight: "10px", maxWidth: "100px"}}
+            style={{flex: 1, marginRight: '10px', maxWidth: '100px'}}
             componentClass="select">
           {
             _.range(0,10+1).map((star, ind) =>
@@ -103,7 +113,7 @@ class PlanModifyControl extends Component {
             )
           }
         </FormControl>
-        <div style={{flex: 1, marginRight: "10px", maxWidth: "100px"}} >
+        <div style={{flex: 1, marginRight: '10px', maxWidth: '100px'}} >
           <NumericInput
               onChange={this.handleChangeCount}
               min={0}
@@ -111,8 +121,8 @@ class PlanModifyControl extends Component {
               className="form-control" />
         </div>
         <Button
-            style={{width: "25%", maxWidth: "100px"}}
-            disabled={action === "invalid"}
+            style={{width: '25%', maxWidth: '100px'}}
+            disabled={action === 'invalid'}
             onClick={this.handleAction(action,this.state)}
             bsStyle={btnStyle}>
           {__(btnText)}

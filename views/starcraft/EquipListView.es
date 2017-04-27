@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import {
   ListGroup,
@@ -11,6 +11,7 @@ import {
 } from './EquipView'
 import { getIconId } from './equiptype'
 import { isEquipMasterEqual } from './utils'
+
 const { _ } = window
 
 // props:
@@ -20,6 +21,14 @@ const { _ } = window
 // - plans
 // - viewMode
 class EquipListView extends Component {
+  static propTypes = {
+    viewMode: PropTypes.bool.isRequired,
+    $equips: PropTypes.object.isRequired,
+    equipLevels: PropTypes.object.isRequired,
+    plans: PropTypes.object.isRequired,
+    equipMstIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+  }
+
   shouldComponentUpdate(nextProps) {
     return this.props.viewMode !== nextProps.viewMode ||
       ! _.isEqual(this.props.equipMstIds, nextProps.equipMstIds ) ||
@@ -28,7 +37,7 @@ class EquipListView extends Component {
       ! isEquipMasterEqual( this.props.$equips, nextProps.$equips )
   }
 
-  render () {
+  render() {
     // equipment list for those that has plans.
     const equipList = []
     // equipment list for those that doesn't have plans
@@ -50,26 +59,24 @@ class EquipListView extends Component {
     })
 
     return (
-      <ListGroup style={{marginBottom:"0"}}>
+      <ListGroup style={{marginBottom: '0'}}>
         {
-          equipList.map( (args,ind) => {
-            return (
-              <ListGroupItem
-                  style={{padding: "0"}}
-                  key={ind}>
-                <div>
-                  <EquipView
-                      viewMode={this.props.viewMode}
-                      { ... args }
-                  />
-                </div>
-              </ListGroupItem>)
-          })
+          equipList.map( (args,ind) => (
+            <ListGroupItem
+                style={{padding: '0'}}
+                key={ind}>
+              <div>
+                <EquipView
+                    viewMode={this.props.viewMode}
+                    { ... args } />
+              </div>
+            </ListGroupItem>)
+          )
         }
         {
           !this.props.viewMode && equipListNoPlan.length > 0 && (
             <ListGroupItem
-                style={{padding: "0"}}
+                style={{padding: '0'}}
                 key="noplan">
               <div>
                 <AddNewEquipView equips={equipListNoPlan} />

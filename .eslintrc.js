@@ -32,13 +32,20 @@ module.exports = {
     'no-console': ['error', { "allow": ["warn", "error"] }],
     'space-in-parens': 'off',
     'object-curly-spacing': 'off',
+    'react/jsx-curly-spacing': 'off',
+    'react/jsx-first-prop-new-line': 'off',
+    'react/jsx-closing-bracket-location': 'off',
+    'react/jsx-indent-props': 'off',
     'space-unary-ops': 'off',
+    'object-property-newline': 'off',
     'space-infix-ops': 'off',
     'curly': 'off',
     'comma-spacing': 'off',
     'array-callback-return': 'off',
     'no-nested-ternary': 'off',
-    'no-confusing-arrow': 'off'
+    'no-confusing-arrow': 'off',
+    'no-else-return': 'off',
+    'react/forbid-prop-types': 'off'
   },
   'settings': {
     'import/resolver': {

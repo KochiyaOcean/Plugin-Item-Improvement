@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 import {
   Button,
@@ -6,19 +6,27 @@ import {
 } from 'react-bootstrap'
 
 import { SlotitemIcon } from 'views/components/etc/icon'
-
 import { PlanView } from './PlanView'
 import { PlanModifyControl } from './PlanModifyControl'
+import { modifyPlans } from './utils'
 
 const { __, FontAwesome } = window
-import { modifyPlans } from './utils'
 
 // props:
 // - mstId, name, iconId, plans, viewMode
 class EquipView extends Component {
+  static propTypes = {
+    mstId: PropTypes.number.isRequired,
+    iconId: PropTypes.number.isRequired,
+    viewMode: PropTypes.bool.isRequired,
+    name: PropTypes.string.isRequired,
+    levels: PropTypes.arrayOf(PropTypes.number).isRequired,
+    plans: PropTypes.object.isRequired,
+  }
+
   handleRemove = mstId => () => {
     modifyPlans( plans => {
-      const newPlans = { ... plans }
+      const newPlans = { ...plans }
       delete newPlans[mstId]
       return newPlans
     })
@@ -41,9 +49,9 @@ class EquipView extends Component {
     return (
       <div>
         <div style={{
-          display:"flex",
-          borderBottom: "solid 1px #666",
-          alignItems:"center"}}>
+          display: 'flex',
+          borderBottom: 'solid 1px #666',
+          alignItems: 'center'}}>
           <SlotitemIcon
               slotitemId={iconId} className="equip-icon" />
           <div style={{flex: 1}}>{name}</div>
@@ -52,15 +60,15 @@ class EquipView extends Component {
             planArr.length === 0 && (
               <Button
                   onClick={this.handleRemove(mstId)}
-                  style={{margin: "5px"}}
+                  style={{margin: '5px'}}
                   bsStyle="warning" >
-                {__("Remove")}
+                {__('Remove')}
               </Button>)
           }
         </div>
         <div style={{
-          width: "80%", maxWidth:"500px",
-          margin: "auto", marginBottom: "2px", marginTop:"2px"}} >
+          width: '80%', maxWidth: '500px',
+          margin: 'auto', marginBottom: '2px', marginTop: '2px'}} >
           {
             planArr.map( (args, ind) => (
               <PlanView
@@ -70,7 +78,8 @@ class EquipView extends Component {
                   { ... args } />
             ))
           }
-          { !this.props.viewMode && (
+          { !this.props.viewMode &&
+            (
               <PlanModifyControl
                   mstId={mstId}
                   plans={plans} />)
@@ -83,41 +92,49 @@ class EquipView extends Component {
 // props:
 // - equips
 class AddNewEquipView extends Component {
+  static propTypes = {
+    equips: PropTypes.arrayOf(PropTypes.shape({
+      iconId: PropTypes.number.isRequired,
+      mstId: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    })).isRequired,
+  }
+
   constructor() {
     super()
     this.state = {
-      selected: "none",
+      selected: 'none',
     }
   }
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState( { selected: e.target.value } )
   }
   handleAddItem = () => {
     const { selected } = this.state
-    if (selected !== "none") {
+    if (selected !== 'none') {
       modifyPlans(plans => ({ ...plans, [selected]: {} }))
     } else {
-      console.error( "trying adding an invaid equipment" )
+      console.error( 'trying adding an invaid equipment' )
     }
   }
 
   render() {
     return (
       <div style={{
-        display: "flex",
-        margin: "5px",
-        fontSize: "12px",
-        alignItems: "center"}} >
+        display: 'flex',
+        margin: '5px',
+        fontSize: '12px',
+        alignItems: 'center'}} >
         <FontAwesome
-            style={{marginRight: "10px"}}
+            style={{marginRight: '10px'}}
             name="plus"
         />
         <FormControl
-            style={{marginRight: "10px",fontSize:"14px"}}
+            style={{marginRight: '10px',fontSize: '14px'}}
             onChange={this.handleChange}
             value={this.state.selected}
             componentClass="select">
-          <option key="none" value="none">{__("New equipment plan")}</option>
+          <option key="none" value="none">{__('New equipment plan')}</option>
           {
             this.props.equips.map((equip, ind) =>
               <option
@@ -128,9 +145,9 @@ class AddNewEquipView extends Component {
           }
         </FormControl>
         <Button
-            disabled={this.state.selected ==="none"}
+            disabled={this.state.selected === 'none'}
             onClick={this.handleAddItem}
-            bsStyle="primary">{__("Add")}</Button>
+            bsStyle="primary">{__('Add')}</Button>
       </div>
     )
   }
