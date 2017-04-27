@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import FontAwesome from 'react-fontawesome'
 import { SlotitemIcon } from 'views/components/etc/icon'
-import { UseitemIcon } from './UseitemIcon'
+import { UseitemIcon } from './useitem-icon'
 
 const { __, __r } = window
 

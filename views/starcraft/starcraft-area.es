@@ -5,10 +5,9 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { store } from 'views/create-store'
 import { prepareEquipTypeInfo } from './equiptype'
-import { EquipCategoryView } from './EquipCategoryView'
-import { ControlPanel } from './ControlPanel'
-import { Divider } from '../Divider'
-
+import { EquipCategoryView } from './equip-category-view'
+import { ControlPanel } from './control-panel'
+import { Divider } from '../divider'
 import { keyPlans } from './utils'
 
 const { _, $, remote } = window

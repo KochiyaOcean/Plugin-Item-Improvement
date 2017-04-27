@@ -77,5 +77,4 @@ window.i18n = i18n
 
 document.title = window.__('Equipment Improvement')
 
-
 require('./views')

@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { Nav, NavItem, Col, Grid, Table } from 'react-bootstrap'
 import _ from 'lodash'
 
-import { Divider } from './Divider'
-import { ItemInfoRow } from './ItemInfoRow'
-import { DetailRow } from './DetailRow'
+import { Divider } from './divider'
+import { ItemInfoRow } from './item-info-row'
+import { DetailRow } from './detail-row'
 
 import { improveData, getJSTDayofWeek } from '../improve-db'
 
