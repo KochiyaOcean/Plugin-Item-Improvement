@@ -45,7 +45,8 @@ class EquipListView extends Component {
     this.props.equipMstIds.map( mstId => {
       const plans = this.props.plans[mstId]
       const $equip = $equips[mstId]
-      const levels = this.props.equipLevels[mstId] || []
+      const levelsRaw = this.props.equipLevels[mstId] || []
+      const levels = levelsRaw.map(x => typeof x === 'undefined' ? 0 : x)
       const name = $equip.api_name
       const iconId = getIconId( $equip )
 
