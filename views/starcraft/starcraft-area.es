@@ -60,7 +60,7 @@ class Main extends Component {
   handleControlAction = action => {
     const { equipTypes } = this.props
     if (action === 'Auto') {
-      this.setState( this.prepareAutoCollapse(this.props) )
+      this.setState( Main.prepareAutoCollapse(this.props) )
       return
     }
 
