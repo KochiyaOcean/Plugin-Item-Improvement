@@ -27,13 +27,13 @@ class Main extends Component {
 
   render() {
     return (
-      <Grid>
+      <Grid className="flex-column full-height">
         <Nav bsStyle="pills" activeKey={this.state.part} onSelect={this.handlePartChange}>
           <NavItem eventKey={'info'}>{__('Improvement information')}</NavItem>
           <NavItem eventKey={'starcraft'}>{__('Starcraft')}</NavItem>
         </Nav>
         <Divider />
-        <div style={{display: this.state.part === 'info' ? 'initial' : 'none'}} >
+        <div className="flex-column flex-1">
           <ItemInfoArea />
         </div>
         <div style={{display: this.state.part === 'starcraft' ? 'initial' : 'none'}} >

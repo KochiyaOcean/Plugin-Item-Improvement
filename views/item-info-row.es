@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import { Checkbox } from 'react-bootstrap'
 import { SlotitemIcon } from 'views/components/etc/icon'
 
 class ItemInfoRow extends Component {
@@ -16,27 +15,25 @@ class ItemInfoRow extends Component {
     name: PropTypes.string.isRequired,
   }
 
+  state = {
+    collapsed: false,
+  }
+
   handleExpanded = e => {
-    if (e.target.tagName === 'INPUT') return
-    this.props.setExpanded(!this.props.rowExpanded)
+    this.setState({ collapsed: !this.state.collapsed })
   }
 
   render() {
     return (
-      <tr onClick={this.handleExpanded} className="expandable">
-        <td style={{ paddingLeft: 20 }}>
-          <Checkbox
-            type="checkbox"
-            className={'new-checkbox'}
-            checked={this.props.highlight}
-            onChange={this.props.clickCheckbox}
-          />
-          <SlotitemIcon slotitemId={this.props.icon} />
-          {this.props.type}
-        </td>
-        <td>{this.props.name}</td>
-        <td>{this.props.hisho}</td>
-      </tr>
+      <div className="item-simple-info">
+        <SlotitemIcon slotitemId={this.props.icon} className="equip-icon" />
+        <div className="item-name">
+          {this.props.name}
+        </div>
+        <div className="item-hisho">
+          {this.props.hisho}
+        </div>
+      </div>
     )
   }
 }
