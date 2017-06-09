@@ -150,11 +150,11 @@ th, td {
 }
 
 #starcraft-root .eqcat-collapse-toggle {
-    width: 1em;
+  width: 1em;
 }
 
 #starcraft-root .star-text {
-    color: #45a9a5;
+  color: #45a9a5;
 }
 
 .item-simple-info {
@@ -188,4 +188,9 @@ th, td {
 .list-group-item {
   padding: 5px;
   border-radius: 0;
+}
+
+.list-container {
+  height: calc(100% - 45px);
+  overflow-y: scroll;
 }
