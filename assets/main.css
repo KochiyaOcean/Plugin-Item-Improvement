@@ -2,9 +2,26 @@
   font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", "Heiti SC", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
 }
 body {
-  margin-top: 15px;
+  height: 100vh;
   font-size: 13px;
 }
+#item-improvement {
+  height: 100%;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.full-height {
+  height: 100%;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-0 {
+  flex: 0;
+}
+
 .form-group {
   margin-bottom: 0px;
 }
@@ -29,9 +46,11 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
+  border-radius: 1px;
   -webkit-border-radius: 1px;
 }
 ::-webkit-scrollbar-thumb {
+  border-radius: 1px;
   -webkit-border-radius: 1px;
   background-color: #3d3d3d;
 }
@@ -62,11 +81,6 @@ body {
 .useitem.png {
   width: 36px;
   height: 36px;
-}
-img.svg {
-  width: 26px;
-  height: 23px;
-  margin: 5px 3px 4px 3px;
 }
 
 .cell-left{
@@ -126,13 +140,13 @@ th, td {
   font-style: italic;
 }
 
-#starcraft-root .equip-icon {
-    width: 2.2em;
-    height: 2.2em;
+.equip-icon {
+  width: 2.2em;
+  height: 2.2em;
 }
 
-#starcraft-root .equip-icon.svg {
-    padding: 5px;
+.equip-icon.svg {
+  padding: 5px;
 }
 
 #starcraft-root .eqcat-collapse-toggle {
@@ -141,4 +155,23 @@ th, td {
 
 #starcraft-root .star-text {
     color: #45a9a5;
+}
+
+.item-simple-info {
+  display: flex;
+  align-items: center;
+}
+
+.item-simple-info .item-hisho {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.list-group {
+  margin-bottom: 5px;
+}
+
+.list-group-item {
+  padding: 5px;
+  border-radius: 0;
 }

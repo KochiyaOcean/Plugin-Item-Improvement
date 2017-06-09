@@ -46,7 +46,7 @@ const MatRow = props => {
         star = <span> <FontAwesome name="star" />{` ${props.upgrade.level}`}</span>
       }
       stage = (<div>
-        <SlotitemIcon slotitemId={props.upgrade.icon} />
+        <SlotitemIcon slotitemId={props.upgrade.icon} className="equip-icon" />
         {window.i18n.resources.__(props.upgrade.name)}
         {star}
       </div>)
@@ -80,6 +80,7 @@ const MatRow = props => {
               {props.item.count} ×
             <SlotitemIcon
               slotitemId={props.item.icon}
+              className="equip-icon"
             />
               {__r(props.item.name)}
             </span> : ''

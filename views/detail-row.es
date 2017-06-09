@@ -55,45 +55,39 @@ const DetailRow = props => {
   })
 
   return (
-    <tr>
-      <td colSpan={3} className="detail-td">
-        <Collapse in={props.rowExpanded}>
-          <div>
-            <Table width="100%" bordered condensed className="detail-table">
-              <thead>
-                <tr>
-                  <th style={{ width: '20%' }} />
-                  <th style={{ width: '33%' }}>
-                    <span>
-                      <MaterialIcon materialId={1} />
-                      {data.improvement[0].consume.fuel}
-                    </span>
-                    <span>
-                      <MaterialIcon materialId={2} />
-                      {data.improvement[0].consume.ammo}
-                    </span>
-                    <span>
-                      <MaterialIcon materialId={3} />
-                      {data.improvement[0].consume.steel}
-                    </span>
-                    <span>
-                      <MaterialIcon materialId={4} />
-                      {data.improvement[0].consume.bauxite}
-                    </span>
-                  </th>
-                  <th style={{ width: '7%' }}><MaterialIcon materialId={7} /></th>
-                  <th style={{ width: '7%' }}><MaterialIcon materialId={8} /></th>
-                  <th style={{ width: '33%' }}>{__('Equipment')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {result}
-              </tbody>
-            </Table>
-          </div>
-        </Collapse>
-      </td>
-    </tr>
+    <div>
+      <Table width="100%" bordered condensed className="detail-table">
+        <thead>
+          <tr>
+            <th style={{ width: '20%' }} />
+            <th style={{ width: '33%' }}>
+              <span>
+                <MaterialIcon materialId={1} className="equip-icon" />
+                {data.improvement[0].consume.fuel}
+              </span>
+              <span>
+                <MaterialIcon materialId={2} className="equip-icon" />
+                {data.improvement[0].consume.ammo}
+              </span>
+              <span>
+                <MaterialIcon materialId={3} className="equip-icon" />
+                {data.improvement[0].consume.steel}
+              </span>
+              <span>
+                <MaterialIcon materialId={4} className="equip-icon" />
+                {data.improvement[0].consume.bauxite}
+              </span>
+            </th>
+            <th style={{ width: '7%' }}><MaterialIcon materialId={7} className="equip-icon" /></th>
+            <th style={{ width: '7%' }}><MaterialIcon materialId={8} className="equip-icon" /></th>
+            <th style={{ width: '33%' }}>{__('Equipment')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {result}
+        </tbody>
+      </Table>
+    </div>
   )
 }
 
