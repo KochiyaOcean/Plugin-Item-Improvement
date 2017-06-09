@@ -167,6 +167,20 @@ th, td {
   margin-right: 0;
 }
 
+.item-simple-info .item-plan {
+  display: flex;
+  position: absolute;
+  width: 100%;
+}
+
+.item-simple-info .item-plan > * {
+  margin: 5px;
+}
+
+.item-simple-info .item-plan .text-divider {
+  margin: 0 0.25em;
+}
+
 .list-group {
   margin-bottom: 5px;
 }

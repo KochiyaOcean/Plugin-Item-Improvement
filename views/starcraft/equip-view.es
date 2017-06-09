@@ -19,6 +19,11 @@ class EquipView extends Component {
     name: PropTypes.string.isRequired,
     levels: PropTypes.arrayOf(PropTypes.number).isRequired,
     plans: PropTypes.object.isRequired,
+    hideTitle: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    hideTitle: false,
   }
 
   handleRemove = mstId => () => {
@@ -45,25 +50,29 @@ class EquipView extends Component {
 
     return (
       <div>
-        <div style={{
-          display: 'flex',
-          borderBottom: 'solid 1px #666',
-          alignItems: 'center'}}>
-          <SlotitemIcon
-              slotitemId={iconId} className="equip-icon" />
-          <div style={{flex: 1}}>{name}</div>
-          {
-            // allow an equipment entity to be removed when it's empty
-            planArr.length === 0 && (
-              <Button
-                  onClick={this.handleRemove(mstId)}
-                  style={{margin: '5px'}}
-                  bsStyle="warning" >
-                {__('Remove')}
-              </Button>)
-          }
-        </div>
-        <div style={{
+        {
+          !this.props.hideTitle && (
+            <div style={{
+              display: 'flex',
+              borderBottom: 'solid 1px #666',
+              alignItems: 'center'}}>
+              <SlotitemIcon
+                  slotitemId={iconId} className="equip-icon" />
+              <div style={{flex: 1}}>{name}</div>
+              {
+                // allow an equipment entity to be removed when it's empty
+                planArr.length === 0 && (
+                  <Button
+                      onClick={this.handleRemove(mstId)}
+                      style={{margin: '5px'}}
+                      bsStyle="warning" >
+                    {__('Remove')}
+                  </Button>)
+              }
+            </div>
+          )
+        }
+        <div onClick={e => e.stopPropagation()} style={{
           width: '80%', maxWidth: '500px',
           margin: 'auto', marginBottom: '2px', marginTop: '2px'}} >
           {
