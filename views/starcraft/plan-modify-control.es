@@ -3,6 +3,7 @@ import React, { Component, PropTypes } from 'react'
 import {
   Button,
   FormControl,
+  Checkbox,
 } from 'react-bootstrap'
 
 import NumericInput from 'react-numeric-input'
@@ -23,6 +24,7 @@ class PlanModifyControl extends Component {
     this.state = {
       star: 0,
       planCount: 1,
+      isInfinity: true,
     }
   }
 
@@ -31,15 +33,15 @@ class PlanModifyControl extends Component {
     if (typeof this.state.planCount !== 'number')
       return 'invalid'
 
-    const { star, planCount } = this.state
+    const { star, planCount, isInfinity } = this.state
     const oldPlanCount = this.props.plans[star]
 
     if (oldPlanCount) {
       // we are editing an existing one
-      return planCount === 0 ? 'remove' : 'modify'
+      return planCount === 0 && !isInfinity ? 'remove' : 'modify'
     } else {
       // we are creating a new one
-      return planCount === 0 ? 'invalid' : 'add'
+      return planCount === 0 && !isInfinity ? 'invalid' : 'add'
     }
   }
 
@@ -53,7 +55,7 @@ class PlanModifyControl extends Component {
     this.setState({ planCount: valAsNum })
   }
 
-  handleAction = (action,{star,planCount}) => () => {
+  handleAction = (action,{ star, planCount, isInfinity }) => () => {
     if (action === 'invalid')
       return
 
@@ -63,7 +65,7 @@ class PlanModifyControl extends Component {
         const newPlans = { ...plans }
         // it's safe to assume that plans[mstId] must exist at this point
         newPlans[mstId] = { ...plans[mstId] }
-        newPlans[mstId][star] = planCount
+        newPlans[mstId][star] = isInfinity ? 10000 : planCount
         return newPlans
       })
       return
@@ -90,7 +92,7 @@ class PlanModifyControl extends Component {
       : action === 'modify' ? ['pencil', 'success', 'Modify']
       : action === 'invalid' ? ['ban', 'danger', 'Invalid']
       : console.error(`invalid action: ${action}`)
-
+    const checkboxText = 'Infinity'
     return (
       <div style={{
         display: 'flex', alignItems: 'center',
@@ -117,8 +119,16 @@ class PlanModifyControl extends Component {
           <NumericInput
               onChange={this.handleChangeCount}
               min={0}
+              disabled={this.state.isInfinity}
               value={this.state.planCount}
               className="form-control" />
+        </div>
+        <div style={{flex: 1, marginRight: '10px', maxWidth: '100px', display: 'flex', alignItems: 'center'}} >
+          <Checkbox
+            checked={this.state.isInfinity}
+            onChange={() => this.setState({ isInfinity: !this.state.isInfinity })}>
+            {__(checkboxText)}
+          </Checkbox>
         </div>
         <Button
             style={{width: '25%', maxWidth: '100px'}}
