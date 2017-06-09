@@ -38,7 +38,7 @@ class PlanView extends Component {
           flex: 1, display: 'flex',
           justifyContent: viewMode ? 'flex-end' : 'flex-start'}}>
           <div className={done ? 'text-success' : 'text-danger'}>{actualCount}</div>
-          <div style={{marginLeft: '2px'}}>/{planCount}</div>
+          <div style={{marginLeft: '2px'}}>/{planCount < 9999 ? planCount : '∞'}</div>
         </div>
         { ! viewMode &&
           (

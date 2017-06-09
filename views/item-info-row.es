@@ -38,7 +38,7 @@ class ItemInfoRow extends Component {
               }}>
                 <div className={done ? 'text-success' : 'text-danger'}>{actualCount}</div>
                 <div className="text-divider">/</div>
-                <div>{planCount}</div>
+                <div>{planCount < 9999 ? planCount : '∞'}</div>
               </div>
             </div>
           )
