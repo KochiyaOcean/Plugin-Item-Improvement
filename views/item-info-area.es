@@ -6,6 +6,7 @@ import _ from 'lodash'
 
 import { improveData, getJSTDayofWeek } from '../improve-db'
 import { ItemWrapper } from './item-wrapper'
+import { StarcraftArea } from './starcraft/starcraft-area'
 
 const { __ } = window
 
@@ -119,20 +120,25 @@ const ItemInfoArea = connect(state => {
               <NavItem eventKey={5}>{__('Friday')}</NavItem>
               <NavItem eventKey={6}>{__('Saturday')}</NavItem>
               <NavItem eventKey={-1}>{__('All')}</NavItem>
+              <NavItem eventKey={10}>{__('Starcraft')}</NavItem>
             </Nav>
           </Col>
         </Grid>
         <Grid className="flex-1">
-          {this.getRows(this.state.day).map((row, index) => (
-            <ItemWrapper
-              index={index}
-              row={row}
-              key={row.id}
-              day={this.state.day}
-              plans={this.props.plans}
-              equipLevels={this.props.equipLevels}
-              $equips={this.props.$equips} />
-          ))}
+          {
+            this.state.day < 7 ?
+            this.getRows(this.state.day).map((row, index) => (
+              <ItemWrapper
+                index={index}
+                row={row}
+                key={row.id}
+                day={this.state.day}
+                plans={this.props.plans}
+                equipLevels={this.props.equipLevels}
+                $equips={this.props.$equips} />
+            )) :
+            <StarcraftArea />
+          }
         </Grid>
       </div>
     )
