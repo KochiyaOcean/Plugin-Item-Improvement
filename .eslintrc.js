@@ -45,6 +45,7 @@ module.exports = {
     'no-nested-ternary': 'off',
     'no-confusing-arrow': 'off',
     'no-else-return': 'off',
+    'no-plusplus': ["error", { "allowForLoopAfterthoughts": true }],
     'react/forbid-prop-types': 'off'
   },
   'settings': {
