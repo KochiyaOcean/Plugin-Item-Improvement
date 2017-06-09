@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
-import { Nav, NavItem, Col, Grid, Table, ListGroup, ListGroupItem, Collapse } from 'react-bootstrap'
-import { List, CellMeasurer, CellMeasurerCache, AutoSizer } from 'react-virtualized'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { Nav, NavItem, Col, Grid } from 'react-bootstrap'
 import _ from 'lodash'
 
-import { Divider } from './divider'
-import { ItemInfoRow } from './item-info-row'
-import { DetailRow } from './detail-row'
-
 import { improveData, getJSTDayofWeek } from '../improve-db'
+import { ItemWrapper } from './item-wrapper'
 
-const { __, config } = window
+const { __ } = window
 
 const DATA = improveData
 
-const getRows = (day) => {
+const getRows = day => {
   const rows = []
   DATA.map( item => {
     const hishos = []
@@ -24,7 +22,7 @@ const getRows = (day) => {
             hishos.push(__(window.i18n.resources.__(secretary)))
           }
         })))
-    //const highlight = _.includes(this.state.highlights, item.id)
+    // const highlight = _.includes(this.state.highlights, item.id)
     if (hishos.length > 0) {
       const row = {
         id: item.id,
@@ -32,7 +30,7 @@ const getRows = (day) => {
         type: window.i18n.resources.__(item.type),
         name: window.i18n.resources.__(item.name),
         hisho: hishos.join(' / '),
-        //highlight,
+        // highlight,
       }
       rows.push(row)
     }
@@ -40,9 +38,12 @@ const getRows = (day) => {
   return rows
 }
 
-const getRowsMemoized = _.memoize(getRows)
-
-class ItemInfoArea extends Component {
+const ItemInfoArea = connect(state => ({
+  plans: _.get(state, 'config.plugin.poi-plugin-starcraft.plans', {}),
+}))(class itemInfoArea extends Component {
+  static propTypes = {
+    plans: PropTypes.object.isRequired,
+  }
 
   constructor(props) {
     super(props)
@@ -56,11 +57,11 @@ class ItemInfoArea extends Component {
       day: key,
     })
   }
-  
+
   render() {
     return (
       <div className="flex-column flex-1">
-        <Grid className="vertical-center" style={{flex: '0'}}>
+        <Grid className="vertical-center flex-0" style={{ minHeight: 45 }}>
           <Col xs={12}>
             <Nav bsStyle="pills" activeKey={this.state.day} onSelect={this.handleKeyChange}>
               <NavItem eventKey={0}>{__('Sunday')}</NavItem>
@@ -74,53 +75,18 @@ class ItemInfoArea extends Component {
             </Nav>
           </Col>
         </Grid>
-        <Divider style={{flex: '0'}} />
-        <Grid style={{flex: "1"}}>
-          {getRowsMemoized(this.state.day).map((row, index) => (
-            <ItemWrapper index={index} row={row} day={this.state.day} handleChildExpand={this.handleChildExpand} />
+        <Grid className="flex-1">
+          {getRows(this.state.day).map((row, index) => (
+            <ItemWrapper
+              index={index}
+              row={row}
+              day={this.state.day}
+              plans={this.props.plans[row.id]} />
           ))}
         </Grid>
       </div>
     )
   }
-}
-
-class ItemWrapper extends Component {
-  state = { expanded: false }
-  handleClick = e => {
-    this.setState({ expanded: !this.state.expanded })
-  }
-  refreshHeight = () => {
-    this.props.handleChildExpand(this.props.index)
-  }
-  render() {
-    const { row, day } = this.props
-    return (
-      <ListGroup className="expandable" onClick={this.handleClick}>
-        <ListGroupItem>
-          <ItemInfoRow
-            key={row.id}
-            id={row.id}
-            icon={row.icon}
-            type={row.type}
-            name={row.name}
-            hisho={row.hisho}
-            highlight={row.highlight}
-            day={day}
-          />
-        </ListGroupItem>
-        <Collapse
-          in={this.state.expanded}
-          unmountOnExit={true}>
-          <ListGroupItem>
-            <DetailRow
-              id={row.id}
-              day={day} />
-          </ListGroupItem>
-        </Collapse>
-      </ListGroup>
-    )
-  }
-}
+})
 
 export { ItemInfoArea }
