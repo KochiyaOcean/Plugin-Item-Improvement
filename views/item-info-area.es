@@ -124,7 +124,7 @@ const ItemInfoArea = connect(state => {
             </Nav>
           </Col>
         </Grid>
-        <Grid className="flex-1">
+        <Grid className="flex-1 list-container">
           {
             this.state.day < 7 ?
             this.getRows(this.state.day).map((row, index) => (
