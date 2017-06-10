@@ -26,5 +26,27 @@
   "Resource to consume": "必要資材",
   "upgrade": "更新",
   "Equipment": "装備",
-  "All": "全ての装備"
+  "All": "全ての装備",
+
+  "Content": "内容",
+  "View": "ビュー",
+
+  "Default": "デフォルト",
+  "Expand All": "全部展開する",
+  "Collapse All": "全部格納する",
+  "View Mode": "ビューモード",
+  "Export as Image": "画像としてセーブする",
+
+  "Owned": "保有",
+  "Add": "作成",
+  "Remove": "削除",
+  "Modify": "修正",
+  "Invalid": "無効",
+  "Infinity": "無上限",
+
+  "New equipment plan": "新しい改修計画",
+  "Expand only non-empty categories": "改修計画がある装備類別を展開する",
+
+  "Starcraft": "スタークラフト",
+  "Your personal planner for crafting stars": "装備改修計画"
 }
