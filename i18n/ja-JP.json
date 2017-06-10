@@ -1,6 +1,6 @@
 {
   "Equipment Improvement": "装備改修表",
-  "Show possible improvements of the day based on data from [Kcwiki](https://zh.kcwiki.moe)": "簡易装備改修表、データは [kcwiki](https://zh.kcwiki.moe) によって提供されている。",
+  "Show possible improvements of the day based on data from [Kcwiki](https://zh.kcwiki.moe)": "簡易装備改修表、データは [kcwiki](https://zh.kcwiki.moe) によって提供されています。",
   "Weekday setting": "曜日設定",
   "Choose weekday": "曜日選択",
   "Sunday": "日曜日",
@@ -18,7 +18,7 @@
   "Fri": "金",
   "Sat": "土",
   "Improvement information": "改修装備",
-  "Type": "分類",
+  "Type": "種類",
   "Name": "装備名",
   "2nd Ship": "二番艦",
   "None": "無し",
@@ -32,10 +32,10 @@
   "View": "ビュー",
 
   "Default": "デフォルト",
-  "Expand All": "全部展開する",
-  "Collapse All": "全部格納する",
+  "Expand All": "すべて展開",
+  "Collapse All": "すべて折りたたむ",
   "View Mode": "ビューモード",
-  "Export as Image": "画像としてセーブする",
+  "Export as Image": "画像として保存",
 
   "Owned": "保有",
   "Add": "作成",
@@ -45,7 +45,7 @@
   "Infinity": "無上限",
 
   "New equipment plan": "新しい改修計画",
-  "Expand only non-empty categories": "改修計画がある装備類別を展開する",
+  "Expand only non-empty categories": "改修計画がある装備種類だけを展開",
 
   "Starcraft": "スタークラフト",
   "Your personal planner for crafting stars": "装備改修計画"
