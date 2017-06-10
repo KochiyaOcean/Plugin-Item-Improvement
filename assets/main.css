@@ -15,13 +15,12 @@ body {
 .full-height {
   height: 100%;
 }
-.flex-1 {
-  flex: 1;
+.main-nav {
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
 }
-.flex-0 {
-  flex: 0;
-}
-
 .form-group {
   margin-bottom: 0px;
 }

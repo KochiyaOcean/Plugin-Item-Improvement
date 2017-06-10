@@ -108,10 +108,10 @@ const ItemInfoArea = connect(state => {
 
   render() {
     return (
-      <div className="flex-column flex-1">
-        <Grid className="vertical-center flex-0" style={{ minHeight: 45 }}>
-          <Col xs={12}>
-            <Nav bsStyle="pills" activeKey={this.state.day} onSelect={this.handleKeyChange}>
+      <div className="flex-column">
+        <Grid className="vertical-center " style={{ minHeight: 45 }}>
+          <Col xs={12} style={{ padding: 0 }}>
+            <Nav className="main-nav" bsStyle="pills" activeKey={this.state.day} onSelect={this.handleKeyChange}>
               <NavItem eventKey={0}>{__('Sunday')}</NavItem>
               <NavItem eventKey={1}>{__('Monday')}</NavItem>
               <NavItem eventKey={2}>{__('Tuesday')}</NavItem>
@@ -124,7 +124,7 @@ const ItemInfoArea = connect(state => {
             </Nav>
           </Col>
         </Grid>
-        <Grid className="flex-1 list-container">
+        <Grid className="list-container">
           {
             this.state.day < 7 ?
             this.getRows(this.state.day).map((row, index) => (
