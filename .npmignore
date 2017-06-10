@@ -1,1 +1,2 @@
-assets/data_whocallsthefleet.es
+*.es
+package-lock.json

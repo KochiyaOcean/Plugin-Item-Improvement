@@ -4,6 +4,8 @@
   "description": "Show improvable items of the day based on data from [KCWiki](https://zh.kcwiki.moe)",
   "main": "index.es",
   "scripts": {
+    "prepack": "poi-util-transpile",
+    "postpublish": "git clean -f && git checkout .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

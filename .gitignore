@@ -1,1 +1,5 @@
 node_modules/
+*.js
+!env-loader.js
+!.eslintrc.js
+package-lock.json
