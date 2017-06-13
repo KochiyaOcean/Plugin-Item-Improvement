@@ -1,5 +1,6 @@
 import domtoimage from 'dom-to-image'
-
+import _ from 'lodash'
+import { remote } from 'electron'
 import React, { Component, PropTypes } from 'react'
 
 import { connect } from 'react-redux'
@@ -10,7 +11,7 @@ import { ControlPanel } from './control-panel'
 import { Divider } from '../divider'
 import { keyPlans } from './utils'
 
-const { _, $, remote } = window
+const { $ } = window
 
 window.store = store
 

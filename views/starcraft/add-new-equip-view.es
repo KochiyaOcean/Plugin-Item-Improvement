@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-
+import FontAwesome from 'react-fontawesome'
 import {
   Button,
   FormControl,
@@ -7,7 +7,7 @@ import {
 
 import { modifyPlans } from './utils'
 
-const { __, FontAwesome } = window
+const { __ } = window
 
 class AddNewEquipView extends Component {
   static propTypes = {

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-
+import _ from 'lodash'
 import {
   ListGroup,
   ListGroupItem,
@@ -9,8 +9,6 @@ import { EquipView } from './equip-view'
 import { AddNewEquipView } from './add-new-equip-view'
 import { getIconId } from './equiptype'
 import { isEquipMasterEqual } from './utils'
-
-const { _ } = window
 
 // props:
 // - $equips

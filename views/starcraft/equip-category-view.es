@@ -1,15 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import { SlotitemIcon } from 'views/components/etc/icon'
-
+import FontAwesome from 'react-fontawesome'
 import {
   Button,
   Collapse,
 } from 'react-bootstrap'
+import _ from 'lodash'
 
 import { EquipListView } from './equip-list-view'
 import { isEquipMasterEqual } from './utils'
-
-const { _, FontAwesome } = window
 
 // props:
 // - $equips

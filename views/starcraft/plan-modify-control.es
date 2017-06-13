@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-
+import FontAwesome from 'react-fontawesome'
+import _ from 'lodash'
 import {
   Button,
   FormControl,
@@ -9,7 +10,7 @@ import {
 import NumericInput from 'react-numeric-input'
 import { starText, modifyPlans } from './utils'
 
-const { _, __, FontAwesome } = window
+const { __ } = window
 
 // props:
 // - plans: star to plan count
