@@ -139,12 +139,12 @@ th, td {
   font-style: italic;
 }
 
-.equip-icon {
+img {
   width: 2.2em;
   height: 2.2em;
 }
 
-.equip-icon.svg {
+img.svg {
   padding: 5px;
 }
 

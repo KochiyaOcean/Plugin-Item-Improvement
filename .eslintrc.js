@@ -57,6 +57,7 @@ module.exports = {
     },
     'import/core-modules': [
       'bluebird',
+      'classnames',
       'electron',
       'react',
       'react-redux',
