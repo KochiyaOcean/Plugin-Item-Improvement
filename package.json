@@ -40,6 +40,7 @@
     "eslint-plugin-react": "^6.10.3",
     "fs-extra": "^1.0.0",
     "lodash": "^4.17.2",
+    "poi-util-transpile": "^7.6.1",
     "request": "^2.78.0",
     "request-promise-native": "^1.0.3"
   },
