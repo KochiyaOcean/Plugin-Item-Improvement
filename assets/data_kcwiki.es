@@ -1,14 +1,26 @@
 // This script downloads and converts item impovement data from Kcwiki data repo
 // use babel-node or node>=7
 const _ = require('lodash')
+const path = require('path')
 const fs = require('fs-extra')
-const request = require('request-promise-native')
+const fetch = require('node-fetch')
+const HttpsProxyAgent = require('https-proxy-agent')
 
-const KCWIKI_DATA = "http://kcwikizh.github.io/kcdata/slotitem/poi_improve.json"
+const proxy = process.env.https_proxy || process.env.http_proxy || ''
 
-request(KCWIKI_DATA)
-  .then( (data) => {
-    const sdata = _.sortBy(JSON.parse(data), ['icon', 'id'])
-    fs.outputJson('./data.json', sdata, (err) => { if (err) console.log(err) } )
-  })
-  .catch(err => console.log(err))
+const DATA_PATH = 'http://kcwikizh.github.io/kcdata/slotitem/poi_improve.json'
+
+const main = async () => {
+  try {
+    const resp = await fetch(DATA_PATH, {
+      agent: proxy ? new HttpsProxyAgent(proxy) : null,
+    })
+    const data = await resp.json()
+    const sdata = _.sortBy(data, ['icon', 'id'])
+    await fs.outputJSON(path.resolve(__dirname, './data.json'), sdata, { spaces: 2 })
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+main()

@@ -6,6 +6,7 @@
   "scripts": {
     "prepack": "poi-util-transpile",
     "postpublish": "git clean -f && git checkout .",
+    "data": "node ./assets/data_kcwiki.es",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -38,11 +39,11 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
-    "fs-extra": "^1.0.0",
+    "fs-extra": "^4.0.1",
+    "https-proxy-agent": "^2.0.0",
     "lodash": "^4.17.2",
-    "poi-util-transpile": "^7.6.1",
-    "request": "^2.78.0",
-    "request-promise-native": "^1.0.3"
+    "node-fetch": "^1.7.1",
+    "poi-util-transpile": "^7.6.1"
   },
   "poiPlugin": {
     "title": "Equipment Improvement",
