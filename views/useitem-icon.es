@@ -1,4 +1,5 @@
 import classnames from 'classnames'
+import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { resolve } from 'path'
 import { connect } from 'react-redux'
@@ -7,9 +8,9 @@ import _ from 'lodash'
 
 class StaticUseitemIcon extends Component {
   static propTypes = {
-    useitemId: React.PropTypes.number.isRequired,
-    className: React.PropTypes.string.isRequired,
-    useSVGIcon: React.PropTypes.bool.isRequired,
+    useitemId: PropTypes.number.isRequired,
+    className: PropTypes.string.isRequired,
+    useSVGIcon: PropTypes.bool.isRequired,
   }
 
   // all fields are primitives

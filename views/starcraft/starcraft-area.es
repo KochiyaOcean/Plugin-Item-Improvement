@@ -1,7 +1,8 @@
 import domtoimage from 'dom-to-image'
 import _ from 'lodash'
 import { remote } from 'electron'
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import { connect } from 'react-redux'
 import { store } from 'views/create-store'

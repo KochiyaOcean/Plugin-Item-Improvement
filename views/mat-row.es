@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 import FontAwesome from 'react-fontawesome'
 import { SlotitemIcon } from 'views/components/etc/icon'
 import { UseitemIcon } from './useitem-icon'

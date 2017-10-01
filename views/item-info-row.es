@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { SlotitemIcon } from 'views/components/etc/icon'
 import { starText } from './starcraft/utils'
 
