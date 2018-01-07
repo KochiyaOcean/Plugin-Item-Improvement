@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 import { Button } from 'react-bootstrap'
 import { SlotitemIcon } from 'views/components/etc/icon'
@@ -7,12 +8,17 @@ import { SlotitemIcon } from 'views/components/etc/icon'
 import { PlanView } from './plan-view'
 import { PlanModifyControl } from './plan-modify-control'
 import { modifyPlans } from './utils'
+import { itemLevelStatFactory } from '../selectors'
 
 const { __ } = window
 
 // props:
 // - mstId, name, iconId, plans, viewMode
-class EquipView extends Component {
+const EquipView = connect(
+  (state, { mstId }) => ({
+    levels: itemLevelStatFactory(mstId)(state),
+  })
+)(class EquipView extends Component {
   static propTypes = {
     mstId: PropTypes.number.isRequired,
     iconId: PropTypes.number.isRequired,
@@ -94,7 +100,7 @@ class EquipView extends Component {
         </div>
       </div>)
   }
-}
+})
 
 
 export { EquipView }

@@ -29,7 +29,6 @@ class EquipCategoryView extends Component {
       group: PropTypes.arrayOf(PropTypes.number).isRequired,
       icons: PropTypes.arrayOf(PropTypes.number).isRequired,
     }).isRequired,
-    equipLevels: PropTypes.object.isRequired,
     plans: PropTypes.object.isRequired,
     equipType: PropTypes.shape({
       api_id: PropTypes.number.isRequired,
@@ -42,7 +41,6 @@ class EquipCategoryView extends Component {
     // skipping "catInfo" as it's generated from $equips
     return this.props.collapsed !== nextProps.collapsed ||
       this.props.viewMode !== nextProps.viewMode ||
-      ! _.isEqual(this.props.equipLevels, nextProps.equipLevels) ||
       ! _.isEqual(this.props.equipType, nextProps.equipType) ||
       ! _.isEqual(this.props.plans, nextProps.plans) ||
       ! isEquipMasterEqual( this.props.$equips, nextProps.$equips )
@@ -50,7 +48,7 @@ class EquipCategoryView extends Component {
   render() {
     const et = this.props.equipType
     const ci = this.props.catInfo
-    const {$equips, equipLevels, collapsed} = this.props
+    const {$equips, collapsed} = this.props
     const hasPlan = ci.group.some( mstId => this.props.plans[mstId])
 
     // for view mode, no need of showing anything .. if there's nothing to show...
@@ -95,7 +93,6 @@ class EquipCategoryView extends Component {
                 plans={this.props.plans}
                 equipMstIds={this.props.catInfo.group}
                 $equips={$equips}
-                equipLevels={equipLevels}
             />
           </div>
         </Collapse>

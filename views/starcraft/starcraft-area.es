@@ -3,9 +3,9 @@ import _ from 'lodash'
 import { remote } from 'electron'
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-
 import { connect } from 'react-redux'
 import { store } from 'views/create-store'
+
 import { prepareEquipTypeInfo } from './equiptype'
 import { EquipCategoryView } from './equip-category-view'
 import { ControlPanel } from './control-panel'
@@ -22,7 +22,6 @@ $('#fontawesome-css')
 class Main extends Component {
   static propTypes = {
     $equips: PropTypes.object.isRequired,
-    equipLevels: PropTypes.object.isRequired,
     equipTypes: PropTypes.object.isRequired,
     plans: PropTypes.object.isRequired,
     equipTypeInfo: PropTypes.shape( {
@@ -97,7 +96,7 @@ class Main extends Component {
   }
 
   render() {
-    const { equipTypes, equipTypeInfo, plans, $equips, equipLevels } = this.props
+    const { equipTypes, equipTypeInfo, plans, $equips } = this.props
     const { equipTypeCollapsed, viewMode } = this.state
     return (
       <div
@@ -125,7 +124,6 @@ class Main extends Component {
                     catInfo={ci}
                     plans={plans}
                     $equips={$equips}
-                    equipLevels={equipLevels}
                 />)
             })
           }
@@ -141,17 +139,6 @@ const StarcraftArea = connect(
     const equipTypesRaw = state.const.$equipTypes
 
     const { $equips } = state.const
-    const { equips } = state.info
-    const equipLevels = {}
-    Object.keys( equips ).map( rstId => {
-      const { api_level, api_slotitem_id } = equips[rstId]
-      /* eslint-disable camelcase */
-      const mstId = api_slotitem_id
-      /* eslint-enable camelcase */
-      const l = equipLevels[mstId] || []
-      l.push( api_level )
-      equipLevels[mstId] = l
-    })
 
     // plans[<equipment master id>] = undefined or object
     // plans[...][0 .. 10] = number of planned count
@@ -173,7 +160,6 @@ const StarcraftArea = connect(
       equipTypes,
       plans,
       $equips,
-      equipLevels,
     }
   })(Main)
 
