@@ -5,7 +5,7 @@ import { join } from 'path-extra'
 import i18n2 from 'i18n-2'
 
 window.config = remote.require('./lib/config')
-const { ROOT, config } = window
+const { config } = window
 
 // Shortcuts and Components
 window.$ = param => document.querySelector(param)
@@ -15,14 +15,12 @@ window.$$ = param => document.querySelectorAll(param)
 // language setting TODO: ?
 // window.language = config.get('poi.language', navigator.language)
 
- // Custom theme
-require(`${ROOT}/views/env-parts/theme`)
 
 // augment font size with poi zoom level
 const zoomLevel = config.get('poi.zoomLevel', 1)
 const additionalStyle = document.createElement('style')
 
-remote.getCurrentWindow().webContents.on('dom-ready', (e) => {
+remote.getCurrentWindow().webContents.on('dom-ready', () => {
   document.body.appendChild(additionalStyle)
 })
 
@@ -57,7 +55,7 @@ if (i18n.resources.translate == null) {
   i18n.resources.translate = (locale, str) => str
 }
 if (i18n.resources.setLocale == null) {
-  i18n.resources.setLocale = (str) => {}
+  i18n.resources.setLocale = () => {}
 }
 
 window.i18n = i18n
