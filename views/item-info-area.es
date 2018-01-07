@@ -10,7 +10,6 @@ import { StarcraftArea } from './starcraft/starcraft-area'
 import {
   starCraftPlanSelector,
   improvementDataSelector,
-  equipLevelStatSelector,
   improveItemIdsByDaySelector,
 } from './selectors'
 
@@ -30,12 +29,12 @@ const ItemInfoArea = connect(state => ({
   data: improvementDataSelector(state),
   idByDay: improveItemIdsByDaySelector(state),
   $equips: _.get(state, 'const.$ships', {}),
-  equipLevels: equipLevelStatSelector(state),
 }))(class itemInfoArea extends Component {
   static propTypes = {
     plans: PropTypes.object.isRequired,
     $equips: PropTypes.object.isRequired,
-    equipLevels: PropTypes.object.isRequired,
+    idByDay: PropTypes.objectOf(PropTypes.array).isRequired,
+    data: PropTypes.objectOf(PropTypes.object).isRequired,
   }
 
   state = {
@@ -61,7 +60,7 @@ const ItemInfoArea = connect(state => ({
 
   render() {
     const { day } = this.state
-    const { plans, $equips, equipLevels } = this.props
+    const { plans, $equips } = this.props
 
     return (
       <div className="flex-column">
@@ -90,7 +89,6 @@ const ItemInfoArea = connect(state => ({
                 key={row.id}
                 day={day}
                 plans={plans}
-                equipLevels={equipLevels}
                 $equips={$equips} />
             )) :
             <StarcraftArea />

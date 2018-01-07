@@ -27,7 +27,7 @@ class ItemInfoRow extends Component {
       <div className="item-simple-info">
         <SlotitemIcon slotitemId={this.props.icon} className="equip-icon" />
         <div className="item-name">
-          {this.props.name}
+          {window.i18n.resources.__(this.props.name)}
         </div>
         {
           !!planCount && (
