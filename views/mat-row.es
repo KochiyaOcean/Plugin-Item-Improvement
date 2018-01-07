@@ -10,22 +10,24 @@ const WEEKDAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
 // React Elements
 const MatRow = props => {
-  const rowCnt = props.upgrade.icon !== 0 ? 3 : 2
+  const rowCnt = props.upgrade ? 3 : 2
 
   let hishoCol = ''
   if (props.day === -1) {
     hishoCol = props.hishos.map(hisho => {
       let days = []
-      hisho.day.forEach((v, i) => { if (v) days.push(__(WEEKDAY[i])) })
+      hisho.day.forEach((v, i) => {
+        if (v) days.push(__(WEEKDAY[i]))
+      })
       if (days.length === 7) {
         days = ''
       } else {
         days = `(${days.join(' / ')})`
       }
       return (
-        <div className={'hisho-col'} key={hisho.name}>
+        <div className="hisho-col" key={hisho.name}>
           {hisho.name}<br />
-          <span className={'available-days'}>{days}</span>
+          <span className="available-days">{days}</span>
         </div>
       )
     })
@@ -43,12 +45,12 @@ const MatRow = props => {
       stage = <span><FontAwesome name="star" /> 6 ~ <FontAwesome name="star" /> MAX </span>
       break
     case 2:
-      if (props.upgrade.level) {
-        star = <span> <FontAwesome name="star" />{` ${props.upgrade.level}`}</span>
+      if (props.upgrade[1]) {
+        star = <span> <FontAwesome name="star" />{` ${props.upgrade[1]}`}</span>
       }
       stage = (<div>
-        <SlotitemIcon slotitemId={props.upgrade.icon} className="equip-icon" />
-        {window.i18n.resources.__(props.upgrade.name)}
+        <SlotitemIcon slotitemId={props.upgrade[0]} className="equip-icon" />
+        {window.i18n.resources.__(props.upgrade[2])}
         {star}
       </div>)
       break
@@ -56,13 +58,14 @@ const MatRow = props => {
       console.error('unreachable code: stage is out of range')
   }
 
-  const useitem = props.useitem
+  console.log(props.stage)
+
+  const { item, useitem } = props
   return (
     <tr>
       {
-        props.stage === 0 ?
+        props.stage === 0 &&
           <td rowSpan={rowCnt}>{hishoCol}</td>
-        : null
       }
       <td>
         {stage}
@@ -76,27 +79,27 @@ const MatRow = props => {
       <td>
         <div>
           {
-          props.item.icon ?
+          item[0] ?
             <span>
-              {props.item.count} ×
+              {item[1]} ×
             <SlotitemIcon
-              slotitemId={props.item.icon}
+              slotitemId={item[0]}
               className="equip-icon"
             />
-              {__r(props.item.name)}
+              {__r(item[2])}
             </span> : ''
         }
         </div>
         <div>
           {
-          useitem.icon ?
+          useitem[0] ?
             <span>
-              {useitem.count} ×
+              {useitem[1]} ×
             <UseitemIcon
-              useitemId={useitem.icon}
+              useitemId={useitem[0]}
               className={'useitem'}
             />
-              {__r(useitem.name)}
+              {__r(useitem[2])}
             </span> : ''
         }
         </div>

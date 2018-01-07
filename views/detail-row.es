@@ -1,59 +1,86 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Table, Collapse } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
+import _ from 'lodash'
+import { connect } from 'react-redux'
 
 import { MaterialIcon } from 'views/components/etc/icon'
+import { constSelector } from 'views/utils/selectors'
 import { MatRow } from './mat-row'
-import { improveTable } from '../improve-db'
 
 const { __ } = window
 
-const DetailRow = props => {
-  const data = improveTable.get(props.id)
+
+const DetailRow = connect(state =>
+  ({
+    $const: constSelector(state) || {},
+  })
+)(({ row, day, $const: { $ships, $equips, $useitems } }) => {
   const result = []
-  data.improvement.map( improvement => {
-    const hishos = []
-    improvement.req.map( req => {
-      req.secretary.map( secretary => {
-        // day = -1 means show all items
-        if (props.day === -1) {
-          hishos.push({
-            name: (__(window.i18n.resources.__(secretary))),
-            day: req.day,
-          })
-        } else if (req.day[props.day]) {
-          hishos.push({
-            name: (__(window.i18n.resources.__(secretary))),
-            day: req.day,
-          })
-        }
-      })
-    })
+  row.improvement.forEach(({ req, resource, upgrade }) => {
+    const assistants = _(req)
+      .flatMap(([days, ships]) => ships
+        ? _(ships)
+          .map(id => ({
+            name: window.__(window.i18n.resources.__(_.get($ships, [id, 'api_name'], 'None'))),
+            day: days,
+          }))
+          .value()
+        : ({
+          name: window.__('None'),
+          day: days,
+        })
+      )
+      .value()
 
     // skip the entry if no secretary availbale for chosen day
-    if (hishos.length === 0) {
+    if (assistants.length === 0) {
       return
     }
 
-    improvement.consume.material.forEach((mat, index) => {
-      const stage = index
-      if (mat.improvement[0]) {
-        result.push(
-          <MatRow
-            stage={stage}
-            development={mat.development}
-            improvement={mat.improvement}
-            item={mat.item}
-            useitem={mat.useitem}
-            upgrade={improvement.upgrade}
-            hishos={hishos}
-            day={props.day}
-            key={`${stage}-${props.day}-${JSON.stringify(hishos)}`}
-          />
-        )
+    let upgradeInfo
+    let stages = [1, 2]
+    if (upgrade) {
+      const [itemId, star] = upgrade
+      const item = _.get($equips, [itemId, 'api_type', 3])
+      const name = _.get($equips, [itemId, 'api_name'])
+      upgradeInfo = [item, star, name]
+      stages = [1, 2, 3]
+    }
+
+    stages.forEach(stage => {
+      const [dev, ensDev, imp, ensImp, extra, count] = resource[stage]
+      let item
+      let useitem
+      let name
+
+      if (_.isString(extra)) {
+        item = 0
+        useitem = extra.replace(/\D/g, '')
+        name = _.get($useitems, [useitem, 'api_name'])
+      } else {
+        item = _.get($equips, [extra, 'api_type', 3])
+        useitem = 0
+        name = _.get($equips, [extra, 'api_name'])
       }
+
+      result.push(
+        <MatRow
+          stage={stage - 1}
+          development={[dev, ensDev]}
+          improvement={[imp, ensImp]}
+          item={[item, count, name]}
+          useitem={[useitem, count, name]}
+          upgrade={upgradeInfo}
+          hishos={assistants}
+          day={day}
+          key={`${stage}-${day}-${JSON.stringify(assistants)}`}
+        />
+      )
     })
   })
+  const [fuel, ammo, steel, bauxite] = row.improvement[0].resource[0]
+
 
   return (
     <div>
@@ -64,19 +91,19 @@ const DetailRow = props => {
             <th style={{ width: '33%' }}>
               <span>
                 <MaterialIcon materialId={1} className="equip-icon" />
-                {data.improvement[0].consume.fuel}
+                {fuel}
               </span>
               <span>
                 <MaterialIcon materialId={2} className="equip-icon" />
-                {data.improvement[0].consume.ammo}
+                {ammo}
               </span>
               <span>
                 <MaterialIcon materialId={3} className="equip-icon" />
-                {data.improvement[0].consume.steel}
+                {steel}
               </span>
               <span>
                 <MaterialIcon materialId={4} className="equip-icon" />
-                {data.improvement[0].consume.bauxite}
+                {bauxite}
               </span>
             </th>
             <th style={{ width: '7%' }}><MaterialIcon materialId={7} className="equip-icon" /></th>
@@ -90,7 +117,7 @@ const DetailRow = props => {
       </Table>
     </div>
   )
-}
+})
 
 DetailRow.propTypes = {
   rowExpanded: PropTypes.bool.isRequired,
