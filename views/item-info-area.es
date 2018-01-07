@@ -57,45 +57,6 @@ const ItemInfoArea = connect(state => ({
         row => row.api_type[2],
       ]),
     )(data)
-
-    // const notFullRows = []
-    // const fullRows = []
-    // const unsetRows = []
-    // DATA.map(item => {
-    //   const hishos = []
-    //   item.improvement.map( improvement =>
-    //     improvement.req.map( req =>
-    //       req.secretary.map( secretary => {
-    //         if (day === -1 || req.day[day]) {
-    //           hishos.push(__(window.i18n.resources.__(secretary)))
-    //         }
-    //       })))
-    //   // const highlight = _.includes(this.state.highlights, item.id)
-    //   if (hishos.length > 0) {
-    //     const row = {
-    //       id: item.id,
-    //       icon: item.icon,
-    //       type: window.i18n.resources.__(item.type),
-    //       name: window.i18n.resources.__(item.name),
-    //       hisho: hishos.join(' / '),
-    //       // highlight,
-    //     }
-    //     switch (this.getRowType(item.id)) {
-    //       case 2: {
-    //         notFullRows.push(row)
-    //         break
-    //       }
-    //       case 1: {
-    //         fullRows.push(row)
-    //         break
-    //       }
-    //       default: {
-    //         unsetRows.push(row)
-    //       }
-    //     }
-    //   }
-    // })
-    // return _.concat(notFullRows, fullRows, unsetRows)
   }
 
   render() {

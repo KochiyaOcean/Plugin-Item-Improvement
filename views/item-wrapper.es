@@ -7,12 +7,11 @@ import _ from 'lodash'
 import { ItemInfoRow } from './item-info-row'
 import { DetailRow } from './detail-row'
 import { EquipView } from './starcraft/equip-view'
-import { itemLevelStatFactory, $shipsSelector } from './selectors'
+import { itemLevelStatFactory } from './selectors'
 
 export const ItemWrapper = connect(
   (state, { row }) => ({
     levels: itemLevelStatFactory(row.id)(state),
-    $ships: $shipsSelector(state),
   })
 )(class ItemWrapper extends Component {
   static propTypes = {
@@ -28,15 +27,6 @@ export const ItemWrapper = connect(
   handleClick = () => {
     this.setState({ expanded: !this.state.expanded })
   }
-
-  getAssistants = (row, day) => _(row.improvement)
-    .flatMap(entry =>
-      _(entry.req)
-        .flatMap(([days, ships]) => (day === -1 || days[day]) ? (ships || []) : [])
-        .map(id => window.i18n.resources.__(_.get(this.props.$ships, [id, 'api_name'])))
-        .value()
-    )
-    .join('/')
 
   render() {
     const { row, day, plans, levels } = this.props
@@ -60,7 +50,7 @@ export const ItemWrapper = connect(
             id={row.id}
             icon={row.api_type[3]}
             name={row.api_name + row.id}
-            hisho={this.getAssistants(row, day)}
+            assistants={row.assistants[day]}
             day={day}
             currentPlan={currentPlan}
           />
@@ -72,6 +62,7 @@ export const ItemWrapper = connect(
           <div>
             <ListGroupItem style={{ borderTopLeftRadius: 0, borderTopRightRadius: 0 }}>
               <DetailRow
+                row={row}
                 id={row.id}
                 day={day}
               />
@@ -84,7 +75,8 @@ export const ItemWrapper = connect(
                 mstId={row.id}
                 iconId={row.icon}
                 plans={plan}
-                levels={levels} />
+                levels={levels}
+              />
             </ListGroupItem>
           </div>
         </Collapse>

@@ -31,7 +31,31 @@ const baseImprovementDataSelector = createSelector(
   ], (db, $const) => _(_.get(db, 'arsenal_all'))
     .keys()
     .map(id => _.get(db, ['items', id], {}))
-    .map(item => ({ ..._.get($const, ['$equips', item.id], {}), ...item, priority: 0 }))
+    .map(item => {
+      const assistants = _(_.range(7).concat(-1))
+        .map(day =>
+          ([
+            day,
+            _(item.improvement)
+              .flatMap(entry =>
+                _(entry.req)
+                  .flatMap(([days, ships]) => (day === -1 || days[day]) ? ships : [])
+                  .map(id => window.__(window.i18n.resources.__(_.get($const, ['$ships', id, 'api_name'], 'None'))))
+                  .value()
+              )
+              .join('/'),
+          ])
+        )
+        .fromPairs()
+        .value()
+
+      return {
+        ..._.get($const, ['$equips', item.id], {}),
+        ...item,
+        priority: 0,
+        assistants,
+      }
+    })
     .value()
 )
 
