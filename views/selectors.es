@@ -8,6 +8,75 @@ import {
   createDeepCompareArraySelector,
 } from 'views/utils/selectors'
 
+const ourShipsSelector = createSelector(
+  [
+    constSelector,
+  ], ({ $ships = {} } = {}) => _($ships)
+    .pickBy(({ api_sortno }) => Boolean(api_sortno))
+    .value()
+)
+
+// the chain starts from each ship, thus incomplete if the ship is not the starting one
+// the adjustedRemodelChainsSelector will return complete chains for all ships
+const remodelChainsSelector = createSelector(
+  [
+    ourShipsSelector,
+  ], $ships => _($ships)
+    .mapValues(({ api_id: shipId }) => {
+      let current = $ships[shipId]
+      let next = +(current.api_aftershipid || 0)
+      let same = [shipId]
+      while (!same.includes(next) && next > 0) {
+        same = [...same, next]
+        current = $ships[next] || {}
+        next = +(current.api_aftershipid || 0)
+      }
+      return same
+    })
+    .value()
+)
+
+const beforeShipMapSelector = createSelector(
+  [
+    ourShipsSelector,
+  ], $ships => _($ships)
+    .filter(ship => +(ship.api_aftershipid || 0) > 0)
+    .map(ship => ([ship.api_aftershipid, ship.api_id]))
+    .fromPairs()
+    .value()
+)
+
+export const uniqueShipIdsSelector = createSelector(
+  [
+    ourShipsSelector,
+    beforeShipMapSelector,
+  ], ($ships, beforeShipMap) => _($ships)
+    .filter(({ api_id }) => !(api_id in beforeShipMap)) // eslint-disable-line camelcase
+    .map(({ api_id }) => api_id) // eslint-disable-line camelcase
+    .value()
+)
+
+export const shipUniqueMapSelector = createSelector(
+  [
+    uniqueShipIdsSelector,
+    remodelChainsSelector,
+  ], (shipIds, chains) => _(shipIds)
+    .flatMap(shipId =>
+      _(chains[shipId]).map(id => ([id, shipId])).value()
+    )
+    .fromPairs()
+    .value()
+)
+
+export const adjustedRemodelChainsSelector = createSelector(
+  [
+    remodelChainsSelector,
+    shipUniqueMapSelector,
+  ], (remodelChains, uniqueMap) => _(uniqueMap)
+    .mapValues(uniqueId => remodelChains[uniqueId])
+    .value()
+)
+
 export const starCraftPlanSelector = createSelector(
   [
     configSelector,
@@ -28,7 +97,9 @@ const baseImprovementDataSelector = createSelector(
   [
     wctfSelector,
     constSelector,
-  ], (db, $const) => _(_.get(db, 'arsenal_all'))
+    adjustedRemodelChainsSelector,
+    shipUniqueMapSelector,
+  ], (db, $const, chains, uniqMap) => _(_.get(db, 'arsenal_all'))
     .keys()
     .map(id => _.get(db, ['items', id], {}))
     .map(item => {
@@ -40,6 +111,14 @@ const baseImprovementDataSelector = createSelector(
               .flatMap(entry =>
                 _(entry.req)
                   .flatMap(([days, ships]) => (day === -1 || days[day]) ? ships : [])
+                  .groupBy(id => uniqMap[id])
+                  .mapValues(ids => _(ids)
+                    .sortBy(id => (chains[id] || []).indexOf(id))
+                    .take(1)
+                    .value()
+                  )
+                  .values()
+                  .flatten()
                   .map(id => window.__(window.i18n.resources.__(_.get($const, ['$ships', id, 'api_name'], 'None'))))
                   .value()
               )

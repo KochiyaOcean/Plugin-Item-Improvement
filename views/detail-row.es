@@ -7,6 +7,10 @@ import { connect } from 'react-redux'
 import { MaterialIcon } from 'views/components/etc/icon'
 import { constSelector } from 'views/utils/selectors'
 import { MatRow } from './mat-row'
+import {
+  adjustedRemodelChainsSelector,
+  shipUniqueMapSelector,
+} from './selectors'
 
 const { __ } = window
 
@@ -14,13 +18,24 @@ const { __ } = window
 const DetailRow = connect(state =>
   ({
     $const: constSelector(state) || {},
+    chains: adjustedRemodelChainsSelector(state),
+    uniqMap: shipUniqueMapSelector(state),
   })
-)(({ row, day, $const: { $ships, $equips, $useitems } }) => {
+)(({ row, day, $const: { $ships, $equips, $useitems }, chains, uniqMap }) => {
   const result = []
   row.improvement.forEach(({ req, resource, upgrade }) => {
     const assistants = _(req)
       .flatMap(([days, ships]) => ships
         ? _(ships)
+          .filter(() => day === -1 || days[day])
+          .groupBy(id => uniqMap[id])
+          .mapValues(ids => _(ids)
+            .sortBy(id => (chains[id] || []).indexOf(id))
+            .take(1)
+            .value()
+          )
+          .values()
+          .flatten()
           .map(id => ({
             name: window.__(window.i18n.resources.__(_.get($ships, [id, 'api_name'], 'None'))),
             day: days,
