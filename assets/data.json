@@ -12860,6 +12860,105 @@
     ]
   },
   {
+    "id": 201,
+    "type": "局地戦闘機",
+    "icon": 38,
+    "name": "紫電一一型",
+    "improvement": [
+      {
+        "upgrade": {
+          "level": 0,
+          "id": 202,
+          "name": "紫電二一型 紫電改",
+          "icon": 38
+        },
+        "req": [
+          {
+            "day": [
+              false,
+              true,
+              true,
+              true,
+              false,
+              false,
+              false
+            ],
+            "secretary": [
+              "赤城",
+              "加賀"
+            ],
+            "secretaryIds": [
+              83,
+              84
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 160,
+          "ammo": 180,
+          "steel": 0,
+          "bauxite": 360,
+          "material": [
+            {
+              "development": [
+                8,
+                9
+              ],
+              "improvement": [
+                4,
+                5
+              ],
+              "item": {
+                "icon": 6,
+                "name": "零式艦戦52型",
+                "id": 21,
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                10,
+                12
+              ],
+              "improvement": [
+                6,
+                8
+              ],
+              "item": {
+                "icon": 10,
+                "name": "瑞雲",
+                "id": 26,
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                12,
+                18
+              ],
+              "improvement": [
+                7,
+                12
+              ],
+              "item": {
+                "icon": 6,
+                "name": "紫電改二",
+                "id": 55,
+                "count": 2
+              },
+              "useitem": {
+                "icon": 0,
+                "name": "",
+                "id": 0,
+                "count": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
     "id": 210,
     "type": "潜水艦装備",
     "icon": 42,
@@ -13429,6 +13528,253 @@
                 "name": "紫電改二",
                 "id": 55,
                 "count": 1
+              }
+            },
+            {
+              "development": [
+                0,
+                0
+              ],
+              "improvement": [
+                0,
+                0
+              ],
+              "item": {
+                "icon": 0,
+                "name": "",
+                "id": 0,
+                "count": 0
+              },
+              "useitem": {
+                "icon": 0,
+                "name": "",
+                "id": 0,
+                "count": 0
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 221,
+    "type": "局地戦闘機",
+    "icon": 44,
+    "name": "一式戦 隼II型",
+    "improvement": [
+      {
+        "upgrade": {
+          "level": 0,
+          "id": 222,
+          "name": "一式戦 隼III型甲",
+          "icon": 44
+        },
+        "req": [
+          {
+            "day": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false
+            ],
+            "secretary": [
+              "あきつ丸",
+              "春日丸"
+            ],
+            "secretaryIds": [
+              161,
+              521
+            ]
+          },
+          {
+            "day": [
+              false,
+              false,
+              false,
+              true,
+              true,
+              true,
+              false
+            ],
+            "secretary": [
+              "神威"
+            ],
+            "secretaryIds": [
+              162
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 90,
+          "ammo": 120,
+          "steel": 10,
+          "bauxite": 270,
+          "material": [
+            {
+              "development": [
+                3,
+                4
+              ],
+              "improvement": [
+                2,
+                3
+              ],
+              "item": {
+                "icon": 6,
+                "name": "九六式艦戦",
+                "id": 19,
+                "count": 1
+              }
+            },
+            {
+              "development": [
+                5,
+                6
+              ],
+              "improvement": [
+                3,
+                5
+              ],
+              "item": {
+                "icon": 6,
+                "name": "零式艦戦21型",
+                "id": 20,
+                "count": 2
+              }
+            },
+            {
+              "development": [
+                10,
+                15
+              ],
+              "improvement": [
+                6,
+                9
+              ],
+              "item": {
+                "icon": 15,
+                "name": "12.7mm単装機銃",
+                "id": 38,
+                "count": 3
+              },
+              "useitem": {
+                "icon": 77,
+                "name": "新型航空兵装資材",
+                "id": 77,
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": 222,
+    "type": "局地戦闘機",
+    "icon": 44,
+    "name": "一式戦 隼III型甲",
+    "improvement": [
+      {
+        "upgrade": {
+          "level": 0,
+          "id": 0,
+          "name": "",
+          "icon": 0
+        },
+        "req": [
+          {
+            "day": [
+              false,
+              true,
+              true,
+              false,
+              false,
+              false,
+              false
+            ],
+            "secretary": [
+              "あきつ丸"
+            ],
+            "secretaryIds": [
+              161
+            ]
+          },
+          {
+            "day": [
+              false,
+              false,
+              false,
+              false,
+              true,
+              true,
+              false
+            ],
+            "secretary": [
+              "神威"
+            ],
+            "secretaryIds": [
+              162
+            ]
+          },
+          {
+            "day": [
+              false,
+              true,
+              true,
+              true,
+              true,
+              false,
+              false
+            ],
+            "secretary": [
+              "春日丸"
+            ],
+            "secretaryIds": [
+              521
+            ]
+          }
+        ],
+        "consume": {
+          "fuel": 130,
+          "ammo": 200,
+          "steel": 20,
+          "bauxite": 330,
+          "material": [
+            {
+              "development": [
+                5,
+                6
+              ],
+              "improvement": [
+                4,
+                5
+              ],
+              "item": {
+                "icon": 6,
+                "name": "零式艦戦52型",
+                "id": 21,
+                "count": 3
+              }
+            },
+            {
+              "development": [
+                6,
+                9
+              ],
+              "improvement": [
+                6,
+                7
+              ],
+              "item": {
+                "icon": 6,
+                "name": "烈風",
+                "id": 22,
+                "count": 2
               }
             },
             {
