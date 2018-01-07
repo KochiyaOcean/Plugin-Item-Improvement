@@ -3,42 +3,43 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { Nav, NavItem, Col, Grid } from 'react-bootstrap'
 import _ from 'lodash'
+import fp from 'lodash/fp'
 
-import { improveData, getJSTDayofWeek } from '../improve-db'
 import { ItemWrapper } from './item-wrapper'
 import { StarcraftArea } from './starcraft/starcraft-area'
+import {
+  starCraftPlanSelector,
+  improvementDataSelector,
+  equipLevelStatSelector,
+  improveItemIdsByDaySelector,
+} from './selectors'
 
 const { __ } = window
 
-const DATA = improveData
-
-const ItemInfoArea = connect(state => {
-  const equips = _.get(state, 'info.equips', {})
-  const equipLevels = {}
-  Object.keys( equips ).map( rstId => {
-    const { api_level } = equips[rstId]
-    const mstId = equips[rstId].api_slotitem_id
-    const l = equipLevels[mstId] || []
-    l.push( api_level )
-    equipLevels[mstId] = l
-  })
-  return {
-    plans: _.get(state, 'config.plugin.poi-plugin-starcraft.plans', {}),
-    $equips: _.get(state, 'const.$ships', {}),
-    equipLevels,
+const getJSTDayofWeek = () => {
+  const date = new Date()
+  let day = date.getUTCDay()
+  if (date.getUTCHours() >= 15) {
+    day = (day + 1) % 7
   }
-})(class itemInfoArea extends Component {
+  return day
+}
+
+const ItemInfoArea = connect(state => ({
+  plans: starCraftPlanSelector(state),
+  data: improvementDataSelector(state),
+  idByDay: improveItemIdsByDaySelector(state),
+  $equips: _.get(state, 'const.$ships', {}),
+  equipLevels: equipLevelStatSelector(state),
+}))(class itemInfoArea extends Component {
   static propTypes = {
     plans: PropTypes.object.isRequired,
     $equips: PropTypes.object.isRequired,
     equipLevels: PropTypes.object.isRequired,
   }
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      day: getJSTDayofWeek(),
-    }
+  state = {
+    day: getJSTDayofWeek(),
   }
 
   handleKeyChange = key => {
@@ -47,66 +48,60 @@ const ItemInfoArea = connect(state => {
     })
   }
 
-  getRowType = id => {
-    const levelsRaw = this.props.equipLevels[id] || []
-    const levels = levelsRaw.map(x => typeof x === 'undefined' ? 0 : x)
-    const plan = this.props.plans[id] || {}
-    if (Object.keys(plan).length < 1) {
-      return 0
-    }
-    const planArr = Object.keys(plan).map( k => {
-      const star = parseInt(k,10)
-      const planCount = plan[k]
-      const actualCount = levels.filter( lvl => lvl >= star ).length
-      return { star, planCount, actualCount }
-    })
-    const isNotFull = planArr.map(({ planCount, actualCount }) => planCount > actualCount)
-      .reduce((a, b) => a || b, false)
-    return isNotFull ? 2 : 1
-  }
-
   getRows = day => {
-    const notFullRows = []
-    const fullRows = []
-    const unsetRows = []
-    DATA.map(item => {
-      const hishos = []
-      item.improvement.map( improvement =>
-        improvement.req.map( req =>
-          req.secretary.map( secretary => {
-            if (day === -1 || req.day[day]) {
-              hishos.push(__(window.i18n.resources.__(secretary)))
-            }
-          })))
-      // const highlight = _.includes(this.state.highlights, item.id)
-      if (hishos.length > 0) {
-        const row = {
-          id: item.id,
-          icon: item.icon,
-          type: window.i18n.resources.__(item.type),
-          name: window.i18n.resources.__(item.name),
-          hisho: hishos.join(' / '),
-          // highlight,
-        }
-        switch (this.getRowType(item.id)) {
-          case 2: {
-            notFullRows.push(row)
-            break
-          }
-          case 1: {
-            fullRows.push(row)
-            break
-          }
-          default: {
-            unsetRows.push(row)
-          }
-        }
-      }
-    })
-    return _.concat(notFullRows, fullRows, unsetRows)
+    const { data, idByDay } = this.props
+    return fp.flow(
+      fp.filter(row => day === -1 || (idByDay[day] || []).includes(row.id)),
+      fp.sortBy([
+        row => -row.priority,
+        row => row.api_type[2],
+      ]),
+    )(data)
+
+    // const notFullRows = []
+    // const fullRows = []
+    // const unsetRows = []
+    // DATA.map(item => {
+    //   const hishos = []
+    //   item.improvement.map( improvement =>
+    //     improvement.req.map( req =>
+    //       req.secretary.map( secretary => {
+    //         if (day === -1 || req.day[day]) {
+    //           hishos.push(__(window.i18n.resources.__(secretary)))
+    //         }
+    //       })))
+    //   // const highlight = _.includes(this.state.highlights, item.id)
+    //   if (hishos.length > 0) {
+    //     const row = {
+    //       id: item.id,
+    //       icon: item.icon,
+    //       type: window.i18n.resources.__(item.type),
+    //       name: window.i18n.resources.__(item.name),
+    //       hisho: hishos.join(' / '),
+    //       // highlight,
+    //     }
+    //     switch (this.getRowType(item.id)) {
+    //       case 2: {
+    //         notFullRows.push(row)
+    //         break
+    //       }
+    //       case 1: {
+    //         fullRows.push(row)
+    //         break
+    //       }
+    //       default: {
+    //         unsetRows.push(row)
+    //       }
+    //     }
+    //   }
+    // })
+    // return _.concat(notFullRows, fullRows, unsetRows)
   }
 
   render() {
+    const { day } = this.state
+    const { plans, $equips, equipLevels } = this.props
+
     return (
       <div className="flex-column">
         <Grid className="vertical-center " style={{ minHeight: 45 }}>
@@ -132,10 +127,10 @@ const ItemInfoArea = connect(state => {
                 index={index}
                 row={row}
                 key={row.id}
-                day={this.state.day}
-                plans={this.props.plans}
-                equipLevels={this.props.equipLevels}
-                $equips={this.props.$equips} />
+                day={day}
+                plans={plans}
+                equipLevels={equipLevels}
+                $equips={$equips} />
             )) :
             <StarcraftArea />
           }
