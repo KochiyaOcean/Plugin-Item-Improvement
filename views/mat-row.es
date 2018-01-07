@@ -9,12 +9,12 @@ const { __, __r } = window
 const WEEKDAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
 // React Elements
-const MatRow = props => {
-  const rowCnt = props.upgrade ? 3 : 2
+const MatRow = ({ stage, day, assistants, upgrade, item, useitem, development, improvement }) => {
+  const rowCnt = upgrade.icon ? 3 : 2
 
   let hishoCol = ''
-  if (props.day === -1) {
-    hishoCol = props.hishos.map(hisho => {
+  if (day === -1) {
+    hishoCol = assistants.map(hisho => {
       let days = []
       hisho.day.forEach((v, i) => {
         if (v) days.push(__(WEEKDAY[i]))
@@ -32,25 +32,25 @@ const MatRow = props => {
       )
     })
   } else {
-    hishoCol = props.hishos.map(hisho => <div key={hisho.name}>{hisho.name}</div>)
+    hishoCol = assistants.map(hisho => <div key={hisho.name}>{hisho.name}</div>)
   }
 
-  let stage = ''
+  let stageRow = ''
   let star = ''
-  switch (props.stage) {
+  switch (stage) {
     case 0:
-      stage = <span><FontAwesome name="star" /> 1 ~ <FontAwesome name="star" /> 6 </span>
+      stageRow = <span><FontAwesome name="star" /> 1 ~ <FontAwesome name="star" /> 6 </span>
       break
     case 1:
-      stage = <span><FontAwesome name="star" /> 6 ~ <FontAwesome name="star" /> MAX </span>
+      stageRow = <span><FontAwesome name="star" /> 6 ~ <FontAwesome name="star" /> MAX </span>
       break
     case 2:
-      if (props.upgrade[1]) {
-        star = <span> <FontAwesome name="star" />{` ${props.upgrade[1]}`}</span>
+      if (upgrade.level) {
+        star = <span> <FontAwesome name="star" />{` ${upgrade.level}`}</span>
       }
-      stage = (<div>
-        <SlotitemIcon slotitemId={props.upgrade[0]} className="equip-icon" />
-        {window.i18n.resources.__(props.upgrade[2])}
+      stageRow = (<div>
+        <SlotitemIcon slotitemId={upgrade.icon} className="equip-icon" />
+        {window.i18n.resources.__(upgrade.name)}
         {star}
       </div>)
       break
@@ -58,48 +58,45 @@ const MatRow = props => {
       console.error('unreachable code: stage is out of range')
   }
 
-  console.log(props.stage)
-
-  const { item, useitem } = props
   return (
     <tr>
       {
-        props.stage === 0 &&
+        stage === 0 &&
           <td rowSpan={rowCnt}>{hishoCol}</td>
       }
       <td>
-        {stage}
+        {stageRow}
       </td>
       <td>
-        {props.development[0]}({props.development[1]})
+        {development[0]}({development[1]})
       </td>
       <td>
-        {props.improvement[0]}({props.improvement[1]})
+        {improvement[0]}({improvement[1]})
       </td>
       <td>
         <div>
           {
-          item[0] ?
+          item.icon ?
             <span>
-              {item[1]} ×
+              {item.count} ×
             <SlotitemIcon
-              slotitemId={item[0]}
+              slotitemId={item.icon}
               className="equip-icon"
             />
-              {__r(item[2])}
+              {__r(item.name)}
             </span> : ''
         }
         </div>
         <div>
           {
-          useitem[0] ?
+          useitem.icon ?
             <span>
-              {useitem[1]} ×
+              {useitem.count} ×
             <UseitemIcon
-              useitemId={useitem[0]}
+              useitemId={useitem.icon}
               className={'useitem'}
             />
-              {__r(useitem[2])}
+              {__r(useitem.name)}
             </span> : ''
         }
         </div>
@@ -128,7 +125,7 @@ MatRow.propTypes = {
     icon: PropTypes.number,
     name: PropTypes.string,
   }),
-  hishos: PropTypes.arrayOf(
+  assistants: PropTypes.arrayOf(
     PropTypes.shape({
       day: PropTypes.arrayOf(PropTypes.bool).isRequired,
       name: PropTypes.string.isRequired,

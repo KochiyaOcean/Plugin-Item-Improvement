@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { ListGroup, ListGroupItem, Collapse } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import _ from 'lodash'
 
 import { ItemInfoRow } from './item-info-row'
 import { DetailRow } from './detail-row'
@@ -71,9 +70,8 @@ export const ItemWrapper = connect(
               <EquipView
                 viewMode={false}
                 hideTitle
-                name={row.name}
+                name={row.api_name}
                 mstId={row.id}
-                iconId={row.icon}
                 plans={plan}
                 levels={levels}
               />

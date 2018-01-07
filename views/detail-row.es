@@ -38,30 +38,42 @@ const DetailRow = connect(state =>
       return
     }
 
-    let upgradeInfo
+    const upgradeInfo = {
+      icon: 0,
+      id: 0,
+      level: 0,
+      name: '',
+    }
     let stages = [1, 2]
     if (upgrade) {
-      const [itemId, star] = upgrade
-      const item = _.get($equips, [itemId, 'api_type', 3])
-      const name = _.get($equips, [itemId, 'api_name'])
-      upgradeInfo = [item, star, name]
+      const [itemId, level] = upgrade
+      upgradeInfo.id = itemId
+      upgradeInfo.level = level
+      upgradeInfo.icon = _.get($equips, [itemId, 'api_type', 3])
+      upgradeInfo.name = _.get($equips, [itemId, 'api_name'])
       stages = [1, 2, 3]
     }
 
     stages.forEach(stage => {
       const [dev, ensDev, imp, ensImp, extra, count] = resource[stage]
-      let item
-      let useitem
-      let name
+      const item = {
+        icon: 0,
+        name: '',
+        count: 0,
+        id: 0,
+      }
+      const useitem = {...item}
 
       if (_.isString(extra)) {
-        item = 0
-        useitem = extra.replace(/\D/g, '')
-        name = _.get($useitems, [useitem, 'api_name'])
-      } else {
-        item = _.get($equips, [extra, 'api_type', 3])
-        useitem = 0
-        name = _.get($equips, [extra, 'api_name'])
+        useitem.id = parseInt(extra.replace(/\D/g, ''), 10)
+        useitem.icon = useitem.id
+        useitem.name = _.get($useitems, [useitem.id, 'api_name'])
+        useitem.count = count
+      } else if (extra) {
+        item.id = extra
+        item.icon = _.get($equips, [extra, 'api_type', 3])
+        item.name = _.get($equips, [extra, 'api_name'])
+        item.count = count
       }
 
       result.push(
@@ -69,12 +81,12 @@ const DetailRow = connect(state =>
           stage={stage - 1}
           development={[dev, ensDev]}
           improvement={[imp, ensImp]}
-          item={[item, count, name]}
-          useitem={[useitem, count, name]}
+          item={item}
+          useitem={useitem}
           upgrade={upgradeInfo}
-          hishos={assistants}
+          assistants={assistants}
           day={day}
-          key={`${stage}-${day}-${JSON.stringify(assistants)}`}
+          key={`${stage}-${day}-${upgradeInfo.id}`}
         />
       )
     })
@@ -120,7 +132,6 @@ const DetailRow = connect(state =>
 })
 
 DetailRow.propTypes = {
-  rowExpanded: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
 }
 
