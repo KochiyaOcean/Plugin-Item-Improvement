@@ -14,6 +14,38 @@ import {
 
 const { __ } = window
 
+const parseItem = ($equips, $useitems, item, count) => {
+  if (_.isString(item)) {
+    const icon = parseInt(item.replace(/\D/g, ''), 10)
+
+    return {
+      icon,
+      name: _.get($useitems, [icon, 'api_name']),
+      count,
+      id: icon,
+      type: 'useitem',
+    }
+  }
+
+  if (item) {
+    return {
+      icon: _.get($equips, [item, 'api_type', 3]),
+      name: _.get($equips, [item, 'api_name']),
+      count,
+      id: item,
+      type: 'item',
+    }
+  }
+
+  return {
+    icon: 0,
+    name: '',
+    count: 0,
+    id: 0,
+    type: 'item',
+  }
+}
+
 
 const DetailRow = connect(state =>
   ({
@@ -71,24 +103,12 @@ const DetailRow = connect(state =>
 
     stages.forEach(stage => {
       const [dev, ensDev, imp, ensImp, extra, count] = resource[stage]
-      const item = {
-        icon: 0,
-        name: '',
-        count: 0,
-        id: 0,
-      }
-      const useitem = {...item}
+      let items = []
 
-      if (_.isString(extra)) {
-        useitem.id = parseInt(extra.replace(/\D/g, ''), 10)
-        useitem.icon = useitem.id
-        useitem.name = _.get($useitems, [useitem.id, 'api_name'])
-        useitem.count = count
-      } else if (extra) {
-        item.id = extra
-        item.icon = _.get($equips, [extra, 'api_type', 3])
-        item.name = _.get($equips, [extra, 'api_name'])
-        item.count = count
+      if (_.isArray(extra)) {
+        items = extra.map(([item, _count]) => parseItem($equips, $useitems, item, _count))
+      } else {
+        items = [parseItem($equips, $useitems, extra, count)]
       }
 
       result.push(
@@ -96,8 +116,7 @@ const DetailRow = connect(state =>
           stage={stage - 1}
           development={[dev, ensDev]}
           improvement={[imp, ensImp]}
-          item={item}
-          useitem={useitem}
+          items={items}
           upgrade={upgradeInfo}
           assistants={assistants}
           day={day}

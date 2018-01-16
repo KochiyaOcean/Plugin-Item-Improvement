@@ -8,8 +8,27 @@ const { __, __r } = window
 
 const WEEKDAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
+const ItemIcon = ({ item, ...props }) => item.type === 'useitem'
+  ? <UseitemIcon
+    useitemId={item.icon}
+    className={'useitem'}
+    {...props}
+  />
+  : <SlotitemIcon
+    slotitemId={item.icon}
+    className="equip-icon"
+    {...props}
+  />
+
+ItemIcon.propTypes = {
+  item: PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    icon: PropTypes.number.isRequired,
+  }).isRequired,
+}
+
 // React Elements
-const MatRow = ({ stage, day, assistants, upgrade, item, useitem, development, improvement }) => {
+const MatRow = ({ stage, day, assistants, upgrade, items, development, improvement }) => {
   const rowCnt = upgrade.icon ? 3 : 2
 
   let hishoCol = ''
@@ -76,29 +95,17 @@ const MatRow = ({ stage, day, assistants, upgrade, item, useitem, development, i
       <td>
         <div>
           {
-          item.icon ?
-            <span>
-              {item.count} ×
-            <SlotitemIcon
-              slotitemId={item.icon}
-              className="equip-icon"
-            />
-              {__r(item.name)}
-            </span> : ''
-        }
-        </div>
-        <div>
-          {
-          useitem.icon ?
-            <span>
-              {useitem.count} ×
-            <UseitemIcon
-              useitemId={useitem.icon}
-              className={'useitem'}
-            />
-              {__r(useitem.name)}
-            </span> : ''
-        }
+            items.map(item => (
+              !!item.icon &&
+              <div key={item.icon}>
+                {item.count} ×
+              <ItemIcon
+                item={item}
+              />
+                {__r(item.name)}
+              </div>
+            ))
+          }
         </div>
       </td>
     </tr>
@@ -110,31 +117,18 @@ MatRow.propTypes = {
   development: PropTypes.arrayOf(PropTypes.number).isRequired,
   improvement: PropTypes.arrayOf(PropTypes.number).isRequired,
   stage: PropTypes.number.isRequired,
-  item: PropTypes.shape({
-    count: PropTypes.number.isRequired,
-    icon: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
   upgrade: PropTypes.shape({
     level: PropTypes.number.isRequired,
     icon: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
-  useitem: PropTypes.shape({
-    count: PropTypes.number,
-    icon: PropTypes.number,
-    name: PropTypes.string,
-  }),
   assistants: PropTypes.arrayOf(
     PropTypes.shape({
       day: PropTypes.arrayOf(PropTypes.bool).isRequired,
       name: PropTypes.string.isRequired,
     })
   ).isRequired,
-}
-
-MatRow.defaultProps = {
-  useitem: {},
 }
 
 export { MatRow }
