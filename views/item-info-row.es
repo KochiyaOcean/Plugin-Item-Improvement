@@ -7,7 +7,7 @@ class ItemInfoRow extends Component {
   static propTypes = {
     currentPlan: PropTypes.object.isRequired,
 
-    hisho: PropTypes.string.isRequired,
+    assistants: PropTypes.string.isRequired,
     icon: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   }
@@ -27,7 +27,7 @@ class ItemInfoRow extends Component {
       <div className="item-simple-info">
         <SlotitemIcon slotitemId={this.props.icon} className="equip-icon" />
         <div className="item-name">
-          {this.props.name}
+          {window.i18n.resources.__(this.props.name)}
         </div>
         {
           !!planCount && (
@@ -45,7 +45,7 @@ class ItemInfoRow extends Component {
           )
         }
         <div className="item-hisho">
-          {this.props.hisho}
+          {this.props.assistants}
         </div>
       </div>
     )

@@ -1,59 +1,132 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Table, Collapse } from 'react-bootstrap'
+import { Table } from 'react-bootstrap'
+import _ from 'lodash'
+import { connect } from 'react-redux'
 
 import { MaterialIcon } from 'views/components/etc/icon'
+import { constSelector } from 'views/utils/selectors'
 import { MatRow } from './mat-row'
-import { improveTable } from '../improve-db'
+import {
+  adjustedRemodelChainsSelector,
+  shipUniqueMapSelector,
+} from './selectors'
 
 const { __ } = window
 
-const DetailRow = props => {
-  const data = improveTable.get(props.id)
+const parseItem = ($equips, $useitems, item, count) => {
+  if (_.isString(item)) {
+    const icon = parseInt(item.replace(/\D/g, ''), 10)
+
+    return {
+      icon,
+      name: _.get($useitems, [icon, 'api_name']),
+      count,
+      id: icon,
+      type: 'useitem',
+    }
+  }
+
+  if (item) {
+    return {
+      icon: _.get($equips, [item, 'api_type', 3]),
+      name: _.get($equips, [item, 'api_name']),
+      count,
+      id: item,
+      type: 'item',
+    }
+  }
+
+  return {
+    icon: 0,
+    name: '',
+    count: 0,
+    id: 0,
+    type: 'item',
+  }
+}
+
+
+const DetailRow = connect(state =>
+  ({
+    $const: constSelector(state) || {},
+    chains: adjustedRemodelChainsSelector(state),
+    uniqMap: shipUniqueMapSelector(state),
+  })
+)(({ row, day, $const: { $ships, $equips, $useitems }, chains, uniqMap }) => {
   const result = []
-  data.improvement.map( improvement => {
-    const hishos = []
-    improvement.req.map( req => {
-      req.secretary.map( secretary => {
-        // day = -1 means show all items
-        if (props.day === -1) {
-          hishos.push({
-            name: (__(window.i18n.resources.__(secretary))),
-            day: req.day,
-          })
-        } else if (req.day[props.day]) {
-          hishos.push({
-            name: (__(window.i18n.resources.__(secretary))),
-            day: req.day,
-          })
-        }
-      })
-    })
+  row.improvement.forEach(({ req, resource, upgrade }) => {
+    const assistants = _(req)
+      .flatMap(([days, ships]) => ships
+        ? _(ships)
+          .filter(() => day === -1 || days[day])
+          .groupBy(id => uniqMap[id])
+          .mapValues(ids => _(ids)
+            .sortBy(id => (chains[id] || []).indexOf(id))
+            .take(1)
+            .value()
+          )
+          .values()
+          .flatten()
+          .map(id => ({
+            name: window.__(window.i18n.resources.__(_.get($ships, [id, 'api_name'], 'None'))),
+            day: days,
+          }))
+          .value()
+        : ({
+          name: window.__('None'),
+          day: days,
+        })
+      )
+      .value()
 
     // skip the entry if no secretary availbale for chosen day
-    if (hishos.length === 0) {
+    if (assistants.length === 0) {
       return
     }
 
-    improvement.consume.material.forEach((mat, index) => {
-      const stage = index
-      if (mat.improvement[0]) {
-        result.push(
-          <MatRow
-            stage={stage}
-            development={mat.development}
-            improvement={mat.improvement}
-            item={mat.item}
-            useitem={mat.useitem}
-            upgrade={improvement.upgrade}
-            hishos={hishos}
-            day={props.day}
-            key={`${stage}-${props.day}-${JSON.stringify(hishos)}`}
-          />
-        )
+    const upgradeInfo = {
+      icon: 0,
+      id: 0,
+      level: 0,
+      name: '',
+    }
+    let stages = [1, 2]
+    if (upgrade) {
+      const [itemId, level] = upgrade
+      upgradeInfo.id = itemId
+      upgradeInfo.level = level
+      upgradeInfo.icon = _.get($equips, [itemId, 'api_type', 3])
+      upgradeInfo.name = _.get($equips, [itemId, 'api_name'])
+      stages = [1, 2, 3]
+    }
+
+    stages.forEach(stage => {
+      const [dev, ensDev, imp, ensImp, extra, count] = resource[stage]
+      let items = []
+
+      if (_.isArray(extra)) {
+        items = extra.map(([item, _count]) => parseItem($equips, $useitems, item, _count))
+      } else {
+        items = [parseItem($equips, $useitems, extra, count)]
       }
+
+      result.push(
+        <MatRow
+          stage={stage - 1}
+          development={[dev, ensDev]}
+          improvement={[imp, ensImp]}
+          items={items}
+          upgrade={upgradeInfo}
+          assistants={assistants}
+          day={day}
+          key={`${stage}-${day}-${upgradeInfo.id}`}
+        />
+      )
     })
   })
+  const [fuel, ammo, steel, bauxite] = row.improvement[0].resource[0]
+
 
   return (
     <div>
@@ -64,19 +137,19 @@ const DetailRow = props => {
             <th style={{ width: '33%' }}>
               <span>
                 <MaterialIcon materialId={1} className="equip-icon" />
-                {data.improvement[0].consume.fuel}
+                {fuel}
               </span>
               <span>
                 <MaterialIcon materialId={2} className="equip-icon" />
-                {data.improvement[0].consume.ammo}
+                {ammo}
               </span>
               <span>
                 <MaterialIcon materialId={3} className="equip-icon" />
-                {data.improvement[0].consume.steel}
+                {steel}
               </span>
               <span>
                 <MaterialIcon materialId={4} className="equip-icon" />
-                {data.improvement[0].consume.bauxite}
+                {bauxite}
               </span>
             </th>
             <th style={{ width: '7%' }}><MaterialIcon materialId={7} className="equip-icon" /></th>
@@ -90,10 +163,9 @@ const DetailRow = props => {
       </Table>
     </div>
   )
-}
+})
 
 DetailRow.propTypes = {
-  rowExpanded: PropTypes.bool.isRequired,
   id: PropTypes.number.isRequired,
 }
 

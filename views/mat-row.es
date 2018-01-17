@@ -8,47 +8,68 @@ const { __, __r } = window
 
 const WEEKDAY = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
+const ItemIcon = ({ item, ...props }) => item.type === 'useitem'
+  ? <UseitemIcon
+    useitemId={item.icon}
+    className={'useitem'}
+    {...props}
+  />
+  : <SlotitemIcon
+    slotitemId={item.icon}
+    className="equip-icon"
+    {...props}
+  />
+
+ItemIcon.propTypes = {
+  item: PropTypes.shape({
+    type: PropTypes.string.isRequired,
+    icon: PropTypes.number.isRequired,
+  }).isRequired,
+}
+
 // React Elements
-const MatRow = props => {
-  const rowCnt = props.upgrade.icon !== 0 ? 3 : 2
+const MatRow = ({ stage, day, assistants, upgrade, items, development, improvement }) => {
+  const rowCnt = upgrade.icon ? 3 : 2
 
   let hishoCol = ''
-  if (props.day === -1) {
-    hishoCol = props.hishos.map(hisho => {
+  if (day === -1) {
+    hishoCol = assistants.map(hisho => {
       let days = []
-      hisho.day.forEach((v, i) => { if (v) days.push(__(WEEKDAY[i])) })
+      hisho.day.forEach((v, i) => {
+        if (v) days.push(__(WEEKDAY[i]))
+      })
       if (days.length === 7) {
         days = ''
       } else {
         days = `(${days.join(' / ')})`
       }
       return (
-        <div className={'hisho-col'} key={hisho.name}>
+        <div className="hisho-col" key={hisho.name}>
           {hisho.name}<br />
-          <span className={'available-days'}>{days}</span>
+          <span className="available-days">{days}</span>
         </div>
       )
     })
   } else {
-    hishoCol = props.hishos.map(hisho => <div key={hisho.name}>{hisho.name}</div>)
+    hishoCol = assistants.map(hisho => <div key={hisho.name}>{hisho.name}</div>)
   }
 
-  let stage = ''
+  let stageRow = ''
   let star = ''
-  switch (props.stage) {
+  switch (stage) {
     case 0:
-      stage = <span><FontAwesome name="star" /> 1 ~ <FontAwesome name="star" /> 6 </span>
+      stageRow = <span><FontAwesome name="star" /> 1 ~ <FontAwesome name="star" /> 6 </span>
       break
     case 1:
-      stage = <span><FontAwesome name="star" /> 6 ~ <FontAwesome name="star" /> MAX </span>
+      stageRow = <span><FontAwesome name="star" /> 6 ~ <FontAwesome name="star" /> MAX </span>
       break
     case 2:
-      if (props.upgrade.level) {
-        star = <span> <FontAwesome name="star" />{` ${props.upgrade.level}`}</span>
+      if (upgrade.level) {
+        star = <span> <FontAwesome name="star" />{` ${upgrade.level}`}</span>
       }
-      stage = (<div>
-        <SlotitemIcon slotitemId={props.upgrade.icon} className="equip-icon" />
-        {window.i18n.resources.__(props.upgrade.name)}
+      stageRow = (<div>
+        <SlotitemIcon slotitemId={upgrade.icon} className="equip-icon" />
+        {window.i18n.resources.__(upgrade.name)}
         {star}
       </div>)
       break
@@ -56,49 +77,35 @@ const MatRow = props => {
       console.error('unreachable code: stage is out of range')
   }
 
-  const useitem = props.useitem
   return (
     <tr>
       {
-        props.stage === 0 ?
+        stage === 0 &&
           <td rowSpan={rowCnt}>{hishoCol}</td>
-        : null
       }
       <td>
-        {stage}
+        {stageRow}
       </td>
       <td>
-        {props.development[0]}({props.development[1]})
+        {development[0]}({development[1]})
       </td>
       <td>
-        {props.improvement[0]}({props.improvement[1]})
+        {improvement[0]}({improvement[1]})
       </td>
       <td>
         <div>
           {
-          props.item.icon ?
-            <span>
-              {props.item.count} ×
-            <SlotitemIcon
-              slotitemId={props.item.icon}
-              className="equip-icon"
-            />
-              {__r(props.item.name)}
-            </span> : ''
-        }
-        </div>
-        <div>
-          {
-          useitem.icon ?
-            <span>
-              {useitem.count} ×
-            <UseitemIcon
-              useitemId={useitem.icon}
-              className={'useitem'}
-            />
-              {__r(useitem.name)}
-            </span> : ''
-        }
+            items.map(item => (
+              !!item.icon &&
+              <div key={item.icon}>
+                {item.count} ×
+              <ItemIcon
+                item={item}
+              />
+                {__r(item.name)}
+              </div>
+            ))
+          }
         </div>
       </td>
     </tr>
@@ -110,31 +117,18 @@ MatRow.propTypes = {
   development: PropTypes.arrayOf(PropTypes.number).isRequired,
   improvement: PropTypes.arrayOf(PropTypes.number).isRequired,
   stage: PropTypes.number.isRequired,
-  item: PropTypes.shape({
-    count: PropTypes.number.isRequired,
-    icon: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
   upgrade: PropTypes.shape({
     level: PropTypes.number.isRequired,
     icon: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
-  useitem: PropTypes.shape({
-    count: PropTypes.number,
-    icon: PropTypes.number,
-    name: PropTypes.string,
-  }),
-  hishos: PropTypes.arrayOf(
+  assistants: PropTypes.arrayOf(
     PropTypes.shape({
       day: PropTypes.arrayOf(PropTypes.bool).isRequired,
       name: PropTypes.string.isRequired,
     })
   ).isRequired,
-}
-
-MatRow.defaultProps = {
-  useitem: {},
 }
 
 export { MatRow }

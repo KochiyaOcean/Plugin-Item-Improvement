@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 import { configSelector } from 'views/utils/selectors'
 import _ from 'lodash'
 
+const src = resolve(__dirname,'../assets/useitem.svg',)
+
 class StaticUseitemIcon extends Component {
   static propTypes = {
     useitemId: PropTypes.number.isRequired,
@@ -20,17 +22,12 @@ class StaticUseitemIcon extends Component {
 
   render() {
     const {useitemId, className, useSVGIcon} = this.props
-    const path = resolve(
-      __dirname,
-      useSVGIcon
-      ? `../assets/svg/useitem-icon/${useitemId}.svg`
-      : `../assets/img/useitem-icon/${useitemId}.png`)
     const classNames = classnames(
       useSVGIcon ? 'svg' : 'png',
       className)
     return (
       <img
-        src={path}
+        src={src}
         alt={`useitem #${useitemId}`}
         className={classNames}
       />)
