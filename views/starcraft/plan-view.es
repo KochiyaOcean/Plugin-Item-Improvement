@@ -23,6 +23,9 @@ class PlanView extends Component {
       const newPlans = { ...plans }
       newPlans[mstId] = { ...plans[mstId] }
       delete newPlans[mstId][star]
+      if (Object.keys(newPlans[mstId]).length === 0) {
+        delete newPlans[mstId]
+      }
       return newPlans
     })
   }
