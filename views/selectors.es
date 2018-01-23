@@ -145,7 +145,7 @@ export const improvementDataSelector = createSelector(
     equipLevelStatSelector,
   ], (data, plans, levels) => _(data).map(item => {
     const { id } = item
-    if (!plans[id]) {
+    if (!plans[id] || _.keys(plans[id]).length === 0) {
       return item
     }
     const isNotFull = _(plans[id])
