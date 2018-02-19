@@ -101,8 +101,8 @@ const baseImprovementDataSelector = createSelector(
     shipUniqueMapSelector,
   ], (db, $const, chains, uniqMap) => _(_.get(db, 'arsenal_all'))
     .keys()
-    .map(id => _.get(db, ['items', id], {}))
-    .map(item => {
+    .map(itemId => {
+      const item = _.get(db, ['items', itemId], {})
       const assistants = _(_.range(7).concat(-1))
         .map(day =>
           ([
