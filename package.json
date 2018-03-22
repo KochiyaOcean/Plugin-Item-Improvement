@@ -1,6 +1,6 @@
 {
   "name": "poi-plugin-item-improvement",
-  "version": "6.0.1",
+  "version": "7.0.0",
   "description": "Show improvable items of the day based on data from [KCWiki](https://zh.kcwiki.moe)",
   "main": "index.es",
   "scripts": {
@@ -53,7 +53,8 @@
     "apiVer": {
       "6.99.99": "2.3.5",
       "7.5.9": "4.1.0",
-      "8.0.99": "5.0.6"
+      "8.0.99": "5.0.6",
+      "8.3.0": "6.0.1"
     }
   }
 }

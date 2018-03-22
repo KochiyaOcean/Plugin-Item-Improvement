@@ -3,7 +3,8 @@ import _ from 'lodash'
 const PLUGIN_KEY = 'plugin.poi-plugin-starcraft'
 const keyPlans = `${PLUGIN_KEY}.plans`
 
-const { __, config } = window
+const { config } = window
+const { __ } = window.i18n['poi-plugin-item-improvement']
 
 const modifyPlans = modify => {
   const oldPlans = config.get( keyPlans, {} )

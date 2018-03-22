@@ -1,195 +1,191 @@
-*, body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", "Heiti SC", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
-}
-body {
-  height: 100vh;
-  font-size: 13px;
-}
 #item-improvement {
   height: 100%;
 }
-.flex-column {
+#item-improvement .flex-column {
   display: flex;
   flex-direction: column;
-}
-.full-height {
   height: 100%;
 }
-.main-nav {
+#item-improvement .full-height {
+  height: 100%;
+}
+#item-improvement .main-nav {
   flex-wrap: nowrap;
   display: flex;
   flex-direction: row;
   white-space: nowrap;
 }
-.form-group {
+#item-improvement .form-group {
   margin-bottom: 0px;
 }
-.vertical-center {
+#item-improvement .vertical-center {
   display: flex;
   align-items: center;
 }
-.divider {
+#item-improvement .divider {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.divider h5{
+#item-improvement .divider h5{
   font-size: 120%;
 }
 
-.divider hr {
+#item-improvement .divider hr {
   margin-bottom: 15.5px;
 }
 
-::-webkit-scrollbar {
+#item-improvement ::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track {
+#item-improvement ::-webkit-scrollbar-track {
   border-radius: 1px;
   -webkit-border-radius: 1px;
 }
-::-webkit-scrollbar-thumb {
+#item-improvement ::-webkit-scrollbar-thumb {
   border-radius: 1px;
   -webkit-border-radius: 1px;
   background-color: #3d3d3d;
 }
-#main-table tbody td {
+#item-improvement #main-table tbody td {
  vertical-align: middle;
  line-height: 36px;
  height: 36px;
  padding: 1px 5px;
 }
-.item-table-name {
+#item-improvement .item-table-name {
   padding-left: 10px;
 }
-.center {
+#item-improvement .center {
   text-align: center;
 }
-.checkbox {
+#item-improvement .checkbox {
   position: absolute;
   margin: 0px 10px;
 }
-.new-checkbox {
+#item-improvement .new-checkbox {
   position: absolute;
   margin: 0px -15px;
 }
-.checkbox > input {
+#item-improvement .checkbox > input {
   top: 0px !important;
   bottom: 0px !important;
 }
-.useitem.png {
+#item-improvement .useitem.png {
   width: 36px;
   height: 36px;
 }
 
-.cell-left{
+#item-improvement .cell-left{
   text-align: left;
 }
 
-.cell-right span{
+#item-improvement .cell-right span{
   display: block;
   min-width: 6em;
   float: left;
 }
 
-.cell-right i{
+#item-improvement .cell-right i{
   font-style: normal;
 }
 
-.cell-header{
+#item-improvement .cell-header{
   text-align: center;
   font-size: 110%;
   border-top: 1px solid;
 }
 
-.cell-center{
+#item-improvement .cell-center{
   text-align: center;
 }
 
-.cell-center span{
+#item-improvement .cell-center span{
   min-width: 4em;
   display: inline-block;
 }
 
-.expandable:hover {
+#item-improvement .expandable:hover {
   cursor: pointer;
 }
 
-.detail-td {
+#item-improvement .detail-td {
   height: 0 !important;
   padding: 0 !important;
 }
 
-.detail-table {
+#item-improvement .detail-table {
   margin: 0;
 }
 
-th, td {
+#item-improvement th, td {
   vertical-align: middle !important;
 }
 
-.hisho-col{
+#item-improvement .hisho-col{
   display: block;
   line-height: 95%;
   margin: 1.5em auto 1.5em auto;
 }
 
-.available-days {
+#item-improvement .available-days {
   font-size: 80%;
   font-style: italic;
 }
 
-img {
+#item-improvement img {
   width: 2.2em;
   height: 2.2em;
 }
 
-img.svg {
+#item-improvement img.svg {
   padding: 5px;
 }
 
-#starcraft-root .eqcat-collapse-toggle {
+#item-improvement #starcraft-root .eqcat-collapse-toggle {
   width: 1em;
 }
 
-#starcraft-root .star-text {
+#item-improvement #starcraft-root .star-text {
   color: #45a9a5;
 }
 
-.item-simple-info {
+#item-improvement .item-simple-info {
   display: flex;
   align-items: center;
 }
 
-.item-simple-info .item-hisho {
+#item-improvement .item-simple-info .item-hisho {
   margin-left: auto;
   margin-right: 0;
 }
 
-.item-simple-info .item-plan {
+#item-improvement .item-simple-info .item-plan {
   display: flex;
   position: absolute;
   width: 100%;
 }
 
-.item-simple-info .item-plan > * {
+#item-improvement .item-simple-info .item-plan > * {
   margin: 5px;
 }
 
-.item-simple-info .item-plan .text-divider {
+#item-improvement .item-simple-info .item-plan .text-divider {
   margin: 0 0.25em;
 }
 
-.list-group {
+#item-improvement .list-group {
   margin-bottom: 5px;
 }
 
-.list-group-item {
+#item-improvement .list-group-item {
   padding: 5px;
   border-radius: 0;
 }
 
-.list-container {
+#item-improvement .list-container {
   height: calc(100% - 45px);
   overflow-y: scroll;
+  margin: 0 15px;
+  flex: 1;
 }

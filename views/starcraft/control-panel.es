@@ -4,7 +4,7 @@ import {
   Button,
 } from 'react-bootstrap'
 
-const { __ } = window
+const { __ } = window.i18n['poi-plugin-item-improvement']
 
 class ControlPanel extends Component {
   static propTypes = {

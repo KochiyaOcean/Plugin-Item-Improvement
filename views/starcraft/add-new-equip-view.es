@@ -8,7 +8,7 @@ import {
 
 import { modifyPlans } from './utils'
 
-const { __ } = window
+const { __ } = window.i18n['poi-plugin-item-improvement']
 
 class AddNewEquipView extends Component {
   static propTypes = {

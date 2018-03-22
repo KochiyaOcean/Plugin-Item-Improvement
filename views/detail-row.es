@@ -12,7 +12,7 @@ import {
   shipUniqueMapSelector,
 } from './selectors'
 
-const { __ } = window
+const { __ } = window.i18n['poi-plugin-item-improvement']
 
 const parseItem = ($equips, $useitems, item, count) => {
   if (_.isString(item)) {
@@ -69,12 +69,12 @@ const DetailRow = connect(state =>
           .values()
           .flatten()
           .map(id => ({
-            name: window.__(window.i18n.resources.__(_.get($ships, [id, 'api_name'], 'None'))),
+            name: window.i18n['poi-plugin-item-improvement'].__(window.i18n.resources.__(_.get($ships, [id, 'api_name'], 'None'))),
             day: days,
           }))
           .value()
         : ({
-          name: window.__('None'),
+          name: window.i18n['poi-plugin-item-improvement'].__('None'),
           day: days,
         })
       )
