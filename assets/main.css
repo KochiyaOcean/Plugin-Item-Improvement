@@ -188,4 +188,5 @@
   overflow-y: scroll;
   margin: 0 15px;
   flex: 1;
+  width: calc(100% - 30px);
 }
