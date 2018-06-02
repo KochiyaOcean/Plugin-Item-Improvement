@@ -10,14 +10,16 @@ import { MatRow } from './mat-row'
 import {
   adjustedRemodelChainsSelector,
   shipUniqueMapSelector,
+  equipAvailableSelector,
 } from './selectors'
 
 const { __ } = window.i18n['poi-plugin-item-improvement']
 
-const parseItem = ($equips, $useitems, item, count) => {
+const parseItem = ($equips, $useitems, item, count, available) => {
+  console.log('availableitem',available[item])
   if (_.isString(item)) {
     const icon = parseInt(item.replace(/\D/g, ''), 10)
-
+    console.log('itemstring', item)
     return {
       icon,
       name: _.get($useitems, [icon, 'api_name']),
@@ -34,6 +36,7 @@ const parseItem = ($equips, $useitems, item, count) => {
       count,
       id: item,
       type: 'item',
+      available: available[item] ? available[item].length : 0,
     }
   }
 
@@ -43,6 +46,7 @@ const parseItem = ($equips, $useitems, item, count) => {
     count: 0,
     id: 0,
     type: 'item',
+    available: 0,
   }
 }
 
@@ -52,8 +56,9 @@ const DetailRow = connect(state =>
     $const: constSelector(state) || {},
     chains: adjustedRemodelChainsSelector(state),
     uniqMap: shipUniqueMapSelector(state),
+    available: equipAvailableSelector(state),
   })
-)(({ row, day, $const: { $ships, $equips, $useitems }, chains, uniqMap }) => {
+)(({ row, day, $const: { $ships, $equips, $useitems }, chains, uniqMap, available }) => {
   const result = []
   row.improvement.forEach(({ req, resource, upgrade }) => {
     const assistants = _(req)
@@ -106,9 +111,9 @@ const DetailRow = connect(state =>
       let items = []
 
       if (_.isArray(extra)) {
-        items = extra.map(([item, _count]) => parseItem($equips, $useitems, item, _count))
+        items = extra.map(([item, _count]) => parseItem($equips, $useitems, item, _count, available))
       } else {
-        items = [parseItem($equips, $useitems, extra, count)]
+        items = [parseItem($equips, $useitems, extra, count, available)]
       }
 
       result.push(
@@ -126,7 +131,6 @@ const DetailRow = connect(state =>
     })
   })
   const [fuel, ammo, steel, bauxite] = row.improvement[0].resource[0]
-
 
   return (
     <div>

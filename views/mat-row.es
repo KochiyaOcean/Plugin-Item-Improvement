@@ -103,7 +103,7 @@ const MatRow = ({ stage, day, assistants, upgrade, items, development, improveme
               <ItemIcon
                 item={item}
               />
-                {__r(item.name)}
+              {__r(item.name)}{typeof item.available === 'number' ? ' ('+ __("Available") + ":  "+item.available+')' : null}
               </div>
             ))
           }
