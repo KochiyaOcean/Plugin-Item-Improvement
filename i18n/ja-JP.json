@@ -43,6 +43,8 @@
   "Modify": "修正",
   "Invalid": "無効",
   "Infinity": "無上限",
+  "Available": "(Available: %d)",
+  
 
   "New equipment plan": "新しい改修計画",
   "Expand only non-empty categories": "改修計画がある装備種類だけを展開",

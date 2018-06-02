@@ -43,7 +43,7 @@
   "Modify": "修改",
   "Invalid": "无效",
   "Infinity": "不设上限",
-  "Available": "可用",
+  "Available": "(可用: %d)",
 
   "New equipment plan": "新建装备计划",
   "Expand only non-empty categories": "仅展开内容非空的装备类别",
