@@ -82,6 +82,14 @@ export const starCraftPlanSelector = createSelector(
     configSelector,
   ], config => _.get(config, 'plugin.poi-plugin-starcraft.plans', {})
 )
+export const equipAvailableSelector = createSelector(
+  [
+    equipsSelector,
+  ], equips => _(equips)
+    .filter({'api_level': 0})
+    .groupBy('api_slotitem_id')
+    .value()
+)
 
 export const equipLevelStatSelector = createSelector(
   [
