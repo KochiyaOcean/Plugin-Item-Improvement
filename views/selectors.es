@@ -86,7 +86,7 @@ export const equipAvailableSelector = createSelector(
   [
     equipsSelector,
   ], equips => _(equips)
-    .filter({'api_locked': 0, 'api_level': 0})
+    .filter({'api_level': 0})
     .groupBy('api_slotitem_id')
     .value()
 )
