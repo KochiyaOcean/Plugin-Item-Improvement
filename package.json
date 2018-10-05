@@ -28,22 +28,18 @@
   },
   "homepage": "https://github.com/poooi/plugin-item-improvement#readme",
   "dependencies": {
-    "dom-to-image": "^2.5.2",
-    "react-numeric-input": "^2.0.7"
+    "dom-to-image": "^2.6.0",
+    "react-numeric-input": "^2.2.3"
   },
   "devDependencies": {
-    "babel-eslint": "^7.0.0",
-    "babel-preset-latest": "^6.16.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
-    "fs-extra": "^4.0.1",
-    "https-proxy-agent": "^2.0.0",
-    "lodash": "^4.17.2",
-    "node-fetch": "^1.7.1",
-    "poi-util-transpile": "^7.6.1"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-poi-plugin": "^1.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "poi-util-transpile": "^8.2.2"
   },
   "poiPlugin": {
     "title": "Equipment Improvement",
