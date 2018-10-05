@@ -1,7 +1,7 @@
 {
   "name": "poi-plugin-item-improvement",
   "version": "7.1.2",
-  "description": "Show improvable items of the day based on data from [KCWiki](https://zh.kcwiki.moe)",
+  "description": "Show possible improvements of the day based on data from [WhoCallsTheFleet](https://fleet.moe)",
   "main": "index.es",
   "scripts": {
     "prepack": "poi-util-transpile",
