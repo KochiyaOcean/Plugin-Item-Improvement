@@ -1,3 +1,4 @@
 {
-  "Available": " (Available: %d)"
+  "Available": " (Available: %d)",
+  "plugin-description": "Show possible improvements of the day based on data from [WhoCallsTheFleet](https://fleet.moe)"
 }

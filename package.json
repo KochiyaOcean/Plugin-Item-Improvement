@@ -47,7 +47,7 @@
   },
   "poiPlugin": {
     "title": "Equipment Improvement",
-    "description": "Show possible improvements of the day based on data from [WhoCallsTheFleet](https://fleet.moe)",
+    "description": "pluigin_description",
     "icon": "fa/wrench",
     "priority": 50,
     "apiVer": {

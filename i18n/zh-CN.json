@@ -1,6 +1,6 @@
 {
   "Equipment Improvement": "装备改修",
-  "Show possible improvements of the day based on data from [WhoCallsTheFleet](https://fleet.moe)": "查看装备改修信息，基于[是谁呼叫舰队](https://fleet.moe)数据",
+  "pluigin_description": "查看装备改修信息，基于[是谁呼叫舰队](https://fleet.moe)数据",
   "Weekday setting": "日期设置",
   "Choose weekday": "选择日期",
   "Sunday": "星期日",
