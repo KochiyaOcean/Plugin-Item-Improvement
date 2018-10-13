@@ -43,7 +43,7 @@
   },
   "poiPlugin": {
     "title": "Equipment Improvement",
-    "description": "pluigin_description",
+    "description": "plugin_description",
     "icon": "fa/wrench",
     "priority": 50,
     "apiVer": {
